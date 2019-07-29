@@ -102,14 +102,14 @@
   <meta name="description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git 安装node.js 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，得到">
 <meta name="keywords" content="github,hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo在github上搭建博客">
+<meta property="og:title" content="使用hexo在github上搭建博客：基础篇">
 <meta property="og:url" content="http://yoursite.com/2019/07/29/使用hexo搭建博客/index.html">
 <meta property="og:site_name" content="测试博客">
 <meta property="og:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git 安装node.js 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，得到">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-29T06:23:00.363Z">
+<meta property="og:updated_time" content="2019-07-29T06:36:27.227Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hexo在github上搭建博客">
+<meta name="twitter:title" content="使用hexo在github上搭建博客：基础篇">
 <meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git 安装node.js 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，得到">
 
 
@@ -129,7 +129,7 @@
 </script>
 
   
-  <title>使用hexo在github上搭建博客 | 测试博客</title>
+  <title>使用hexo在github上搭建博客：基础篇 | 测试博客</title>
   
 
 
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用hexo在github上搭建博客
+          <h1 class="post-title" itemprop="name headline">使用hexo在github上搭建博客：基础篇
 
               
             
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2019-07-29 10:58:21 / 修改时间：14:23:00" itemprop="dateCreated datePublished" datetime="2019-07-29T10:58:21+08:00">2019-07-29</time>
+              <time title="创建时间：2019-07-29 10:58:21 / 修改时间：14:36:27" itemprop="dateCreated datePublished" datetime="2019-07-29T10:58:21+08:00">2019-07-29</time>
             </span>
           
 
@@ -459,7 +459,7 @@
 </blockquote>
 <p>此过程中，当前分支应显示为hexo。</p>
 <p>此时，hexo的安装应该已完成。</p>
-<p>不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，严重影响使用。</p>
+<p>Windows系统不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。</p>
 <p>将_config.yml中的deploy参数的值修改为master。这样编译好的静态文件将被上传到master分支。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
 <h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><h3 id="博客的部署"><a href="#博客的部署" class="headerlink" title="博客的部署"></a><strong>博客的部署</strong></h3><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
 <blockquote>
@@ -508,7 +508,7 @@
 <p>注意，复制过来的源文件中应该包含一个.gitignore文件，如果没有需要手动创建，内容为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
 
-<p>如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传出错。这会导致主题的配置在其它设备上无法使用。</p>
+<p>如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传不上去错。这会导致主题的配置在其它设备上无法使用。</p>
 <p>之后再按照上文中的步骤将源文件push到github上即可。</p>
 <h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
 <p>首先克隆仓库。在任意文件夹下，用控制台输入</p>
@@ -529,7 +529,7 @@
 <blockquote>
 <p>npm install hexo-deployer-git</p>
 </blockquote>
-<p>此后的操作就都如常了。</p>
+<p>此后的修改配置部署操作就都如常了。</p>
 
       
     </div>
