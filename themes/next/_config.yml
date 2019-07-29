@@ -220,7 +220,7 @@ avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.gif
+  url: https://avatars2.githubusercontent.com/u/35512473
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # If true, the avatar would be rotated with the cursor.
@@ -1162,3 +1162,7 @@ vendors:
 css: css
 js: js
 images: images
+
+# 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true
