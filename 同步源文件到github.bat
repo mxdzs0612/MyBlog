@@ -3,6 +3,4 @@ git status
 git add .
 git commit -m "%commit_log%"
 git push
-hexo clean
-hexo g -d
 pause
