@@ -1,5 +1,5 @@
 ---
-title: 使用hexo在github上搭建博客
+title: 使用hexo在github上搭建博客：基础篇
 date: 2019-07-29 10:58:21
 category: 其他
 tags: [github, hexo]
@@ -63,7 +63,7 @@ tags: [github, hexo]
 
 此时，hexo的安装应该已完成。
 
-Windows系统不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，严重影响使用。
+Windows系统不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。
 
 将_config.yml中的deploy参数的值修改为master。这样编译好的静态文件将被上传到master分支。请注意，**yaml语法中，冒号后面需要空一格**，再键入内容。
 
@@ -125,7 +125,7 @@ node_modules/
 public/
 .deploy*/
 ```
-如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传出错。这会导致主题的配置在其它设备上无法使用。
+如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传不上去错。这会导致主题的配置在其它设备上无法使用。
 
 之后再按照上文中的步骤将源文件push到github上即可。
 
@@ -145,4 +145,4 @@ public/
 
 >npm install hexo-deployer-git
 
-此后的操作就都如常了。
+此后的修改配置部署操作就都如常了。
