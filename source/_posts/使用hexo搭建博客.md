@@ -32,8 +32,7 @@ tags: [github, hexo]
 ## 创建仓库
 在github的右上角点击[Create a new repository](https://github.com/new)。
 
-在<font color=orange>Repository name</font> 中填入**你的用户名.github.io**，如mxdzs0612.github.io即为本博客的仓库名。
-
+在`Repository name`中填入**你的用户名.github.io**，如`mxdzs0612.github.io`即为本博客的仓库名。
 这同时也是博客的域名。在下文中，将用“xxxx”代替用户名。
 
 其它选项任填，完毕后点击绿色按钮创建。
@@ -65,7 +64,7 @@ Bash中，当前分支应显示为hexo。
 
 此时，hexo的安装应该已完成。
 
-Windows系统不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。
+Windows系统不建议在cmd中安装hexo，因为这样会直接安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。
 
 ## 博客的基本配置
 打开目录下的_config.yml文件，继续修改其中的内容。请注意，**yaml语法中，冒号后面需要空一格**，再键入内容。
