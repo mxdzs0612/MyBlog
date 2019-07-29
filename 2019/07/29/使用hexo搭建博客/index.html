@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="测试博客">
 <meta property="og:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git 安装node.js 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，得到">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-29T06:01:22.239Z">
+<meta property="og:updated_time" content="2019-07-29T06:23:00.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客">
 <meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git 安装node.js 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，得到">
@@ -365,7 +365,7 @@
                 
               
 
-              <time title="创建时间：2019-07-29 10:58:21 / 修改时间：14:01:22" itemprop="dateCreated datePublished" datetime="2019-07-29T10:58:21+08:00">2019-07-29</time>
+              <time title="创建时间：2019-07-29 10:58:21 / 修改时间：14:23:00" itemprop="dateCreated datePublished" datetime="2019-07-29T10:58:21+08:00">2019-07-29</time>
             </span>
           
 
@@ -460,8 +460,8 @@
 <p>此过程中，当前分支应显示为hexo。</p>
 <p>此时，hexo的安装应该已完成。</p>
 <p>不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，严重影响使用。</p>
-<p>将_config.yml中的deploy参数的值修改为master。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
-<h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
+<p>将_config.yml中的deploy参数的值修改为master。这样编译好的静态文件将被上传到master分支。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
+<h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><h3 id="博客的部署"><a href="#博客的部署" class="headerlink" title="博客的部署"></a><strong>博客的部署</strong></h3><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
 <blockquote>
 <p>hexo generate</p>
 </blockquote>
@@ -485,13 +485,12 @@
 <p>hexo deploy</p>
 </blockquote>
 <p>此过程中会跳出github登录提示，登录即可。</p>
-<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请强制刷新页面（Chrome浏览器为Ctrl+Shift+R）。</p>
-<p>后两部操作可合成一步，即</p>
+<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请等待几秒钟（十秒左右），然后强制刷新页面（Chrome浏览器为Ctrl+Shift+R）。</p>
+<p>后两步操作可合并成一步，即</p>
 <blockquote>
 <p>hexo g -d</p>
 </blockquote>
-<hr>
-<p>不要忘记将源文件上传。在Git Bash中依次执行</p>
+<h3 id="备份源代码"><a href="#备份源代码" class="headerlink" title="备份源代码"></a><strong>备份源代码</strong></h3><p>不要忘记将源文件上传。在Git Bash中依次执行</p>
 <blockquote>
 <p>git add .</p>
 </blockquote>
@@ -503,6 +502,34 @@
 </blockquote>
 <p>即可将源代码上传至hexo分支。</p>
 <p>第二条命令的引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。</p>
+<p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃，交换顺序可能就会出现问题。</p>
+<h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，但没有备份源码，操作几乎相同。唯一的区别是，clone的hexo branch中已经有内容了。</p>
+<p>因此，只需将clone的文件中除.git文件夹以外的文件全部删掉，将原来写的博客的源文件全部复制过来即可。</p>
+<p>注意，复制过来的源文件中应该包含一个.gitignore文件，如果没有需要手动创建，内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
+
+<p>如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传出错。这会导致主题的配置在其它设备上无法使用。</p>
+<p>之后再按照上文中的步骤将源文件push到github上即可。</p>
+<h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
+<p>首先克隆仓库。在任意文件夹下，用控制台输入</p>
+<blockquote>
+<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
+</blockquote>
+<p>注意，默认分支应仍为hexo。如已修改，需使用</p>
+<blockquote>
+<p>git clone -b hexo <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
+</blockquote>
+<p>在本地新拷贝的xxxx.github.io文件夹中，通过Git Bash依次执行</p>
+<blockquote>
+<p>npm install hexo</p>
+</blockquote>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<blockquote>
+<p>npm install hexo-deployer-git</p>
+</blockquote>
+<p>此后的操作就都如常了。</p>
 
       
     </div>
@@ -699,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备分支"><span class="nav-number">3.</span> <span class="nav-text">准备分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装与备份hexo"><span class="nav-number">4.</span> <span class="nav-text">安装与备份hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成部署"><span class="nav-number">5.</span> <span class="nav-text">完成部署</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备分支"><span class="nav-number">3.</span> <span class="nav-text">准备分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装与备份hexo"><span class="nav-number">4.</span> <span class="nav-text">安装与备份hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成部署"><span class="nav-number">5.</span> <span class="nav-text">完成部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博客的部署"><span class="nav-number">5.1.</span> <span class="nav-text">博客的部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份源代码"><span class="nav-number">5.2.</span> <span class="nav-text">备份源代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已有博客的备份"><span class="nav-number">5.3.</span> <span class="nav-text">已有博客的备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新设备上的操作"><span class="nav-number">5.4.</span> <span class="nav-text">新设备上的操作</span></a></li></ol></li></ol></div>
             
 
           </div>
