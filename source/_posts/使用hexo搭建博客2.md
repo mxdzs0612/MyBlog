@@ -16,3 +16,5 @@ tags: [github, hexo]
 >git clone https://github.com/theme-next/hexo-theme-next themes/next
 
 即可将主题文件克隆到themes目录下的next文件夹中。
+
+如果需要备份主题文件，此时应直接删去next文件夹下的.git文件夹。

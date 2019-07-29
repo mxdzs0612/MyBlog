@@ -4,5 +4,5 @@ git add .
 git commit -m "%commit_log%"
 git push
 hexo clean
-heco g -d
+hexo g -d
 pause
