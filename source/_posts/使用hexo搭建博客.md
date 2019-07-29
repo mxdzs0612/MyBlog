@@ -65,9 +65,10 @@ tags: [github, hexo]
 
 不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，严重影响使用。
 
-将_config.yml中的deploy参数的值修改为master。请注意，**yaml语法中，冒号后面需要空一格**，再键入内容。
+将_config.yml中的deploy参数的值修改为master。这样编译好的静态文件将被上传到master分支。请注意，**yaml语法中，冒号后面需要空一格**，再键入内容。
 
 ## 完成部署
+### **博客的部署**
 先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行
 >hexo generate
 
@@ -91,9 +92,11 @@ tags: [github, hexo]
 
 这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请等待几秒钟（十秒左右），然后强制刷新页面（Chrome浏览器为Ctrl+Shift+R）。
 
-后两部操作可合成一步，即
+后两步操作可合并成一步，即
 >hexo g -d
-___
+
+### **备份源代码**
+
 不要忘记将源文件上传。在Git Bash中依次执行
 >git add .
 
@@ -104,3 +107,42 @@ ___
 即可将源代码上传至hexo分支。
 
 第二条命令的引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。
+
+日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃，交换顺序可能就会出现问题。
+
+### **已有博客的备份**
+如果之前已经创建并上传好了博客，但没有备份源码，操作几乎相同。唯一的区别是，clone的hexo branch中已经有内容了。
+
+因此，只需将clone的文件中除.git文件夹以外的文件全部删掉，将原来写的博客的源文件全部复制过来即可。
+
+注意，复制过来的源文件中应该包含一个.gitignore文件，如果没有需要手动创建，内容为
+```
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+```
+如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传出错。这会导致主题的配置在其它设备上无法使用。
+
+之后再按照上文中的步骤将源文件push到github上即可。
+
+### **新设备上的操作**
+安装过程与之前一样，只需省略初始化（init）的步骤即可。
+
+首先克隆仓库。在任意文件夹下，用控制台输入
+>git clone git@github.com:xxxx/xxxx.github.io.git
+
+注意，默认分支应仍为hexo。如已修改，需使用
+>git clone -b hexo git@github.com:xxxx/xxxx.github.io.git
+
+在本地新拷贝的xxxx.github.io文件夹中，通过Git Bash依次执行
+>npm install hexo
+
+>npm install
+
+>npm install hexo-deployer-git
+
+此后的操作就都如常了。
