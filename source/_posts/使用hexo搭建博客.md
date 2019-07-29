@@ -1,8 +1,106 @@
 ---
-title: 使用hexo搭建博客
+title: 使用hexo在github上搭建博客
 date: 2019-07-29 10:58:21
 category: 其他
-tags: [github]
+tags: [github, hexo]
 ---
 
-本文记录在github上搭建hexo博客的过程
+本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。
+
+关于hexo的简介，可以参考[官方文档](https://hexo.io/zh-cn/docs/)。
+
+## 环境准备
+首先需要安装、配置好[git](https://git-scm.com/)
+
+安装[node.js](https://nodejs.org/zh-cn/)
+
+然后注册[github](https://github.com/)账号。git的配置中，用户名和邮箱应与github相同。
+
+具体过程还请自行搜索，此处从略。
+
+然后配置ssh密钥。在控制台输入
+>ssh-keygen -t rsa -C "github的注册邮箱"
+
+一路回车，得到信息，密钥会被保存在系统盘用户目录下的.ssh文件夹中。
+
+找到id_rsa.pub文件并用文本编辑器（如[Notepad++](https://notepad-plus-plus.org/)）打开，复制里面的内容。注意id_rsa文件中保存的是**私钥**，不要点错了。
+
+进入github的[ssh配置页面](https://github.com/settings/ssh)，点击New SSH key，将刚才复制的值粘贴到Key一栏中。title可任填，如blog。完毕后保存。
+
+## 创建仓库
+在github的右上角点击[Create a new repository](https://github.com/new)
+
+在<font color=orange>Repository name</font> 中填入**你的用户名.github.io**，如mxdzs0612.github.io即为本博客的仓库名。
+
+这同时也是博客的域名。
+
+其它选项任填，完毕后点击绿色按钮创建。
+
+## 准备分支
+为了能够在多台设备上维护博客，这里建议直接新建分支。
+
+点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其[设置](https://github.com/mxdzs0612/mxdzs0612.github.io/settings/branches)为主要（默认）分支。
+
+后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。分支名可任取。
+
+在本地某个文件夹下打开Git bash，克隆仓库。指令为
+
+>git clone git@github.com:xxxx/xxxx.github.io.git
+
+这一步的目的是获取.git文件夹及其中的内容。
+
+## 安装与备份hexo
+进入xxxx.github.io文件夹，打开Git Bash，依次执行以下指令：
+>npm install hexo
+
+>hexo init
+
+>npm install
+
+>npm install hexo-deployer-git
+
+此过程中，当前分支应显示为hexo。
+
+此时，hexo的安装应该已完成。
+
+不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，严重影响使用。
+
+将_config.yml中的deploy参数的值修改为master。请注意，**yaml语法中，冒号后面需要空一格**，再键入内容。
+
+## 完成部署
+先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行
+>hexo generate
+
+>hexo server
+
+在浏览器输入 http://localhost:4000/ ，可以在本地预览博客的效果。
+
+如果需要新建文章，输入
+>hexo new "文章名"
+
+在xxxx.github.io\source\_posts\路径下找到该文章，用markdown编辑器进行编辑。推荐使用[VS Code](https://code.visualstudio.com/)、[Typora](https://typora.io/)。
+
+保存，依次执行下列操作
+>hexo clean
+
+>hexo generate
+
+>hexo deploy
+
+此过程中会跳出github登录提示，登录即可。
+
+这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请等待几秒钟（十秒左右），然后强制刷新页面（Chrome浏览器为Ctrl+Shift+R）。
+
+后两部操作可合成一步，即
+>hexo g -d
+___
+不要忘记将源文件上传。在Git Bash中依次执行
+>git add .
+
+>git commit –m "add branch"
+
+>git push 
+
+即可将源代码上传至hexo分支。
+
+第二条命令的引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。
