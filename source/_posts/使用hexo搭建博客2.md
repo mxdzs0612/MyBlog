@@ -21,6 +21,8 @@ tags: [github, hexo]
 
 如果需要备份主题文件，此时应直接删去next文件夹下的.git文件夹，以防出现各种奇怪的问题。
 
+若不慎忘记删去，备份时会上传一个空的next文件夹，里面的所有文件都不会上传。此时，若还想备份，必须先删掉整个next文件夹，commit一次，然后再将克隆下来的、删去.git文件夹后的next主题文件夹重新复制过来，再commit。
+
 ## 基本配置
 主题自己也有一个配置文件，文件名也叫_config.yml。此文件位于/themes/next/_config.yml路径下，与hexo的配置文件互补。如果出现冲突，以hexo的配置为准。请读者注意区分要修改的东西到底在哪个_config.yml文件中。
 
@@ -35,6 +37,6 @@ theme: next
 
 然后切换语言。进入themes\next\languages\目录，选择想要的语言，以简体中文为例，复制其文件名称`zh-CN`。
 
-修改hexo的配置文件中的# Site注释下的language条目，修改为对应语言的文件名，如`zh-CN`。
+修改hexo的配置文件中的# Site注释下的language条目，修改为对应语言的文件名，如`zh-CN`。请参考上一篇博客。
 
 （未完待续）

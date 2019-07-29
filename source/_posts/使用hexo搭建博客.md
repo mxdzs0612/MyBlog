@@ -5,7 +5,7 @@ category: 其他
 tags: [github, hexo]
 ---
 
-本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。
+本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。
 
 关于hexo的简介，可以参考[官方文档](https://hexo.io/zh-cn/docs/)。
 ```
@@ -38,7 +38,7 @@ tags: [github, hexo]
 其它选项任填，完毕后点击绿色按钮创建。
 
 ## 准备分支
-为了能够在多台设备上维护博客，这里建议直接新建分支。
+为了能够在多台设备上维护博客，同时对博客源文件在github上进行备份，这里建议直接新建分支。如果不想备份，可以忽略相关内容。
 
 点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其[设置](https://github.com/mxdzs0612/mxdzs0612.github.io/settings/branches)为主要（默认）分支。
 
@@ -51,7 +51,7 @@ tags: [github, hexo]
 这一步的目的是获取远程仓库自动生成的.git文件夹及其中的配置内容。
 
 ## 安装hexo
-进入xxxx.github.io文件夹，打开Git Bash，依次执行以下指令：
+进入刚克隆的xxxx.github.io文件夹，打开Git Bash，依次执行以下指令：
 >npm install hexo
 
 >hexo init
@@ -159,7 +159,7 @@ public/
 注意，默认分支仍应为hexo。如已修改，需使用下列语句克隆对应分支：
 >git clone -b hexo git@github.com:xxxx/xxxx.github.io.git
 
-在本地新拷贝的xxxx.github.io文件夹中，通过Git Bash依次执行
+进入刚拷贝的xxxx.github.io文件夹，通过Git Bash依次执行
 >npm install hexo
 
 >npm install
