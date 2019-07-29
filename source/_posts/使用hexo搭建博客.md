@@ -110,7 +110,7 @@ clean操作的目的是清除缓存，这一步不是必须的，但是如果网
 
 如果是第一次执行此过程，中段会跳出github登录提示，用自己的账户登录即可。
 
-这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。
+这时访问 xxxx.github.io ，即可看到文章已发布。如果没有变化，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。如果对文章进行进行了修改，通常也需强制刷新、清除缓存后才能看到效果。
 
 后两步操作可合并、简写成一步，即
 >hexo g -d
@@ -145,7 +145,7 @@ node_modules/
 public/
 .deploy*/
 ```
-如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。
+如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。
 
 之后再按照上文中的步骤将源文件push到github上即可。
 
@@ -155,7 +155,7 @@ public/
 首先克隆仓库。在任意文件夹下，用控制台输入
 >git clone git@github.com:xxxx/xxxx.github.io.git
 
-注意，默认分支应仍为hexo。如已修改，需使用
+注意，默认分支仍应为hexo。如已修改，需使用
 >git clone -b hexo git@github.com:xxxx/xxxx.github.io.git
 
 在本地新拷贝的xxxx.github.io文件夹中，通过Git Bash依次执行
