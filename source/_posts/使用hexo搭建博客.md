@@ -84,7 +84,7 @@ deploy:
   repo: https://github.com/xxxx/xxxx.github.io.git
   branch: master
 ```
-请务必将_config.yml中的deploy参数的值修改为master。这样编译好的静态文件将被上传到master分支。
+请务必将_config.yml中的deploy参数的值修改为master，这样编译好的静态文件将被上传到master分支。
 
 ## 完成部署
 ### **博客的部署**

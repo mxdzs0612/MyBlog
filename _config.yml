@@ -84,7 +84,7 @@ deploy:
   
 backup:
     type: git
-    theme: next
+    theme: next,landscape
     message: 备份源代码
     repository:
        github: git@github.com:mxdzs0612/mxdzs0612.git,hexo
