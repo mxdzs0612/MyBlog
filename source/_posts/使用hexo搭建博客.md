@@ -7,8 +7,6 @@ tags: [github, hexo]
 
 本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。
 
-本文最后修改于2019-07-29，其中某些内容可能已过时，请注意甄别。
-
 关于hexo的简介，可以参考[官方文档](https://hexo.io/zh-cn/docs/)。
 
 ## 环境准备
@@ -51,7 +49,7 @@ tags: [github, hexo]
 
 这一步的目的是获取远程仓库自动生成的.git文件夹及其中的配置内容。
 
-## 安装与备份hexo
+## 安装hexo
 进入xxxx.github.io文件夹，打开Git Bash，依次执行以下指令：
 >npm install hexo
 
@@ -105,6 +103,7 @@ deploy:
 保存，依次执行下列操作
 >hexo clean
 
+这一步的目的是清除缓存，这一步不是必须的，如果网站显示异常，可尝试此操作。
 >hexo generate
 
 >hexo deploy
