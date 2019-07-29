@@ -12,3 +12,7 @@ tags: [github, hexo]
  ## 安装
  hexo 默认主题为landscape，可以在[此页面](https://hexo.io/themes/)中选择喜欢的主题。但是不管选哪个，都需要自己下载。这里就以NexT为例了。
 
+我们当然可以选择去官方网站下载源码，但是更简单的方法是使用git。在博客的目录下打开控制台，输入
+>git clone https://github.com/theme-next/hexo-theme-next themes/next
+
+即可将主题文件克隆到themes目录下的next文件夹中。
