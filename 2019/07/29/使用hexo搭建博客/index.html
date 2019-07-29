@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-29T07:47:39.584Z">
+<meta property="og:updated_time" content="2019-07-29T08:27:37.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：基础篇">
 <meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体过程还请自行搜索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-keygen -t rsa -C “github的注册邮箱”  一路回车，">
@@ -380,7 +380,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-29 15:47:39" itemprop="dateModified" datetime="2019-07-29T15:47:39+08:00">2019-07-29</time>
+                <time title="修改时间：2019-07-29 16:27:37" itemprop="dateModified" datetime="2019-07-29T16:27:37+08:00">2019-07-29</time>
               </span>
             
           
@@ -495,31 +495,32 @@
 <blockquote>
 <p>hexo clean</p>
 </blockquote>
-<p>这一步的目的是清除缓存，这一步不是必须的，如果网站显示异常，可尝试此操作。</p>
+<p>clean操作的目的是清除缓存，这一步不是必须的，但是如果网站显示出现异常，可尝试此操作。</p>
 <blockquote>
 <p>hexo generate</p>
 </blockquote>
 <blockquote>
 <p>hexo deploy</p>
 </blockquote>
-<p>此过程中会跳出github登录提示，用自己的账户登录即可。</p>
+<p>如果是第一次执行此过程，中段会跳出github登录提示，用自己的账户登录即可。</p>
 <p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。</p>
-<p>后两步操作可合并成一步，即</p>
+<p>后两步操作可合并、简写成一步，即</p>
 <blockquote>
 <p>hexo g -d</p>
 </blockquote>
-<h3 id="备份源代码"><a href="#备份源代码" class="headerlink" title="备份源代码"></a><strong>备份源代码</strong></h3><p>不要忘记将源文件上传。在Git Bash中依次执行</p>
+<h3 id="备份源代码"><a href="#备份源代码" class="headerlink" title="备份源代码"></a><strong>备份源代码</strong></h3><p>不要忘记将源文件也上传到github。在Git Bash中依次执行</p>
 <blockquote>
 <p>git add .</p>
 </blockquote>
+<p>添加文件到本地缓冲区</p>
 <blockquote>
 <p>git commit –m “add branch”</p>
 </blockquote>
+<p>确认修改并上传到本地版本控制库中。引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。</p>
 <blockquote>
 <p>git push </p>
 </blockquote>
-<p>即可将源代码上传至hexo分支。</p>
-<p>第二条命令的引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。</p>
+<p>推送到远程仓库。如此即可将源代码上传至hexo分支。</p>
 <p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃、文件丢失，交换顺序可能就会出现问题。</p>
 <h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，但没有备份源码，操作几乎相同。唯一的区别是，clone的hexo branch中已经有内容了。</p>
 <p>因此，只需将clone的文件中除.git文件夹以外的文件全部删掉，将原来写的博客的源文件全部复制过来即可。</p>
@@ -548,6 +549,27 @@
 <p>npm install hexo-deployer-git</p>
 </blockquote>
 <p>此后的修改配置部署操作就都如常了。请参考上文，自行操作。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发布新文章的步骤如下：</p>
+<blockquote>
+<p>hexo n “文章名” </p>
+</blockquote>
+<p>编辑完毕后，</p>
+<blockquote>
+<p>hexo clean</p>
+</blockquote>
+<blockquote>
+<p>hexo g -d</p>
+</blockquote>
+<p>若要备份源代码，只需</p>
+<blockquote>
+<p>git add .</p>
+</blockquote>
+<blockquote>
+<p>git commit -m “xxx”</p>
+</blockquote>
+<blockquote>
+<p>git push</p>
+</blockquote>
 
       
     </div>
@@ -756,7 +778,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备分支"><span class="nav-number">3.</span> <span class="nav-text">准备分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">4.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客的基本配置"><span class="nav-number">5.</span> <span class="nav-text">博客的基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成部署"><span class="nav-number">6.</span> <span class="nav-text">完成部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博客的部署"><span class="nav-number">6.1.</span> <span class="nav-text">博客的部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份源代码"><span class="nav-number">6.2.</span> <span class="nav-text">备份源代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已有博客的备份"><span class="nav-number">6.3.</span> <span class="nav-text">已有博客的备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新设备上的操作"><span class="nav-number">6.4.</span> <span class="nav-text">新设备上的操作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备分支"><span class="nav-number">3.</span> <span class="nav-text">准备分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">4.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客的基本配置"><span class="nav-number">5.</span> <span class="nav-text">博客的基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成部署"><span class="nav-number">6.</span> <span class="nav-text">完成部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#博客的部署"><span class="nav-number">6.1.</span> <span class="nav-text">博客的部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份源代码"><span class="nav-number">6.2.</span> <span class="nav-text">备份源代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已有博客的备份"><span class="nav-number">6.3.</span> <span class="nav-text">已有博客的备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新设备上的操作"><span class="nav-number">6.4.</span> <span class="nav-text">新设备上的操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
