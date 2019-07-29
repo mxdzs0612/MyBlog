@@ -87,5 +87,5 @@ backup:
     theme: next,landscape
     message: 备份源代码
     repository:
-       github: git@github.com:mxdzs0612/mxdzs0612.git,hexo
+       github: git@github.com:mxdzs0612/mxdzs0612.github.io.git,hexo
        # gitcafe: git@github.com:xxx/xxx.git,branchName
