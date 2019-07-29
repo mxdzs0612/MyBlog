@@ -81,7 +81,7 @@ timezone: Asia/Shanghai # 网站时区，默认使用电脑的时区
 ```
 deploy: 
   type: git
-  repo: https://github.com/mxdzs0612/mxdzs0612.github.io.git
+  repo: https://github.com/xxxx/xxxx.github.io.git
   branch: master
 ```
 请务必将_config.yml中的deploy参数的值修改为master。这样编译好的静态文件将被上传到master分支。
