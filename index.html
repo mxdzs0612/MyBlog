@@ -381,7 +381,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-29 16:29:56" itemprop="dateModified" datetime="2019-07-29T16:29:56+08:00">2019-07-29</time>
+                <time title="修改时间：2019-07-29 16:34:29" itemprop="dateModified" datetime="2019-07-29T16:34:29+08:00">2019-07-29</time>
               </span>
             
           
@@ -506,7 +506,7 @@
 <p>hexo deploy</p>
 </blockquote>
 <p>如果是第一次执行此过程，中段会跳出github登录提示，用自己的账户登录即可。</p>
-<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。</p>
+<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没有变化，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。如果对文章进行进行了修改，通常也需强制刷新、清除缓存后才能看到效果。</p>
 <p>后两步操作可合并、简写成一步，即</p>
 <blockquote>
 <p>hexo g -d</p>
@@ -530,14 +530,14 @@
 <p>注意，复制过来的源文件中应该包含一个.gitignore文件，如果没有需要手动创建，内容为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
 
-<p>如果之前安装过主题，也应该将themes文件夹中的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
+<p>如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
 <p>之后再按照上文中的步骤将源文件push到github上即可。</p>
 <h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
 <p>首先克隆仓库。在任意文件夹下，用控制台输入</p>
 <blockquote>
 <p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
-<p>注意，默认分支应仍为hexo。如已修改，需使用</p>
+<p>注意，默认分支仍应为hexo。如已修改，需使用</p>
 <blockquote>
 <p>git clone -b hexo <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
