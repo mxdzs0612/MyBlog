@@ -86,7 +86,7 @@ deploy:
   repo: https://github.com/xxxx/xxxx.github.io.git
   branch: master
 ```
-请务必将_config.yml中的deploy参数的值修改为master，这样编译好的静态文件将被上传到master分支。
+请务必将_config.yml中的deploy下branch参数的值修改为master，这样编译好的静态文件将被上传到master分支。
 
 ## 完成部署
 ### **博客的部署**
@@ -105,7 +105,7 @@ deploy:
 保存，依次执行下列操作
 >hexo clean
 
-clean操作的目的是清除缓存，这一步不是必须的，但是如果网站显示出现异常，可尝试此操作。
+clean操作的目的是清除缓存（上一次generate生成的静态文件等），这一步不是必须的，但是如果网站显示出现异常或不符合预期之处，可尝试此操作。
 >hexo generate
 
 >hexo deploy
