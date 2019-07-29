@@ -341,7 +341,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/29/使用hexo搭建博客/" class="post-title-link" itemprop="url">使用hexo搭建博客</a>
+                <a href="/2019/07/29/使用hexo搭建博客/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客</a>
               
             
           </h1>
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="创建时间：2019-07-29 10:58:21 / 修改时间：10:59:37" itemprop="dateCreated datePublished" datetime="2019-07-29T10:58:21+08:00">2019-07-29</time>
+              <time title="创建时间：2019-07-29 10:58:21 / 修改时间：14:01:22" itemprop="dateCreated datePublished" datetime="2019-07-29T10:58:21+08:00">2019-07-29</time>
             </span>
           
 
@@ -422,7 +422,90 @@
       
         
           
-            <p>本文记录在github上搭建hexo博客的过程</p>
+            <p>本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。</p>
+<p>关于hexo的简介，可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>首先需要安装、配置好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a></p>
+<p>安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js</a></p>
+<p>然后注册<a href="https://github.com/" target="_blank" rel="noopener">github</a>账号。git的配置中，用户名和邮箱应与github相同。</p>
+<p>具体过程还请自行搜索，此处从略。</p>
+<p>然后配置ssh密钥。在控制台输入</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “github的注册邮箱”</p>
+</blockquote>
+<p>一路回车，得到信息，密钥会被保存在系统盘用户目录下的.ssh文件夹中。</p>
+<p>找到id_rsa.pub文件并用文本编辑器（如<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a>）打开，复制里面的内容。注意id_rsa文件中保存的是<strong>私钥</strong>，不要点错了。</p>
+<p>进入github的<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">ssh配置页面</a>，点击New SSH key，将刚才复制的值粘贴到Key一栏中。title可任填，如blog。完毕后保存。</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github的右上角点击<a href="https://github.com/new" target="_blank" rel="noopener">Create a new repository</a></p>
+<p>在<font color="orange">Repository name</font> 中填入<strong>你的用户名.github.io</strong>，如mxdzs0612.github.io即为本博客的仓库名。</p>
+<p>这同时也是博客的域名。</p>
+<p>其它选项任填，完毕后点击绿色按钮创建。</p>
+<h2 id="准备分支"><a href="#准备分支" class="headerlink" title="准备分支"></a>准备分支</h2><p>为了能够在多台设备上维护博客，这里建议直接新建分支。</p>
+<p>点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/settings/branches" target="_blank" rel="noopener">设置</a>为主要（默认）分支。</p>
+<p>后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。分支名可任取。</p>
+<p>在本地某个文件夹下打开Git bash，克隆仓库。指令为</p>
+<blockquote>
+<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
+</blockquote>
+<p>这一步的目的是获取.git文件夹及其中的内容。</p>
+<h2 id="安装与备份hexo"><a href="#安装与备份hexo" class="headerlink" title="安装与备份hexo"></a>安装与备份hexo</h2><p>进入xxxx.github.io文件夹，打开Git Bash，依次执行以下指令：</p>
+<blockquote>
+<p>npm install hexo</p>
+</blockquote>
+<blockquote>
+<p>hexo init</p>
+</blockquote>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<blockquote>
+<p>npm install hexo-deployer-git</p>
+</blockquote>
+<p>此过程中，当前分支应显示为hexo。</p>
+<p>此时，hexo的安装应该已完成。</p>
+<p>不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，严重影响使用。</p>
+<p>将_config.yml中的deploy参数的值修改为master。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
+<h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
+<blockquote>
+<p>hexo generate</p>
+</blockquote>
+<blockquote>
+<p>hexo server</p>
+</blockquote>
+<p>在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，可以在本地预览博客的效果。</p>
+<p>如果需要新建文章，输入</p>
+<blockquote>
+<p>hexo new “文章名”</p>
+</blockquote>
+<p>在xxxx.github.io\source_posts\路径下找到该文章，用markdown编辑器进行编辑。推荐使用<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>、<a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>。</p>
+<p>保存，依次执行下列操作</p>
+<blockquote>
+<p>hexo clean</p>
+</blockquote>
+<blockquote>
+<p>hexo generate</p>
+</blockquote>
+<blockquote>
+<p>hexo deploy</p>
+</blockquote>
+<p>此过程中会跳出github登录提示，登录即可。</p>
+<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没看到效果，请强制刷新页面（Chrome浏览器为Ctrl+Shift+R）。</p>
+<p>后两部操作可合成一步，即</p>
+<blockquote>
+<p>hexo g -d</p>
+</blockquote>
+<hr>
+<p>不要忘记将源文件上传。在Git Bash中依次执行</p>
+<blockquote>
+<p>git add .</p>
+</blockquote>
+<blockquote>
+<p>git commit –m “add branch”</p>
+</blockquote>
+<blockquote>
+<p>git push </p>
+</blockquote>
+<p>即可将源代码上传至hexo分支。</p>
+<p>第二条命令的引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。</p>
 
           
         
@@ -851,7 +934,9 @@
         
           
         
-        <span class="site-state-item-count">1</span>
+          
+        
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
