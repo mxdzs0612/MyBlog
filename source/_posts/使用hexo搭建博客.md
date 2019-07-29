@@ -71,7 +71,7 @@ Windows系统不建议在cmd中安装hexo，因为这样会安装到系统盘个
 打开目录下的_config.yml文件，继续修改其中的内容。请注意，**yaml语法中，冒号后面需要空一格**，再键入内容。
 
 基本的配置在# Site下，即
-```
+```yml
 title: 这是一个博客 # 网站标题
 subtitle: 这是一个副标题 # 副标题
 description: 试着搭个博客 # 网页描述，类似座右铭，一般会显示在author附近
@@ -80,7 +80,7 @@ language: zh-CN # 网站语言，部分主题的默认语言是英文，建议�
 timezone: Asia/Shanghai # 网站时区，默认使用电脑的时区
 ```
 然后比较重要的是# Deployment下的部署信息，即
-```
+```yml
 deploy: 
   type: git
   repo: https://github.com/xxxx/xxxx.github.io.git
