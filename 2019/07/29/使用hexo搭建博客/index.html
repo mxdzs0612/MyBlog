@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-29T10:05:54.109Z">
+<meta property="og:updated_time" content="2019-07-29T11:13:59.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：基础篇">
 <meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-">
@@ -396,7 +396,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-29 18:05:54" itemprop="dateModified" datetime="2019-07-29T18:05:54+08:00">2019-07-29</time>
+                <time title="修改时间：2019-07-29 19:13:59" itemprop="dateModified" datetime="2019-07-29T19:13:59+08:00">2019-07-29</time>
               </span>
             
           
@@ -547,7 +547,7 @@
 <p>git push </p>
 </blockquote>
 <p>推送到远程仓库。如此即可将源代码上传至hexo分支。</p>
-<p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃、文件丢失，交换顺序可能就会出现问题。</p>
+<p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃、文件丢失，交换顺序可能就会导致源码丢失。</p>
 <h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，但没有备份源码，备份的操作与之前几乎相同。唯一的区别是，建立分支之后的branch中已经有内容了，此时的内容是部署的文件而非源码。</p>
 <p>因此，clone之后，只需将clone下来的文件中除.git文件夹以外的文件全部删掉，将原来写的博客的源文件整体复制过来即可。</p>
 <p>注意，复制过来的源文件中应该包含一个.gitignore文件，如果没有需要手动创建，内容为</p>
@@ -556,11 +556,11 @@
 <p>如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
 <p>之后再按照上文中的步骤将源文件push到github上。这样，源文件就会覆盖掉分支中的文件，从而实现备份。</p>
 <h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
-<p>首先克隆仓库。在任意文件夹下，用控制台输入</p>
+<p>首先克隆仓库。在任意文件夹下打开Git Bash，输入</p>
 <blockquote>
 <p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
-<p>注意，默认分支仍应为hexo。如已修改，需使用</p>
+<p>注意，默认分支仍应为hexo。如已修改，需使用下列语句克隆对应分支：</p>
 <blockquote>
 <p>git clone -b hexo <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
@@ -574,12 +574,12 @@
 <blockquote>
 <p>npm install hexo-deployer-git</p>
 </blockquote>
-<p>此后的修改配置部署操作就都如常了。请参考上文，自行操作。</p>
-<p>注意，在多设备间进行操作之前，需使用下述指令</p>
+<p>这样就在新的设备上也安装好了hexo。此后的修改配置部署操作就都如常了。请参考上文，自行操作。</p>
+<p>注意，如果在其它设备修改过文件，在新设备上进行操作之前，要先使用下述指令</p>
 <blockquote>
 <p>git pull</p>
 </blockquote>
-<p>将本地仓库与远程仓库同步（下载并合并）。否则可能出现版本冲突、无法push的情况。</p>
+<p>将本地仓库与远程仓库同步（下载+合并版本）。否则可能出现版本冲突、无法push的情况。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发布新文章的步骤如下：在控制台输入</p>
 <blockquote>
 <p>hexo n “文章名” </p>
