@@ -5,9 +5,9 @@ category: 其他
 tags: [github, hexo]
 ---
 
- 本文介绍了hexo最常用的主题，[NexT主题](https://theme-next.org/)。
+ 本文介绍了hexo最常见的主题，[NexT主题](https://theme-next.org/)的基本用法。
 
- 这一主题使用人数多，自由度高，可扩展性强，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。
+ 这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。
 
  注意，由于NexT在不断更新、演进，搜索引擎检索到的许多配置方法都已过时。本文写于2019年7月底，笔者无法保证本文中的信息今后不会过时、失效，请读者注意甄别。
 
@@ -58,7 +58,75 @@ scheme: Gemini
 ```
 不进行设置时，默认选择的是第一个（Muse）。
 
-### **导航栏**
+### **菜单栏**
+在主题的配置文件中找到`Menu`关键字，进行设置。想要哪个就去掉哪个配置前面的“#”注释。
+```yml
+menu:
+  home: / || home
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+```
+例如：如果想给文章添加标签，应按如下步骤操作：
 
+首先在博客根目录下，执行
+>hexo new page tags
+
+此操作会在`\source\tags`路径下生成一个`index.md`文件，其内容为
+```
+---
+title: tags
+date: 2019-07-29 09:07:39
+type: "tags"
+comments: false
+---
+```
+其中`comments: false`这行是自己加的，如果之后想要开启评论功能，这个页面应该是禁止评论的，建议设置。
+
+最后去掉主题配置文件中`menu.tags`设置前的“#”注释即可。
+
+要在写的文章中使用标签，只需在new出来的文章头部类似的位置添加`tags: [标签1, 标签2]`即可。标签会显示在文章的末尾处。
+
+同理可实现分类等功能。NexT默认提供的页面如下表。
+
+| 键值 | 设定值 | 显示内容 |
+| ------ | ------ | ------ |
+| home | home: / | 主页 |
+| about | about: /about | 关于 |
+| tags | tags: /tags | 标签 |
+| categories | categories: /categories | 分类 |
+| archives | archives: /archives | 归档 |
+| schedule | schedule: /schedule/ | 日程表 |
+| sitemap | sitemap: /sitemap.xml | 站点地图 |
+| commonweal | commonweal: /404.html | 404页 |
+熟练掌握后，可以自己设定想在菜单栏中展示的页面。
+
+### **设置头像**
+在主题的配置文件中找到`avatar`关键字。
+
+如果头像要使用在线地址，修改url的属性，内容填入图片的完整地址即可。如笔者使用自己的github头像，就可以这样配置：
+```yml
+# Sidebar Avatar
+avatar:
+  # In theme directory (source/images): /images/avatar.gif
+  # In site directory (source/uploads): /uploads/avatar.gif
+  # You can also use other linking images.
+  url: https://avatars2.githubusercontent.com/u/35512473
+  # If true, the avatar would be dispalyed in circle.
+  rounded: false
+  # If true, the avatar would be rotated with the cursor.
+  rotated: false
+```
+如果要使用本地文件，则应将头像文件放在主题文件夹的`themes\next\source\images`路径下，然后修改url的属性为`avatar: /images/avatar.png`即可。
+
+也可在source文件夹下新建upload目录，配置为`avatar: /uploads/avatar.png`。
+
+其余选项的作用还请阅读注释或官方文档，自行探索。
+
+## 集成第三方功能
 
 （未完待续）
