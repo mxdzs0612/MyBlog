@@ -21,9 +21,9 @@ tags: [github, hexo]
 
 如果需要备份主题文件，此时应直接删去next文件夹下的.git文件夹，以防出现各种奇怪的问题。
 
-若不慎忘记删去，备份时会上传一个空的next文件夹，里面的所有文件都不会上传。此时，若还想备份，必须先删掉整个next文件夹，commit一次，然后再将克隆下来的、删去.git文件夹后的next主题文件夹重新复制过来，再commit。
+若不慎忘记删去就进行了备份，备份时会上传一个空的next文件夹，但是里面的所有文件都不会上传，文件夹在github上显示为黑色。此时，若还想备份，必须先删掉整个next文件夹，commit一次，然后再将克隆下来的、删去.git文件夹后的next主题文件夹重新复制过来，再次commit。
 
-如果还是会出现文件备份不全的情况，可以自行修改主题所在目录下的`.gitignore`文件。笔者的做法是直接把默认的`landscape`目录中的`.gitignore`复制过来，经测试没有出现什么问题。
+如果还是出现了文件备份不全的情况，可以自行修改主题所在目录下的`.gitignore`文件。笔者的做法是直接把默认的`landscape`目录中的`.gitignore`复制过来，经多台设备测试，没有出现什么问题。
 
 ## 基本配置
 主题自己也有一个配置文件，文件名也叫`_config.yml`。此文件位于`/themes/next/_config.yml`路径下，与hexo的配置文件互补。如果出现冲突，以hexo的配置为准。请读者注意区分下文的叙述中要修改的东西到底在哪个`_config.yml`文件中。
@@ -41,12 +41,12 @@ theme: next
 ### **选择语言**
 然后切换语言。进入`themes\next\languages\`目录，选择想要的语言，以简体中文为例，复制其文件名称`zh-CN`。
 
-修改hexo的配置文件中的`# Site`注释下的language条目，修改为对应语言的文件名，如`zh-CN`。不清楚的地方请参考上一篇博客。
+修改hexo的配置文件中的`# Site`注释下的language条目，修改为对应语言的文件名，如`zh-CN`。不清楚具体位置的读者请参考上一篇博客的`博客的基本配置`部分。
 
 值得注意的是，可能会有部分教程此处配置的是`zh-hans`。这种写法已经过时，请以`languages`目录下的文件名为准。
 
 ### **主题模板**
-NexT主题共提供了四种风格，可以点击[官方github中Live Preview标签](https://github.com/theme-next/hexo-theme-next#live-preview)下的页面进行预览。由于笔者是双子座，这里就选择了Gemini风格。
+NexT主题共提供了四种风格，可以点击[官方github中Live Preview标签](https://github.com/theme-next/hexo-theme-next#live-preview)下的页面进行预览。笔者对主题没有什么特别的偏好。但由于笔者是双子座，这里就选择了Gemini风格。
 
 配置方法很简单。在NexT的配置文件中找到`# Schemes`注释，在下面的四种风格中去掉你要选的那种风格名称之前的“#”注释即可。如
 ```yml
@@ -89,17 +89,17 @@ comments: false
 
 最后去掉主题配置文件中`menu.tags`设置前的“#”注释即可。
 
-要在写的文章中使用标签，只需在new出来的文章头部类似的位置添加`tags: [标签1, 标签2]`即可。标签会显示在文章的末尾处。
+要在写的文章中使用标签，只需在new出来的文章头部类似的位置添加`tags: [标签1, 标签2]`，标签即会自动归档，并显示在文章的末尾处。
 
 同理可实现分类等功能。NexT默认提供的页面如下表。
 
 | 键值 | 设定值 | 显示内容 |
 | ------ | ------ | ------ |
-| home | home: / | 主页 |
+| home | home: / | 主页（默认开启） |
 | about | about: /about | 关于 |
 | tags | tags: /tags | 标签 |
 | categories | categories: /categories | 分类 |
-| archives | archives: /archives | 归档 |
+| archives | archives: /archives | 归档（默认开启） |
 | schedule | schedule: /schedule/ | 日程表 |
 | sitemap | sitemap: /sitemap.xml | 站点地图 |
 | commonweal | commonweal: /404.html | 404页 |
