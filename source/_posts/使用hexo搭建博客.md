@@ -101,6 +101,8 @@ deploy:
 
 在`xxxx.github.io\source\_posts\`路径下找到该文章，用markdown编辑器进行编辑。推荐使用[VS Code](https://code.visualstudio.com/)或[Typora](https://typora.io/)。
 
+请注意，不要随便删除new出来的.md文件中自带的内容。将来文章的标题、标签、分类等许多内容都需要在这里进行设置。如`title: `属性后面就是文章的标题，默认与文件名相同，可进行修改（并不一定要和文件名相同）。
+
 保存，依次执行下列操作
 >hexo clean
 

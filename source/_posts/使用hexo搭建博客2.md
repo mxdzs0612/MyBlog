@@ -103,6 +103,7 @@ comments: false
 | schedule | schedule: /schedule/ | 日程表 |
 | sitemap | sitemap: /sitemap.xml | 站点地图 |
 | commonweal | commonweal: /404.html | 404页 |
+
 熟练掌握后，可以自己设定想在菜单栏中展示的页面。
 
 ### **设置头像**
