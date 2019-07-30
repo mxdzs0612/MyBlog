@@ -99,18 +99,18 @@
   };
 </script>
 
-  <meta name="description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-">
+  <meta name="description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh">
 <meta name="keywords" content="github,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo在github上搭建博客：基础篇">
 <meta property="og:url" content="http://yoursite.com/2019/07/29/使用hexo搭建博客/index.html">
 <meta property="og:site_name" content="mxdzs0612的博客">
-<meta property="og:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-">
+<meta property="og:description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-29T11:13:59.248Z">
+<meta property="og:updated_time" content="2019-07-30T05:40:01.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：基础篇">
-<meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh密钥。在控制台输入  ssh-">
+<meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。 1操作环境：Windows 10 1903专业版  环境准备首先需要安装、配置好git。 安装node.js。 然后注册github账号。git的配置中，用户名和邮箱应与github相同。 具体安装过程还请自行探索或在搜索引擎中检索，此处从略。 然后配置ssh">
 
 
 
@@ -396,7 +396,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-29 19:13:59" itemprop="dateModified" datetime="2019-07-29T19:13:59+08:00">2019-07-29</time>
+                <time title="修改时间：2019-07-30 13:40:01" itemprop="dateModified" datetime="2019-07-30T13:40:01+08:00">2019-07-30</time>
               </span>
             
           
@@ -453,7 +453,7 @@
       
 
       
-        <p>本文记录在github上搭建hexo博客的过程，以及一些遇到的问题。</p>
+        <p>本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。</p>
 <p>关于hexo的简介，可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作环境：Windows 10 1903专业版</span><br></pre></td></tr></table></figure>
 
@@ -466,21 +466,20 @@
 <p>ssh-keygen -t rsa -C “github的注册邮箱”</p>
 </blockquote>
 <p>一路回车，得到信息，密钥会被保存在系统盘用户目录下的.ssh文件夹中。</p>
-<p>找到id_rsa.pub文件并用文本编辑器（如<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a>）打开，复制里面的内容。注意此处有两个文件，其中id_rsa文件中保存的是<strong>私钥</strong>，是只能自己看的，而公钥是可以上传的，不要点错了。</p>
+<p>找到<code>id_rsa.pub</code>文件并用文本编辑器（如<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a>）打开，复制里面的内容。注意此处有两个文件，其中<code>id_rsa</code>文件中保存的是<strong>私钥</strong>，是只能自己看的，而.pub结尾的文件中的公钥是可以上传的，不要点错了。</p>
 <p>进入github的<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">ssh配置页面</a>，点击New SSH key，将刚才复制的公钥的值粘贴到Key一栏中。title可任填，如blog。完毕后点击绿色按钮保存。</p>
 <h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github的右上角点击<a href="https://github.com/new" target="_blank" rel="noopener">Create a new repository</a>。</p>
-<p>在<font color="orange">Repository name</font> 中填入<strong>你的用户名.github.io</strong>，如mxdzs0612.github.io即为本博客的仓库名。</p>
-<p>这同时也是博客的域名。在下文中，将用“xxxx”代替用户名。</p>
+<p>在<code>Repository name</code>中填入<strong>你的用户名.github.io</strong>，如<code>mxdzs0612.github.io</code>即为本博客的仓库名。<br>这同时也是博客的域名。在下文中，将用“xxxx”代替用户名。</p>
 <p>其它选项任填，完毕后点击绿色按钮创建。</p>
-<h2 id="准备分支"><a href="#准备分支" class="headerlink" title="准备分支"></a>准备分支</h2><p>为了能够在多台设备上维护博客，这里建议直接新建分支。</p>
+<h2 id="准备分支"><a href="#准备分支" class="headerlink" title="准备分支"></a>准备分支</h2><p>为了能够在多台设备上维护博客，同时对博客源文件在github上进行备份，这里建议直接新建分支。如果不想备份，可以忽略相关内容。</p>
 <p>点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/settings/branches" target="_blank" rel="noopener">设置</a>为主要（默认）分支。</p>
 <p>后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。分支名可任取。</p>
-<p>在本地某个文件夹下打开Git Bash，克隆仓库。指令为</p>
+<p>在本地某个文件夹下打开Git Bash，用SSH方式克隆仓库。指令为</p>
 <blockquote>
 <p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
 <p>这一步的目的是获取远程仓库自动生成的.git文件夹及其中的配置内容。</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>进入xxxx.github.io文件夹，打开Git Bash，依次执行以下指令：</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>进入刚克隆的<code>xxxx.github.io</code>文件夹，在空白处点击右键打开Git Bash，依次执行以下指令：</p>
 <blockquote>
 <p>npm install hexo</p>
 </blockquote>
@@ -495,12 +494,12 @@
 </blockquote>
 <p>Bash中，当前分支应显示为hexo。</p>
 <p>此时，hexo的安装应该已完成。</p>
-<p>Windows系统不建议在cmd中安装hexo，因为这样会安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。</p>
-<h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开目录下的_config.yml文件，继续修改其中的内容。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
-<p>基本的配置在# Site下，即</p>
+<p>Windows系统不建议在cmd中安装hexo，因为这样会直接安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。</p>
+<h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开目录下的<code>_config.yml</code>文件，继续修改其中的内容。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
+<p>基本的配置在<code># Site</code>下，即</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">这是一个博客</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">这是一个副标题</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">试着搭个博客</span> <span class="comment"># 网页描述，类似座右铭，一般会显示在author附近</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">mxdzs0612</span> <span class="comment"># 站长信息</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 网站语言，部分主题的默认语言是英文，建议修改</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment"># 网站时区，默认使用电脑的时区</span></span><br></pre></td></tr></table></figure>
 
-<p>然后比较重要的是# Deployment下的部署信息，即</p>
+<p>然后比较重要的是<code># Deployment</code>下的部署信息，即</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/xxxx/xxxx.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <p>请务必将_config.yml中的deploy下branch参数的值修改为master，这样编译好的静态文件将被上传到master分支。</p>
@@ -516,7 +515,7 @@
 <blockquote>
 <p>hexo new “文章名”</p>
 </blockquote>
-<p>在xxxx.github.io\source_posts\路径下找到该文章，用markdown编辑器进行编辑。推荐使用<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>或<a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>。</p>
+<p>在<code>xxxx.github.io\source\_posts\</code>路径下找到该文章，用markdown编辑器进行编辑。推荐使用<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>或<a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>。</p>
 <p>保存，依次执行下列操作</p>
 <blockquote>
 <p>hexo clean</p>
@@ -550,13 +549,13 @@
 <p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃、文件丢失，交换顺序可能就会导致源码丢失。</p>
 <h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，但没有备份源码，备份的操作与之前几乎相同。唯一的区别是，建立分支之后的branch中已经有内容了，此时的内容是部署的文件而非源码。</p>
 <p>因此，clone之后，只需将clone下来的文件中除.git文件夹以外的文件全部删掉，将原来写的博客的源文件整体复制过来即可。</p>
-<p>注意，复制过来的源文件中应该包含一个.gitignore文件，如果没有需要手动创建，内容为</p>
+<p>注意，复制过来的源文件中应该包含一个<code>.gitignore</code>文件，如果没有需要手动创建，内容为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
 
 <p>如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
 <p>之后再按照上文中的步骤将源文件push到github上。这样，源文件就会覆盖掉分支中的文件，从而实现备份。</p>
 <h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
-<p>首先克隆仓库。在任意文件夹下打开Git Bash，输入</p>
+<p>配置好环境后，首先克隆仓库。在任意文件夹下打开Git Bash，输入</p>
 <blockquote>
 <p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
@@ -564,7 +563,7 @@
 <blockquote>
 <p>git clone -b hexo <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
-<p>在本地新拷贝的xxxx.github.io文件夹中，通过Git Bash依次执行</p>
+<p>进入刚拷贝的<code>xxxx.github.io</code>文件夹，通过Git Bash依次执行</p>
 <blockquote>
 <p>npm install hexo</p>
 </blockquote>
@@ -602,7 +601,12 @@
 <p>git push</p>
 </blockquote>
 <p>以上操作均可在控制台中完成，不必切换到Git Bash。</p>
+<p>笔者为懒人提供了两个批处理脚本，这样就不必手打命令了。</p>
+<p>同步源文件到github.bat</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> /p commit_log=请输入 commit 日志信息:</span><br><span class="line">git status</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"%commit_log%"</span></span><br><span class="line">git push</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
 
+<p>发布文章到github.bat</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -654,6 +658,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/29/使用hexo搭建博客2/" rel="prev" title="使用hexo在github上搭建博客：主题篇">
+                使用hexo在github上搭建博客：主题篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -720,7 +740,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
