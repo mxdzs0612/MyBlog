@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-30 14:15:05" itemprop="dateModified" datetime="2019-07-30T14:15:05+08:00">2019-07-30</time>
+                <time title="修改时间：2019-07-30 14:22:28" itemprop="dateModified" datetime="2019-07-30T14:22:28+08:00">2019-07-30</time>
               </span>
             
           
@@ -458,17 +458,17 @@
 </blockquote>
 <p>即可将主题文件克隆到themes目录下的next文件夹中。</p>
 <p>如果需要备份主题文件，此时应直接删去next文件夹下的.git文件夹，以防出现各种奇怪的问题。</p>
-<p>若不慎忘记删去，备份时会上传一个空的next文件夹，里面的所有文件都不会上传。此时，若还想备份，必须先删掉整个next文件夹，commit一次，然后再将克隆下来的、删去.git文件夹后的next主题文件夹重新复制过来，再commit。</p>
-<p>如果还是会出现文件备份不全的情况，可以自行修改主题所在目录下的<code>.gitignore</code>文件。笔者的做法是直接把默认的<code>landscape</code>目录中的<code>.gitignore</code>复制过来，经测试没有出现什么问题。</p>
+<p>若不慎忘记删去就进行了备份，备份时会上传一个空的next文件夹，但是里面的所有文件都不会上传，文件夹在github上显示为黑色。此时，若还想备份，必须先删掉整个next文件夹，commit一次，然后再将克隆下来的、删去.git文件夹后的next主题文件夹重新复制过来，再次commit。</p>
+<p>如果还是出现了文件备份不全的情况，可以自行修改主题所在目录下的<code>.gitignore</code>文件。笔者的做法是直接把默认的<code>landscape</code>目录中的<code>.gitignore</code>复制过来，经多台设备测试，没有出现什么问题。</p>
 <h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>主题自己也有一个配置文件，文件名也叫<code>_config.yml</code>。此文件位于<code>/themes/next/_config.yml</code>路径下，与hexo的配置文件互补。如果出现冲突，以hexo的配置为准。请读者注意区分下文的叙述中要修改的东西到底在哪个<code>_config.yml</code>文件中。</p>
 <h3 id="主题的切换"><a href="#主题的切换" class="headerlink" title="主题的切换"></a><strong>主题的切换</strong></h3><p>首先要切换主题。在hexo的配置文件中，找到<code># Extensions</code>注释，进行如下修改：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
 
 <p>其中，填入的内容应与<code>themes</code>文件夹中存放主题的子文件夹名称相同。</p>
 <h3 id="选择语言"><a href="#选择语言" class="headerlink" title="选择语言"></a><strong>选择语言</strong></h3><p>然后切换语言。进入<code>themes\next\languages\</code>目录，选择想要的语言，以简体中文为例，复制其文件名称<code>zh-CN</code>。</p>
-<p>修改hexo的配置文件中的<code># Site</code>注释下的language条目，修改为对应语言的文件名，如<code>zh-CN</code>。不清楚的地方请参考上一篇博客。</p>
+<p>修改hexo的配置文件中的<code># Site</code>注释下的language条目，修改为对应语言的文件名，如<code>zh-CN</code>。不清楚具体位置的读者请参考上一篇博客的<code>博客的基本配置</code>部分。</p>
 <p>值得注意的是，可能会有部分教程此处配置的是<code>zh-hans</code>。这种写法已经过时，请以<code>languages</code>目录下的文件名为准。</p>
-<h3 id="主题模板"><a href="#主题模板" class="headerlink" title="主题模板"></a><strong>主题模板</strong></h3><p>NexT主题共提供了四种风格，可以点击<a href="https://github.com/theme-next/hexo-theme-next#live-preview" target="_blank" rel="noopener">官方github中Live Preview标签</a>下的页面进行预览。由于笔者是双子座，这里就选择了Gemini风格。</p>
+<h3 id="主题模板"><a href="#主题模板" class="headerlink" title="主题模板"></a><strong>主题模板</strong></h3><p>NexT主题共提供了四种风格，可以点击<a href="https://github.com/theme-next/hexo-theme-next#live-preview" target="_blank" rel="noopener">官方github中Live Preview标签</a>下的页面进行预览。笔者对主题没有什么特别的偏好。但由于笔者是双子座，这里就选择了Gemini风格。</p>
 <p>配置方法很简单。在NexT的配置文件中找到<code># Schemes</code>注释，在下面的四种风格中去掉你要选的那种风格名称之前的“#”注释即可。如</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
 
@@ -486,7 +486,7 @@
 
 <p>其中<code>comments: false</code>这行是自己加的，如果之后想要开启评论功能，这个页面应该是禁止评论的，建议设置。</p>
 <p>最后去掉主题配置文件中<code>menu.tags</code>设置前的“#”注释即可。</p>
-<p>要在写的文章中使用标签，只需在new出来的文章头部类似的位置添加<code>tags: [标签1, 标签2]</code>即可。标签会显示在文章的末尾处。</p>
+<p>要在写的文章中使用标签，只需在new出来的文章头部类似的位置添加<code>tags: [标签1, 标签2]</code>，标签即会自动归档，并显示在文章的末尾处。</p>
 <p>同理可实现分类等功能。NexT默认提供的页面如下表。</p>
 <table>
 <thead>
@@ -499,7 +499,7 @@
 <tbody><tr>
 <td>home</td>
 <td>home: /</td>
-<td>主页</td>
+<td>主页（默认开启）</td>
 </tr>
 <tr>
 <td>about</td>
@@ -519,7 +519,7 @@
 <tr>
 <td>archives</td>
 <td>archives: /archives</td>
-<td>归档</td>
+<td>归档（默认开启）</td>
 </tr>
 <tr>
 <td>schedule</td>
