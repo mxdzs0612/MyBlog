@@ -81,3 +81,10 @@ deploy:
   type: git
   repo: https://github.com/mxdzs0612/mxdzs0612.github.io.git
   branch: master
+  
+algolia:
+  applicationID: '9H3FFDKJCP'
+  apiKey: 'ce723c64aa5162a06db74612c1addedd'
+  adminApiKey: '0d00d9a5bd7d94f555fa598772b0889b'
+  indexName: 'GithubBlog'
+  chunkSize: 5000
