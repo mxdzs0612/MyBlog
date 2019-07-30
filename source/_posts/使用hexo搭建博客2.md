@@ -134,9 +134,9 @@ avatar:
 先将图标文件复制到主题目录中的`images`文件夹下，然后在主题的配置文件中找到`favicon`关键字，按照提示修改为相对路径即可。
 
 ## 集成第三方功能
-NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。
+NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考[官方文档](https://theme-next.org/docs/)。
 
-理论上也可以使用hexo的插件，进行下载。但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。
+理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。
 
 ### **文末提示语**
 
