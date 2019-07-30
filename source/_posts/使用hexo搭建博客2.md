@@ -128,6 +128,38 @@ avatar:
 
 其余选项的作用还请阅读注释或官方文档，自行探索。
 
+### **设置网站图标**
+网站图标就是显示在网页标签最左边的那个小图片。
+
+先将图标文件复制到主题目录中的`images`文件夹下，然后在主题的配置文件中找到`favicon`关键字，按照提示修改为相对路径即可。
+
 ## 集成第三方功能
+NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。
+
+理论上也可以使用hexo的插件，进行下载。但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。
+
+### **文末提示语**
+
+
+### **阅读数量统计**
+NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。
+
+在主题的配置文件中搜索`busuanzi_count`，将下面的enable属性设为true即可。下面几条属性可自行设置。
+
+total_visitors：总访问人数统计；total_views：总访问量统计。这两个值会显示在页面的最下面。
+
+post_views：文章阅读量统计，会显示在文章的标题下方。
+
+xxx_icon可设置这些访问量的示意图标，图标采用的是[Font Awesome Icons](https://fontawesome.com/v4.7.0/icons/)，可自行替换成自己喜欢的。
+```yml
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: user
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: eye
+```
 
 （未完待续）
