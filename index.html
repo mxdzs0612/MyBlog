@@ -502,32 +502,22 @@
       
         
           
-            <p>本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同.</p>
-<p>NexT的页面是通过<code>.swig</code>格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。</p>
-<h2 id="永久链接"><a href="#永久链接" class="headerlink" title="永久链接"></a>永久链接</h2><p>更改博客的配置文件的<code>permalink</code>属性，即可修改文章的URL形式。</p>
-<p>支持的修改类型请参考Hexo的<a href="https://hexo.io/zh-cn/docs/permalinks.html" target="_blank" rel="noopener">官方文档</a>。</p>
-<h2 id="文末提示"><a href="#文末提示" class="headerlink" title="文末提示"></a>文末提示</h2><p>在路径<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件,并添加以下内容：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span>-------------本文结束<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>感谢您的阅读-------------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>中间的内容可按个人喜好修改，符合HTML语法即可。</p>
-<p>打开同目录下的<code>post.swig</code>文件，搜索<code>post-footer</code>，在其所在标签上方增加</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include 'passage-end-tag.swig' %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>最后在主题的配置文件中的任意位置添加</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文章末尾添加“本文结束”标记</span></span><br><span class="line"><span class="attr">passage_end_tag:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="网页底部内容"><a href="#网页底部内容" class="headerlink" title="网页底部内容"></a>网页底部内容</h2><p>在主题配置文件中搜索<code>footer:</code>属性，按个人喜好进行配置即可。</p>
-<p>可进行控制的项目有：</p>
-<ul>
-<li>网站从哪年起建立</li>
-<li>所显示的图案及样式（依然是之前介绍过的fa图标，可设定其颜色以及是否为动态的）</li>
-<li>版权所有者声明，默认与author相同</li>
-<li>是否显示Hexo、NexT的链接及版本号</li>
-<li>是否显示网址ICP备案号</li>
-</ul>
-<h2 id="标签样式"><a href="#标签样式" class="headerlink" title="标签样式"></a>标签样式</h2><h2 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h2><h2 id="Github横幅"><a href="#Github横幅" class="headerlink" title="Github横幅"></a>Github横幅</h2><h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><h2 id="动态标题栏"><a href="#动态标题栏" class="headerlink" title="动态标题栏"></a>动态标题栏</h2><h2 id="点击效果"><a href="#点击效果" class="headerlink" title="点击效果"></a>点击效果</h2><h2 id="鼠标样式"><a href="#鼠标样式" class="headerlink" title="鼠标样式"></a>鼠标样式</h2><p>（待续）</p>
-
+            <p>
+              本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同.
+NexT的页面是通过.swig格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。
+永久链接更改博客的配置文件的permalink属性，即可修改文章的URL形式。
+支持的修改类型请参考Hexo的
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/其他/使用hexo搭建博客3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -716,184 +706,21 @@
       
         
           
-            <p> 本文介绍了hexo最常见的主题，<a href="https://theme-next.org/" target="_blank" rel="noopener">NexT主题</a>的基本用法。</p>
-<p> 这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。</p>
-<p> 注意，由于NexT在不断更新、演进，搜索引擎检索到的许多配置方法都已过时。本文写于2019年7月底，笔者无法保证本文中的信息今后不会过时、失效，请读者注意甄别。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p> hexo的默认主题为landscape，可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">此页面</a>中选择喜欢的主题。但是不管选哪个，都需要自己下载。这里就以NexT为例了。</p>
-<p>我们当然可以选择去官方网站下载源码，但是更简单的方法是使用git。在博客的目录下打开控制台，输入</p>
-<blockquote>
-<p>git clone <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> themes/next</p>
-</blockquote>
-<p>即可将主题文件克隆到themes目录下的next文件夹中。</p>
-<p>如果需要备份主题文件，此时应直接删去next文件夹下的.git文件夹，以防出现各种奇怪的问题。理论上使用–recursive参数也可以，但是会非常麻烦。</p>
-<p>若不慎忘记删去就进行了备份，备份时会上传一个空的next文件夹，但是里面的所有文件都不会上传，文件夹在github上显示为黑色。此时，若还想备份，必须先删掉整个next文件夹，commit一次，然后再将克隆下来的、删去.git文件夹后的next主题文件夹重新复制过来，再次commit。</p>
-<p>如果还是出现了文件备份不全的情况，可以自行修改主题所在目录下的<code>.gitignore</code>文件。笔者的做法是直接把默认的<code>landscape</code>目录中的<code>.gitignore</code>复制过来，经多台设备测试，没有出现什么问题。</p>
-<p>注意，之后若安装了插件，主题的配置文件中可能含有各种app的id等信息，会公开展示在分支中备份源代码内。虽然一般这些应用都会验证使用者的身份，其他人即使获取到密钥也无法使用这些插件，但还是可能有人对此感到介意，因此在这里进行提醒。不想公开的话，就只能不备份主题文件了。</p>
-<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>主题自己也有一个配置文件，文件名也叫<code>_config.yml</code>。此文件位于<code>/themes/next/_config.yml</code>路径下，与hexo的配置文件互补。如果出现冲突，以hexo的配置为准。请读者注意区分下文的叙述中要修改的东西到底在哪个<code>_config.yml</code>文件中。</p>
-<h3 id="主题的切换"><a href="#主题的切换" class="headerlink" title="主题的切换"></a><strong>主题的切换</strong></h3><p>首先要切换主题。在hexo的配置文件中，找到<code># Extensions</code>注释，进行如下修改：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-
-<p>其中，填入的内容应与<code>themes</code>文件夹中存放主题的子文件夹名称相同。</p>
-<h3 id="选择语言"><a href="#选择语言" class="headerlink" title="选择语言"></a><strong>选择语言</strong></h3><p>然后切换语言。进入<code>themes\next\languages\</code>目录，选择想要的语言，以简体中文为例，复制其文件名称<code>zh-CN</code>。</p>
-<p>修改hexo的配置文件中的<code># Site</code>注释下的language条目，修改为对应语言的文件名，如<code>zh-CN</code>。不清楚具体位置的读者请参考上一篇博客的<code>博客的基本配置</code>部分。</p>
-<p>值得注意的是，可能会有部分教程此处配置的是<code>zh-hans</code>。这种写法已经过时，请以<code>languages</code>目录下的文件名为准。</p>
-<h3 id="主题模板"><a href="#主题模板" class="headerlink" title="主题模板"></a><strong>主题模板</strong></h3><p>NexT主题共提供了四种风格，可以点击<a href="https://github.com/theme-next/hexo-theme-next#live-preview" target="_blank" rel="noopener">官方github中Live Preview标签</a>下的页面进行预览。笔者对主题没有什么特别的偏好。但由于笔者是双子座，这里就选择了Gemini风格。</p>
-<p>配置方法很简单。在NexT的配置文件中找到<code># Schemes</code>注释，在下面的四种风格中去掉你要选的那种风格名称之前的“#”注释即可。如</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Gemini</span></span><br></pre></td></tr></table></figure>
-
-<p>不进行设置时，默认选择的是第一个（Muse）。不是很建议选择Mist主题，因为后续支持的内容可能比较少。</p>
-<h3 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a><strong>菜单栏</strong></h3><p>在主题的配置文件中找到<code>Menu</code>关键字，进行设置。想要哪个就去掉哪个配置前面的“#”注释。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure>
-
-<p>例如：如果想给文章添加标签，应按如下步骤操作：</p>
-<p>首先在博客根目录下，执行</p>
-<blockquote>
-<p>hexo new page tags</p>
-</blockquote>
-<p>此操作会在<code>\source\tags</code>路径下生成一个<code>index.md</code>文件，其内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-07-29 09:07:39</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>comments: false</code>这行是自己加的，如果之后想要开启评论功能，这个页面应该是禁止评论的，建议设置。</p>
-<p>最后去掉主题配置文件中<code>menu.tags</code>设置前的“#”注释即可。</p>
-<p>要在写的文章中使用标签，只需在new出来的文章头部类似的位置添加<code>tags: [标签1, 标签2]</code>，标签即会自动归档，并显示在文章的末尾处。</p>
-<p>同理可实现分类等功能。NexT默认提供的页面如下表。</p>
-<table>
-<thead>
-<tr>
-<th>键值</th>
-<th>设定值</th>
-<th>显示内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>home</td>
-<td>home: /</td>
-<td>主页（默认开启）</td>
-</tr>
-<tr>
-<td>about</td>
-<td>about: /about</td>
-<td>关于</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>tags: /tags</td>
-<td>标签</td>
-</tr>
-<tr>
-<td>categories</td>
-<td>categories: /categories</td>
-<td>分类</td>
-</tr>
-<tr>
-<td>archives</td>
-<td>archives: /archives</td>
-<td>归档（默认开启）</td>
-</tr>
-<tr>
-<td>schedule</td>
-<td>schedule: /schedule/</td>
-<td>日程表</td>
-</tr>
-<tr>
-<td>sitemap</td>
-<td>sitemap: /sitemap.xml</td>
-<td>站点地图</td>
-</tr>
-<tr>
-<td>commonweal</td>
-<td>commonweal: /404.html</td>
-<td>404页</td>
-</tr>
-</tbody></table>
-<p>熟练掌握后，可以自己设定想在菜单栏中展示的页面。</p>
-<h3 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a><strong>设置头像</strong></h3><p>在主题的配置文件中找到<code>avatar</code>关键字。</p>
-<p>如果头像要使用在线地址，修改url的属性，内容填入图片的完整地址即可。如笔者使用自己的github头像，就可以这样配置：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line"><span class="attr">  url:</span> <span class="attr">https://avatars2.githubusercontent.com/u/35512473</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line"><span class="attr">  rounded:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line"><span class="attr">  rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>如果要使用本地文件，则应将头像文件放在主题文件夹的<code>themes\next\source\images</code>路径下，然后修改url的属性为<code>avatar: /images/avatar.png</code>即可。</p>
-<p>也可在source文件夹下新建upload目录，配置为<code>avatar: /uploads/avatar.png</code>。</p>
-<p>其余选项的作用还请阅读注释或官方文档，自行探索。</p>
-<h3 id="设置网站图标"><a href="#设置网站图标" class="headerlink" title="设置网站图标"></a><strong>设置网站图标</strong></h3><p>网站图标就是显示在网页标签最左边的那个小图片。</p>
-<p>先将图标文件复制到主题目录中的<code>images</code>文件夹下，然后在主题的配置文件中找到<code>favicon</code>关键字，按照提示修改为相对路径即可。</p>
-<h2 id="集成第三方功能"><a href="#集成第三方功能" class="headerlink" title="集成第三方功能"></a>集成第三方功能</h2><p>NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考<a href="https://theme-next.org/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>理论上也可以使用<a href="https://hexo.io/plugins/index.html" target="_blank" rel="noopener">hexo的插件</a>，进行下载。<del>但是在NexT主题下，笔者的尝试<ruby>全部失败<rt><a href="https://zh.moegirl.org/%E4%B8%8D%E8%A6%81%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%95%8A%EF%BC%81" target="_blank" rel="noopener">全部木大</a></rt></ruby>了。如果读者知道该怎么做，欢迎发<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/issues" target="_blank" rel="noopener">issue</a>进行教学。</del> 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。</p>
-<h3 id="阅读数量统计"><a href="#阅读数量统计" class="headerlink" title="阅读数量统计"></a><strong>阅读数量统计</strong></h3><p>NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。</p>
-<p>在主题的配置文件中搜索<code>busuanzi_count</code>，将下面的enable属性设为true即可。下面几条属性可自行设置。</p>
-<p>total_visitors：总访问人数统计；total_views：总访问量统计。这两个值会显示在页面的最下面。</p>
-<p>post_views：文章阅读量统计，会显示在文章的标题下方。</p>
-<p>xxx_icon可设置这些访问量的示意图标，图标采用的是<a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">Font Awesome Icons</a>，可自行替换成自己喜欢的。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  total_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_views_icon:</span> <span class="string">eye</span></span><br><span class="line"><span class="attr">  post_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
-
-<p>不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 近期改版后，LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以自行查找其他统计方法。</p>
-<h3 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a><strong>搜索功能</strong></h3><p>在主题配置文件中搜索<code># Search Services</code>注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即<code>algolia_search</code>。</p>
-<p>首先进入<a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia官方网站</a>，注册账号。可以直接使用你的github账号。</p>
-<p>填写信息后（部分信息可跳过不填），点击页面上的粉红色按钮<code>NEW INDEX</code>，新建一个索引，起一个名字（后面会用到）。</p>
-<p>来到<a href="https://www.algolia.com/api-keys" target="_blank" rel="noopener">API Keys</a>页面，<code>Application ID</code>和<code>Search-Only API Key</code>都是后面要用的。</p>
-<p>再来到<code>All API Keys</code>标签，点击Edit，在ACL选项中打开<code>search</code>、<code>addObject</code>、<code>deleteObject</code>、<code>listIndexes</code>、<code>deleteIndex</code>。</p>
-<p>然后安装插件。在主题根目录下执行</p>
-<blockquote>
-<p>   npm install hexo-algoliasearch –save</p>
-</blockquote>
-<p>然后在根目录的站点配置文件中，增添</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line"><span class="attr">  applicationID:</span> <span class="string">'appId'</span></span><br><span class="line"><span class="attr">  apiKey:</span> <span class="string">'apiKey'</span></span><br><span class="line"><span class="attr">  indexName:</span> <span class="string">'indexName'</span></span><br><span class="line"><span class="attr">  chunkSize:</span> <span class="number">5000</span></span><br></pre></td></tr></table></figure>
-
-<p>将刚刚记录下来的值填进去。</p>
-<p>但还没结束。下一步需要让Algolia记录你的文章数据。</p>
-<p>在根目录下打开Git Bash，输入</p>
-<blockquote>
-<p>export HEXO_ALGOLIA_INDEXING_KEY=Search-Only API key</p>
-</blockquote>
-<p>（注：若用cmd，要将export换成set，但此法可能会导致不可预知的错误，因此建议使用Git Bash）</p>
-<blockquote>
-<p>hexo algolia</p>
-</blockquote>
-<p>顺利的话，Algolia后台的<code>Indices</code>下应该就能看到我们的博客的信息了。</p>
-<p>最后添加页面上的入口及脚本。进入主题目录下，Git Bash输入</p>
-<blockquote>
-<p>git clone <a href="https://github.com/theme-next/theme-next-algolia-instant-search" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-algolia-instant-search</a> source/lib/algolia-instant-search</p>
-</blockquote>
-<p>在<code>source/lib/</code>目录下安装algolia-instant-search所需的文件。</p>
-<p>最后，把主题配置文件中的<code>algolia_search.enable</code>，属性设为true，即可开启搜索功能。</p>
-<p>更详细信息，可参考github上的<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md" target="_blank" rel="noopener">文档</a>。</p>
-<h3 id="本地搜索功能"><a href="#本地搜索功能" class="headerlink" title="本地搜索功能"></a><strong>本地搜索功能</strong></h3><p>algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。因此本站决定换用<code>Local Search</code>。个人也更推荐这种搜索方式。</p>
-<p>首先在根目录打开Git Bash，运行</p>
-<blockquote>
-<p>$ npm install hexo-generator-searchdb –save</p>
-</blockquote>
-<p>在博客配置文件增添下列语句：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">  format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-
-<p>最后在主题配置文件中搜索<code># Local search</code>，将<code>enable</code>属性设为true即可。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-generator-searchdb</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line"><span class="attr">  trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line"><span class="attr">  top_n_per_article:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line"><span class="attr">  unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line"><span class="attr">  preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>搜索功能的位置和algolia一样，也在菜单栏的最下面，并且支持全文搜索。此外，也可自己定制样式，非常好用。</p>
-<p>这种方式就简单了很多，缺点是需要额外一些安装包，换设备部署需要重新安装。</p>
-<p>此外，这种方法的原理是在本地生成一个包含索引的<code>search.xml</code>文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会占用不少空间。</p>
-<h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a><strong>评论</strong></h3><p>本站原先使用了<a href="https://gitalk.github.io/" target="_blank" rel="noopener">GITALK</a>。这种方式的优点是配置简单，缺点是不支持无登陆评论。</p>
-<p>GITALK是利用github API、基于Github issue开发的评论系统。</p>
-<p>首先要去<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">这里</a>申请一个新app。四个位置依次填入app名称、博客地址<code>https://xxxx.github.io</code>、描述（任填）以及回调地址（仍然填博客地址）。点击绿色按钮创建。</p>
-<p>完成后，记住app的信息，在主题配置文件中搜索<code># Gitalk</code>，参照注释进行设置：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##next/_config.yml</span></span><br><span class="line">    <span class="comment"># Gitalk</span></span><br><span class="line">    <span class="comment"># Demo: https://gitalk.github.io</span></span><br><span class="line"><span class="string">​</span>    <span class="attr">gitalk:</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">enable:</span> <span class="literal">false</span>     <span class="comment"># 设为true即可启用</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">github_id:</span>        <span class="comment"># Github repo owner，填入你的用户名</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">repo:</span>             <span class="comment"># Repository name to store issues，新建的用于保存评论数据的仓库名，填入博客的repo名即可，如xxxx.github.io`</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">client_id:</span>        <span class="comment"># Github Application Client ID，填入app信息</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">client_secret:</span>    <span class="comment"># Github Application Client Secret，填入app信息</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">admin_user:</span>       <span class="comment"># GitHub repo owner and collaborators, only these guys can initialize github issues</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">distraction_free_mode:</span> <span class="literal">true</span> <span class="comment"># Facebook-like distraction free mode</span></span><br><span class="line">      <span class="comment"># Gitalk's display language depends on user's browser or system environment</span></span><br><span class="line">      <span class="comment"># If you want everyone visiting your site to see a uniform language, you can set a force language value</span></span><br><span class="line">      <span class="comment"># Available value: en, es-ES, fr, ru, zh-CN, zh-TW</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了。</p>
-<p>使用时，需要登录github账号才能评论，评论呈现在页面最下方。每篇文章都要进行初始化，建立一个原始的issue，才能增添新的评论。而只有在<code>admin_user</code>中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者在考虑更换评论系统，本站的评论功能暂时关闭。</p>
-<p>如果之前注册了LeanCloud，使用LeanCloud提供的评论插件<code>Valine</code>是一个非常不错的选择。这是少有的支持无登陆评论的插件。免费版虽有诸多限制，但也足够使用，推荐不介意上传自己手持身份证照片的读者采用Valine，具体教程还请参考<a href="https://theme-next.org/docs/third-party-services/comments-and-widgets#Valine-China" target="_blank" rel="noopener">官方文档</a>。</p>
-<h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a><strong>字数统计</strong></h3><p>首先在根目录运行Git Bash，执行</p>
-<blockquote>
-<p>npm install hexo-symbols-count-time –save</p>
-</blockquote>
-<p>然后在博客的配置文件中新增配置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">  symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  time:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_time:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  exclude_codeblock:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>最后，在主题的配置文件中搜索<code>symbols_count_time:</code>，进行如下修改</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Post wordcount display settings</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-symbols-count-time</span></span><br><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">  separated_meta:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  item_text_post:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  item_text_total:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  awl:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">  wpm:</span> <span class="number">300</span></span><br></pre></td></tr></table></figure>
-
-<p>上述设置是对中文博客的推荐设置，如想自定义，请参考<a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。</p>
-<p>如果<code>item_text_total</code>设置为true，在页面最下方还会显示站点总字数与站点阅读总时长的估计值。</p>
-
+            <p>
+               本文介绍了hexo最常见的主题，NexT主题的基本用法。
+ 这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。
+ 注意，由于NexT在不断更新、演进，搜索引擎检索到的许多配置方法都已过时。本文写于2019年7月底，笔者无法保证本文中的信
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/其他/使用hexo搭建博客2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1082,164 +909,23 @@
       
         
           
-            <p>本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。</p>
-<p>关于hexo的简介，可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">操作系统： Windows 10 1903专业版</span><br><span class="line">编辑器： VS Code &amp; Notepad++</span><br><span class="line">浏览器： Chrome</span><br></pre></td></tr></table></figure>
+            <p>
+              本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。
+关于hexo的简介，可以参考官方文档。
+操作系统： Windows 10 1903专业版编辑器： VS Code &amp; Notepad++浏览器： Chrome
 
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>首先需要安装、配置好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>。</p>
-<p>安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js</a>。</p>
-<p>然后注册<a href="https://github.com/" target="_blank" rel="noopener">github</a>账号。git的配置中，用户名和邮箱应与github相同。</p>
-<p>具体安装过程还请自行探索或在搜索引擎中检索，此处从略。</p>
-<p>然后配置ssh密钥。在控制台输入</p>
-<blockquote>
-<p>ssh-keygen -t rsa -C “github的注册邮箱”</p>
-</blockquote>
-<p>一路回车，得到信息，密钥会被保存在系统盘用户目录下的.ssh文件夹中。</p>
-<p>找到<code>id_rsa.pub</code>文件并用文本编辑器（如<a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a>）打开，复制里面的内容。注意此处有两个文件，其中<code>id_rsa</code>文件中保存的是<strong>私钥</strong>，是只能自己看的，而.pub结尾的文件中的公钥是可以上传的，不要点错了。</p>
-<p>进入github的<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">ssh配置页面</a>，点击New SSH key，将刚才复制的公钥的值粘贴到Key一栏中。title可任填，如blog。完毕后点击绿色按钮保存。</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github的右上角点击<a href="https://github.com/new" target="_blank" rel="noopener">Create a new repository</a>。</p>
-<p>在<code>Repository name</code>中填入<strong>你的用户名.github.io</strong>，如<code>mxdzs0612.github.io</code>即为本博客的仓库名。<br>这同时也是博客的域名。在下文中，将用“xxxx”代替用户名。</p>
-<p>其它选项任填，完毕后点击绿色按钮创建。</p>
-<h2 id="准备分支"><a href="#准备分支" class="headerlink" title="准备分支"></a>准备分支</h2><p>为了能够在多台设备上维护博客，同时对博客源文件在github上进行备份，这里建议直接新建分支。如果不想备份，可以忽略相关内容。</p>
-<p>点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/settings/branches" target="_blank" rel="noopener">设置</a>为主要（默认）分支。</p>
-<p>后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。分支名可任取。</p>
-<p>在本地某个文件夹下打开Git Bash，用SSH方式克隆仓库。指令为</p>
-<blockquote>
-<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
-</blockquote>
-<p>这一步的目的是获取远程仓库自动生成的.git文件夹及其中的配置内容。</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>进入刚克隆的<code>xxxx.github.io</code>文件夹，在空白处点击右键打开Git Bash，依次执行以下指令：</p>
-<blockquote>
-<p>npm install hexo</p>
-</blockquote>
-<blockquote>
-<p>hexo init</p>
-</blockquote>
-<blockquote>
-<p>npm install</p>
-</blockquote>
-<blockquote>
-<p>npm install hexo-deployer-git</p>
-</blockquote>
-<p>Bash中，当前分支应显示为hexo。</p>
-<p>此时，hexo的安装应该已完成。</p>
-<p>Windows系统不建议在cmd中安装hexo，因为这样会直接安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。</p>
-<h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开目录下的<code>_config.yml</code>文件，继续修改其中的内容。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
-<p>基本的配置在<code># Site</code>下，即</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">这是一个博客</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">这是一个副标题</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">试着搭个博客</span> <span class="comment"># 网页描述，类似座右铭，一般会显示在author附近</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">mxdzs0612</span> <span class="comment"># 站长信息</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 网站语言，部分主题的默认语言是英文，建议修改</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment"># 网站时区，默认使用电脑的时区</span></span><br></pre></td></tr></table></figure>
-
-<p>然后比较重要的是<code># Deployment</code>下的部署信息，即</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/xxxx/xxxx.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p>请务必将_config.yml中的deploy下branch参数的值修改为master，这样编译好的静态文件将被上传到master分支。</p>
-<h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><h3 id="博客的部署"><a href="#博客的部署" class="headerlink" title="博客的部署"></a><strong>博客的部署</strong></h3><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
-<blockquote>
-<p>hexo generate</p>
-</blockquote>
-<blockquote>
-<p>hexo server</p>
-</blockquote>
-<p>在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，可以在本地预览博客的效果。其中预置了一个hello-world.md文件，因此会有一篇默认博客。</p>
-<p>如果需要新建文章，输入</p>
-<blockquote>
-<p>hexo new “文章名”</p>
-</blockquote>
-<p>在<code>xxxx.github.io\source\_posts\</code>路径下找到该文章，用markdown编辑器进行编辑。推荐使用<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a>或<a href="https://typora.io/" target="_blank" rel="noopener">Typora</a>。</p>
-<p>请注意，不要随便删除new出来的.md文件中自带的内容。将来文章的标题、标签、分类等许多内容都需要在这里进行设置。如<code>title:</code>属性后面就是文章的标题，默认与文件名相同，可进行修改（并不一定要和文件名相同）。</p>
-<p>保存，依次执行下列操作</p>
-<blockquote>
-<p>hexo clean</p>
-</blockquote>
-<p>clean操作的目的是清除缓存（上一次generate生成的静态文件等），这一步不是必须的，但是如果网站显示出现异常或不符合预期之处，可尝试此操作。</p>
-<blockquote>
-<p>hexo generate</p>
-</blockquote>
-<blockquote>
-<p>hexo deploy</p>
-</blockquote>
-<p>如果是第一次执行此过程，中段会跳出github登录提示，用自己的账户登录即可。</p>
-<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没有变化，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。如果对文章进行进行了修改，通常也需强制刷新、清除缓存后才能看到效果。</p>
-<p>后两步操作可合并、简写成一步，即</p>
-<blockquote>
-<p>hexo g -d</p>
-</blockquote>
-<h3 id="备份源代码"><a href="#备份源代码" class="headerlink" title="备份源代码"></a><strong>备份源代码</strong></h3><p>不要忘记将源文件也上传到github。在Git Bash中依次执行</p>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>添加文件到本地缓冲区</p>
-<blockquote>
-<p>git commit –m “add branch”</p>
-</blockquote>
-<p>确认修改并上传到本地版本控制库中。引号中的内容可任填，填入的内容会用作提交的commit message，显示在github code列表中文件名的右侧。</p>
-<blockquote>
-<p>git push </p>
-</blockquote>
-<p>推送到远程仓库。如此即可将源代码上传至hexo分支。</p>
-<p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃、文件丢失，交换顺序可能就会导致源码丢失。</p>
-<h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，但没有备份源码，备份的操作与之前几乎相同。唯一的区别是，建立分支之后的branch中已经有内容了，此时的内容是部署的文件而非源码。</p>
-<p>因此，clone之后，只需将clone下来的文件中除.git文件夹以外的文件全部删掉，将原来写的博客的源文件整体复制过来即可。</p>
-<p>注意，复制过来的源文件中应该包含一个<code>.gitignore</code>文件，如果没有需要手动创建，内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
-
-<p>如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
-<p>之后再按照上文中的步骤将源文件push到github上。这样，源文件就会覆盖掉分支中的文件，从而实现备份。</p>
-<h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
-<p>配置好环境后，首先克隆仓库。在任意文件夹下打开Git Bash，输入</p>
-<blockquote>
-<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
-</blockquote>
-<p>注意，默认分支仍应为hexo。如已修改，需使用下列语句克隆对应分支：</p>
-<blockquote>
-<p>git clone -b hexo <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
-</blockquote>
-<p>进入刚拷贝的<code>xxxx.github.io</code>文件夹，通过Git Bash依次执行</p>
-<blockquote>
-<p>npm install hexo</p>
-</blockquote>
-<blockquote>
-<p>npm install</p>
-</blockquote>
-<blockquote>
-<p>npm install hexo-deployer-git</p>
-</blockquote>
-<p>切记不要执行hexo init，否则之前写好的东西就都没了。</p>
-<p>这样就在新的设备上也安装好了hexo。此后的修改配置部署操作就都如常了。请参考上文，自行操作。</p>
-<p>当然，如果额外安装过hexo插件，就只能找个地方记住自己装了哪些东西，然后在新设备上再装一遍。否则可能出现在另一台设备上生成的博客缺少东西的情况。</p>
-<p>注意，如果在其它设备修改过文件，在新设备上进行操作之前，要先使用下述指令</p>
-<blockquote>
-<p>git pull</p>
-</blockquote>
-<p>将本地仓库与远程仓库同步（下载+合并版本）。否则可能出现版本冲突、无法push的情况，造成不必要的麻烦。。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发布新文章的步骤如下：在控制台输入</p>
-<blockquote>
-<p>hexo n “文章名” </p>
-</blockquote>
-<p>编辑完毕后，</p>
-<blockquote>
-<p>hexo clean</p>
-</blockquote>
-<blockquote>
-<p>hexo g -d</p>
-</blockquote>
-<p>若要备份源代码，只需</p>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<blockquote>
-<p>git commit -m “xxx”</p>
-</blockquote>
-<blockquote>
-<p>git push</p>
-</blockquote>
-<p>以上操作均可在控制台中完成，不必切换到Git Bash。</p>
-<p>笔者为懒人提供了两个批处理脚本，这样就不必手打命令了。</p>
-<p>同步源文件到github.bat</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> /p commit_log=请输入 commit 日志信息:</span><br><span class="line">git status</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"%commit_log%"</span></span><br><span class="line">git push</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>发布文章到github.bat</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+环境准备首先需要安装、配置好g
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/其他/使用hexo搭建博客/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1412,6 +1098,20 @@
 
 
 
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      推荐阅读
+    </div>
+    <ul class="links-of-blogroll-list">
+      
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/" title="https://github.com/" rel="noopener" target="_blank">Github</a>
+        </li>
+      
+    </ul>
+  </div>
 
 
           
