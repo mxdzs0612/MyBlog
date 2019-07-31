@@ -37,5 +37,8 @@
     "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
     "stylint": "^1.5.9"
+  },
+  "dependencies": {
+    "hexo-next-utteranc": "github:theme-next/hexo-next-utteranc"
   }
 }
