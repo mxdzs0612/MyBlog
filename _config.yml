@@ -90,3 +90,9 @@ algolia:
   apiKey: 'ce723c64aa5162a06db74612c1addedd'
   indexName: 'GithubBlog'
   chunkSize: 5000
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
