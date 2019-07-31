@@ -209,10 +209,11 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: Links
+links_title: 推荐阅读
 links_layout: block
 #links_layout: inline
 links:
+  Github: https://github.com/
   #Title: http://example.com
 
 # Sidebar Avatar
@@ -294,7 +295,7 @@ excerpt_description: true
 # Automatically Excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Read more button
