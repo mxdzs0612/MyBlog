@@ -138,7 +138,7 @@ avatar:
 ## 集成第三方功能
 NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考[官方文档](https://theme-next.org/docs/)。
 
-理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。
+理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。~~但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。~~ 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务，经尝试可以成功开启。
 
 ### **阅读数量统计**
 NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。
@@ -160,10 +160,10 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 ```
-如想使用第三方统计工具，个人推荐[LeanCloud](https://leancloud.cn/)。
+不蒜子的缺点是统计不是很准（只多不少）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的建议考虑谷歌/百度的统计。
 
 ### **搜索功能**
-在主题配置文件中搜索`# Search Services`注释，下面包含了NexT集成的两种配置方式。本站采用的是第一种，即`algolia_search`。
+在主题配置文件中搜索`# Search Services`注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即`algolia_search`。
 
 首先进入[Algolia官方网站](https://www.algolia.com/)，注册账号。可以直接使用你的github账号。
 
@@ -205,6 +205,41 @@ algolia:
 
 更详细信息，可参考github上的[文档](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md)。
 
+### **本地搜索功能**
+algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。因此本站决定换用`Local Search`。个人也更推荐这种搜索方式。
+
+首先在根目录打开Git Bash，运行
+>$ npm install hexo-generator-searchdb --save
+
+在博客配置文件增添下列语句：
+```yml
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+```
+最后在主题配置文件中搜索`# Local search`，将`enable`属性设为true即可。
+```yml
+# Local search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+local_search:
+  enable: true
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  # Preload the search data when the page loads.
+  preload: false
+```
+
+搜索功能的位置和algolia一样，也在菜单栏的最下面，并且支持全文搜索。此外，也可自己定制样式，非常好用。
+
+这种方式就简单了很多，缺点是需要额外一些安装包，换设备部署需要重新安装。
+
 ### **评论**
 
 本文直接使用了[GITALK](https://gitalk.github.io/)。这种方式的优点是配置简单，缺点是不支持无登陆评论。
@@ -233,4 +268,4 @@ GITALK是利用github API，基于Github issue开发的评论系统。
 ```
 这样就完成了。
 
-使用时，需要登录github账号，在文章末尾处进行初始化。只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者也在考虑更换评论系统。
+使用时，需要登录github账号，在文章末尾处进行初始化。只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者暂时关闭了评论功能，也在考虑更换评论系统。
