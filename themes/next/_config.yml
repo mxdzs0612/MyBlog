@@ -192,6 +192,7 @@ site_state: true
 social:
   GitHub: https://github.com/mxdzs0612 || github
   E-Mail: mailto:mxdzs0612@gmail.com || envelope
+  Moegirl: https://zh.moegirl.org/User:Mxdzs0612 || hourglass-half
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -209,11 +210,12 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: 推荐阅读
+links_title: 相关链接
 links_layout: block
 #links_layout: inline
 links:
   Github: https://github.com/
+  萌娘百科: https://zh.moegirl.org/Mainpage
   #Title: http://example.com
 
 # Sidebar Avatar
