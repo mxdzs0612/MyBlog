@@ -138,7 +138,7 @@ avatar:
 ## 集成第三方功能
 NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考[官方文档](https://theme-next.org/docs/)。
 
-理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。~~但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。~~ 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务，经尝试可以成功开启。
+理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。~~但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。~~ 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。
 
 ### **阅读数量统计**
 NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。
@@ -160,7 +160,7 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 ```
-不蒜子的缺点是统计不是很准（只多不少）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的建议考虑谷歌/百度的统计。
+不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以考虑谷歌/百度的统计。
 
 ### **搜索功能**
 在主题配置文件中搜索`# Search Services`注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即`algolia_search`。

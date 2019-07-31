@@ -53,7 +53,7 @@ rss:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2019
 
   # Icon between year and copyright info.
   icon:
@@ -800,8 +800,8 @@ leancloud_visitors:
 firestore:
   enable: false
   collection: articles # Required, a string collection name to access firestore database
-  apiKey: # Required
-  projectId: # Required
+  apiKey: AIzaSyCIuJNvQMYiGGy3D7-7-ZsEAXQmxjXWDUY # Required
+  projectId: myblog-ae2c1 # Required
   bluebird: false # Enable this if you want to include bluebird 3.5.1 (core version) Promise polyfill
 
 # Show Views / Visitors of the website / page with busuanzi.
