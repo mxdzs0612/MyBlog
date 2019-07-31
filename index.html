@@ -645,7 +645,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-31 14:19:56" itemprop="dateModified" datetime="2019-07-31T14:19:56+08:00">2019-07-31</time>
+                <time title="修改时间：2019-07-31 15:51:20" itemprop="dateModified" datetime="2019-07-31T15:51:20+08:00">2019-07-31</time>
               </span>
             
           
@@ -683,7 +683,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">7.1k</span>
+              <span title="本文字数">7.9k</span>
             </span>
           
 
@@ -695,7 +695,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">12 分钟</span>
+              <span title="阅读时长">13 分钟</span>
             </span>
           
 
@@ -817,7 +817,7 @@
 <h3 id="设置网站图标"><a href="#设置网站图标" class="headerlink" title="设置网站图标"></a><strong>设置网站图标</strong></h3><p>网站图标就是显示在网页标签最左边的那个小图片。</p>
 <p>先将图标文件复制到主题目录中的<code>images</code>文件夹下，然后在主题的配置文件中找到<code>favicon</code>关键字，按照提示修改为相对路径即可。</p>
 <h2 id="集成第三方功能"><a href="#集成第三方功能" class="headerlink" title="集成第三方功能"></a>集成第三方功能</h2><p>NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考<a href="https://theme-next.org/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>理论上也可以使用<a href="https://hexo.io/plugins/index.html" target="_blank" rel="noopener">hexo的插件</a>，进行下载。<del>但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/issues" target="_blank" rel="noopener">issue</a>进行教学。</del> 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。</p>
+<p>理论上也可以使用<a href="https://hexo.io/plugins/index.html" target="_blank" rel="noopener">hexo的插件</a>，进行下载。<del>但是在NexT主题下，笔者的尝试<ruby>全部失败<rt><a href="https://zh.moegirl.org/%E4%B8%8D%E8%A6%81%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%95%8A%EF%BC%81" target="_blank" rel="noopener">全部木大</a></rt></ruby>了。如果读者知道该怎么做，欢迎发<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/issues" target="_blank" rel="noopener">issue</a>进行教学。</del> 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。</p>
 <h3 id="阅读数量统计"><a href="#阅读数量统计" class="headerlink" title="阅读数量统计"></a><strong>阅读数量统计</strong></h3><p>NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。</p>
 <p>在主题的配置文件中搜索<code>busuanzi_count</code>，将下面的enable属性设为true即可。下面几条属性可自行设置。</p>
 <p>total_visitors：总访问人数统计；total_views：总访问量统计。这两个值会显示在页面的最下面。</p>
@@ -825,7 +825,7 @@
 <p>xxx_icon可设置这些访问量的示意图标，图标采用的是<a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">Font Awesome Icons</a>，可自行替换成自己喜欢的。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  total_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_views_icon:</span> <span class="string">eye</span></span><br><span class="line"><span class="attr">  post_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
 
-<p>不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以考虑谷歌/百度的统计。</p>
+<p>不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 近期改版后，LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以自行查找其他统计方法。</p>
 <h3 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a><strong>搜索功能</strong></h3><p>在主题配置文件中搜索<code># Search Services</code>注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即<code>algolia_search</code>。</p>
 <p>首先进入<a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia官方网站</a>，注册账号。可以直接使用你的github账号。</p>
 <p>填写信息后（部分信息可跳过不填），点击页面上的粉红色按钮<code>NEW INDEX</code>，新建一个索引，起一个名字（后面会用到）。</p>
@@ -869,15 +869,30 @@
 
 <p>搜索功能的位置和algolia一样，也在菜单栏的最下面，并且支持全文搜索。此外，也可自己定制样式，非常好用。</p>
 <p>这种方式就简单了很多，缺点是需要额外一些安装包，换设备部署需要重新安装。</p>
-<h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a><strong>评论</strong></h3><p>本文直接使用了<a href="https://gitalk.github.io/" target="_blank" rel="noopener">GITALK</a>。这种方式的优点是配置简单，缺点是不支持无登陆评论。</p>
-<p>GITALK是利用github API，基于Github issue开发的评论系统。</p>
+<p>此外，这种方法的原理是在本地生成一个包含索引的<code>search.xml</code>文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会占用不少空间。</p>
+<h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a><strong>评论</strong></h3><p>本站原先使用了<a href="https://gitalk.github.io/" target="_blank" rel="noopener">GITALK</a>。这种方式的优点是配置简单，缺点是不支持无登陆评论。</p>
+<p>GITALK是利用github API、基于Github issue开发的评论系统。</p>
 <p>首先要去<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">这里</a>申请一个新app。四个位置依次填入app名称、博客地址<code>https://xxxx.github.io</code>、描述（任填）以及回调地址（仍然填博客地址）。点击绿色按钮创建。</p>
-<p>完成后，记住app的信息，在主题配置文件中搜索<code># Gitalk</code>，进行设置</p>
+<p>完成后，记住app的信息，在主题配置文件中搜索<code># Gitalk</code>，参照注释进行设置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##next/_config.yml</span></span><br><span class="line">    <span class="comment"># Gitalk</span></span><br><span class="line">    <span class="comment"># Demo: https://gitalk.github.io</span></span><br><span class="line"><span class="string">​</span>    <span class="attr">gitalk:</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">enable:</span> <span class="literal">false</span>     <span class="comment"># 设为true即可启用</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">github_id:</span>        <span class="comment"># Github repo owner，填入你的用户名</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">repo:</span>             <span class="comment"># Repository name to store issues，新建的用于保存评论数据的仓库名，填入博客的repo名即可，如xxxx.github.io`</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">client_id:</span>        <span class="comment"># Github Application Client ID，填入app信息</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">client_secret:</span>    <span class="comment"># Github Application Client Secret，填入app信息</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">admin_user:</span>       <span class="comment"># GitHub repo owner and collaborators, only these guys can initialize github issues</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">distraction_free_mode:</span> <span class="literal">true</span> <span class="comment"># Facebook-like distraction free mode</span></span><br><span class="line">      <span class="comment"># Gitalk's display language depends on user's browser or system environment</span></span><br><span class="line">      <span class="comment"># If you want everyone visiting your site to see a uniform language, you can set a force language value</span></span><br><span class="line">      <span class="comment"># Available value: en, es-ES, fr, ru, zh-CN, zh-TW</span></span><br><span class="line"><span class="string">​</span>      <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
 
 <p>这样就完成了。</p>
-<p>使用时，需要登录github账号，在文章末尾处进行初始化。只有在<code>admin_user</code>中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者暂时关闭了评论功能，也在考虑更换评论系统。</p>
-<h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a><strong>字数统计</strong></h3>
+<p>使用时，需要登录github账号才能评论，评论呈现在页面最下方。每篇文章都要进行初始化，建立一个原始的issue，才能增添新的评论。而只有在<code>admin_user</code>中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者在考虑更换评论系统，本站的评论功能暂时关闭。</p>
+<p>如果之前注册了LeanCloud，使用LeanCloud提供的评论插件<code>Valine</code>是一个非常不错的选择。这是少有的支持无登陆评论的插件。免费版虽有诸多限制，但也足够使用，推荐不介意上传自己手持身份证照片的读者采用Valine，具体教程还请参考<a href="https://theme-next.org/docs/third-party-services/comments-and-widgets#Valine-China" target="_blank" rel="noopener">官方文档</a>。</p>
+<h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a><strong>字数统计</strong></h3><p>首先在根目录运行Git Bash，执行</p>
+<blockquote>
+<p>npm install hexo-symbols-count-time –save</p>
+</blockquote>
+<p>然后在博客的配置文件中新增配置</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">  symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  time:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_symbols:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_time:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  exclude_codeblock:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>最后，在主题的配置文件中搜索<code>symbols_count_time:</code>，进行如下修改</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Post wordcount display settings</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-symbols-count-time</span></span><br><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">  separated_meta:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  item_text_post:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  item_text_total:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  awl:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">  wpm:</span> <span class="number">300</span></span><br></pre></td></tr></table></figure>
+
+<p>上述设置是对中文博客的推荐设置，如想自定义，请参考<a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。</p>
+<p>如果<code>item_text_total</code>设置为true，在页面最下方还会显示站点总字数与站点阅读总时长的估计值。</p>
+
           
         
       
@@ -1434,7 +1449,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">13k</span>
   
 
   
@@ -1445,7 +1460,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
   
 </div>
 
