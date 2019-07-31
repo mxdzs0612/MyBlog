@@ -1,3 +1,2 @@
-# npm install hexo-algoliasearch --save
 npm install hexo-generator-searchdb --save
 npm install hexo-symbols-count-time --save

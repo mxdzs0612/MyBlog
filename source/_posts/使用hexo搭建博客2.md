@@ -138,7 +138,7 @@ avatar:
 ## 集成第三方功能
 NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考[官方文档](https://theme-next.org/docs/)。
 
-理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。~~但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。~~ 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。
+理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。~~但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>[全部木大](https://zh.moegirl.org/%E4%B8%8D%E8%A6%81%E5%81%9C%E4%B8%8B%E6%9D%A5%E5%95%8A%EF%BC%81)</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。~~ 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。
 
 ### **阅读数量统计**
 NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。
@@ -160,7 +160,7 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 ```
-不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以考虑谷歌/百度的统计。
+不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 近期改版后，LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以自行查找其他统计方法。
 
 ### **搜索功能**
 在主题配置文件中搜索`# Search Services`注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即`algolia_search`。
@@ -240,15 +240,17 @@ local_search:
 
 这种方式就简单了很多，缺点是需要额外一些安装包，换设备部署需要重新安装。
 
+此外，这种方法的原理是在本地生成一个包含索引的`search.xml`文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会占用不少空间。
+
 ### **评论**
 
-本文直接使用了[GITALK](https://gitalk.github.io/)。这种方式的优点是配置简单，缺点是不支持无登陆评论。
+本站原先使用了[GITALK](https://gitalk.github.io/)。这种方式的优点是配置简单，缺点是不支持无登陆评论。
 
-GITALK是利用github API，基于Github issue开发的评论系统。
+GITALK是利用github API、基于Github issue开发的评论系统。
 
 首先要去[这里](https://github.com/settings/applications/new)申请一个新app。四个位置依次填入app名称、博客地址`https://xxxx.github.io`、描述（任填）以及回调地址（仍然填博客地址）。点击绿色按钮创建。
 
-完成后，记住app的信息，在主题配置文件中搜索`# Gitalk`，进行设置
+完成后，记住app的信息，在主题配置文件中搜索`# Gitalk`，参照注释进行设置：
 ```yml
 ##next/_config.yml
     # Gitalk
@@ -268,6 +270,36 @@ GITALK是利用github API，基于Github issue开发的评论系统。
 ```
 这样就完成了。
 
-使用时，需要登录github账号，在文章末尾处进行初始化。只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者暂时关闭了评论功能，也在考虑更换评论系统。
+使用时，需要登录github账号才能评论，评论呈现在页面最下方。每篇文章都要进行初始化，建立一个原始的issue，才能增添新的评论。而只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者在考虑更换评论系统，本站的评论功能暂时关闭。
+
+如果之前注册了LeanCloud，使用LeanCloud提供的评论插件`Valine`是一个非常不错的选择。这是少有的支持无登陆评论的插件。免费版虽有诸多限制，但也足够使用，推荐不介意上传自己手持身份证照片的读者采用Valine，具体教程还请参考[官方文档](https://theme-next.org/docs/third-party-services/comments-and-widgets#Valine-China)。
 
 ### **字数统计**
+首先在根目录运行Git Bash，执行
+>npm install hexo-symbols-count-time --save
+
+然后在博客的配置文件中新增配置
+```yml
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+```
+最后，在主题的配置文件中搜索`symbols_count_time:`，进行如下修改
+```yml
+# Post wordcount display settings
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: true
+  awl: 2
+  wpm: 300
+```
+上述设置是对中文博客的推荐设置，如想自定义，请参考[官方文档](https://github.com/theme-next/hexo-symbols-count-time)。
+
+这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。
+
+如果`item_text_total`设置为true，在页面最下方还会显示站点总字数与站点阅读总时长的估计值。
