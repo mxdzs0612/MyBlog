@@ -54,7 +54,13 @@ passage_end_tag:
 - 是否显示Hexo、NexT的链接及版本号
 - 是否显示网址ICP备案号
 
-## canvas
+## 标签样式
+
+## 代码风格
+
+## Github横幅
+
+## Canvas
 
 ## 动态标题栏
 
