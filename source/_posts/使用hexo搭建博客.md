@@ -9,7 +9,9 @@ tags: [github, hexo]
 
 关于hexo的简介，可以参考[官方文档](https://hexo.io/zh-cn/docs/)。
 ```
-操作环境：Windows 10 1903专业版
+操作系统： Windows 10 1903专业版
+编辑器： VS Code & Notepad++
+浏览器： Chrome
 ```
 ## 环境准备
 首先需要安装、配置好[git](https://git-scm.com/)。
