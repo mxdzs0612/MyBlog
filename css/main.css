@@ -958,8 +958,7 @@ pre .javascript .function {
 .pagination .next {
   margin-right: 0;
 }
-.pagination .page-number.current,
-.algolia-pagination .current .page-number {
+.pagination .page-number.current {
   color: #fff;
   background: #ccc;
   border-top-color: #ccc;
@@ -1640,7 +1639,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff28;
+  background: #ff45ff;
 }
 .feed-link,
 .chat {
@@ -1950,13 +1949,7 @@ pre .javascript .function {
     transform: scale(1.1);
   }
 }
-.ais-search-box--magnifier svg {
-  display: none !important;
-}
-.ais-search-box--reset svg {
-  display: none !important;
-}
-.algolia-pop-overlay {
+.local-search-pop-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1965,28 +1958,22 @@ pre .javascript .function {
   z-index: 2080;
   background-color: rgba(0,0,0,0.3);
 }
-@media (max-width: 767px) {
-  .algolia-pop-overlay {
-    display: none;
-  }
-}
-.algolia-popup {
-  overflow: hidden;
-  padding: 0;
+.local-search-popup {
   display: none;
   position: fixed;
   top: 10%;
   left: 50%;
+  margin-left: -350px;
   width: 700px;
   height: 80%;
-  margin-left: -350px;
+  padding: 0;
   background: #fff;
   color: #333;
   z-index: 9999;
   border-radius: 5px;
 }
 @media (max-width: 767px) {
-  .algolia-popup {
+  .local-search-popup {
     padding: 0;
     top: 0;
     left: 0;
@@ -1996,105 +1983,77 @@ pre .javascript .function {
     border-radius: 0;
   }
 }
-.algolia-popup .popup-btn-close {
-  position: absolute;
-  right: 14px;
-  color: #4ebd79;
-  font-size: 14px;
+.local-search-popup ul.search-result-list {
+  padding: 0;
+  margin: 0 5px;
+}
+.local-search-popup p.search-result {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+.local-search-popup a.search-result-title {
   font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding-left: 15px;
-  border-left: 1px solid #eee;
-  top: 10px;
+  font-size: 16px;
 }
-.algolia-popup .popup-btn-close .fa {
-  color: #999;
-  font-size: 18px;
+.local-search-popup .search-keyword {
+  border-bottom: 1px dashed #f00;
+  font-weight: bold;
+  color: #f00;
 }
-.algolia-popup .popup-btn-close:hover .fa {
-  color: #222;
-}
-.algolia-search {
-  padding: 10px 15px 5px;
-  max-height: 50px;
-  border-bottom: 1px solid #ccc;
+.local-search-popup .local-search-header {
+  padding: 5px;
+  height: 36px;
   background: #f5f5f5;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.algolia-search-input-icon {
+.local-search-popup #local-search-result {
+  overflow: auto;
+  position: relative;
+  padding: 5px 25px;
+  height: calc(100% - 55px);
+}
+.local-search-popup .local-search-input-wrapper {
   display: inline-block;
-  width: 20px;
+  width: calc(100% - 90px);
+  height: 36px;
+  line-height: 36px;
+  padding: 0 5px;
 }
-.algolia-search-input-icon .fa {
-  font-size: 18px;
-}
-.algolia-search-input {
-  display: inline-block;
-  width: calc(90% - 20px);
-}
-.algolia-search-input input {
-  padding: 5px 0;
+.local-search-popup .local-search-input-wrapper input {
+  padding: 8px 0;
+  height: 20px;
+  display: block;
   width: 100%;
   outline: none;
   border: none;
   background: transparent;
-}
-.algolia-powered {
-  float: right;
-}
-.algolia-powered img {
-  display: inline-block;
-  height: 18px;
   vertical-align: middle;
 }
-.algolia-results {
-  position: relative;
-  overflow: auto;
-  padding: 10px 30px;
-  height: calc(100% - 50px);
-}
-.algolia-results hr {
-  margin: 10px 0;
-}
-.algolia-results .highlight {
-  font-style: normal;
-  margin: 0;
-  padding: 0 2px;
-  font-size: inherit;
-  color: #f00;
-}
-.algolia-hits {
-  margin-top: 20px;
-}
-.algolia-hit-item {
-  margin: 15px 0;
-}
-.algolia-hit-item-link {
-  display: block;
-  border-bottom: 1px dashed #ccc;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
-}
-.algolia-pagination .pagination {
-  margin: 40px 0px;
-  border-top: none;
-  padding: 0;
-  opacity: 1;
-}
-.algolia-pagination .pagination-item {
+.local-search-popup .search-icon,
+.local-search-popup .popup-btn-close {
   display: inline-block;
+  font-size: 18px;
+  color: #999;
+  height: 36px;
+  width: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.algolia-pagination .page-number {
-  border-top: none;
+.local-search-popup .search-icon {
+  float: left;
 }
-.algolia-pagination .page-number:hover {
-  border-bottom: 1px solid #222;
+.local-search-popup .popup-btn-close {
+  border-left: 1px solid #eee;
+  float: right;
+  cursor: pointer;
 }
-.algolia-pagination .disabled-item {
-  visibility: hidden;
+.local-search-popup #no-result {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ccc;
 }
 .page-archive .archive-page-counter {
   position: relative;
