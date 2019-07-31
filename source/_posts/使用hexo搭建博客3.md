@@ -1,9 +1,7 @@
 ---
 title: 使用hexo在github上搭建博客：个性化篇
-tags:
-  - github
-  - hexo
-category: 其他
+category: 建站
+tags: [github, hexo]
 date: 2019-07-31 12:31:20
 ---
 

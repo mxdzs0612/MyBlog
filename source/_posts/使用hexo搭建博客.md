@@ -1,7 +1,7 @@
 ---
 title: 使用hexo在github上搭建博客：基础篇
 date: 2019-07-29 10:58:21
-category: 其他
+category: 建站
 tags: [github, hexo]
 ---
 
