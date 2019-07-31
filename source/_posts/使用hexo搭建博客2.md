@@ -140,10 +140,6 @@ NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍�
 
 理论上也可以使用[hexo的插件](https://hexo.io/plugins/index.html)，进行下载。但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发[issue](https://github.com/mxdzs0612/mxdzs0612.github.io/issues)进行教学。
 
-### **文末提示语**
-
-### **网站底部内容**
-
 ### **阅读数量统计**
 NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。
 
@@ -164,9 +160,77 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 ```
+如想使用第三方统计工具，个人推荐[LeanCloud](https://leancloud.cn/)。
 
 ### **搜索功能**
+在主题配置文件中搜索`# Search Services`注释，下面包含了NexT集成的两种配置方式。本站采用的是第一种，即`algolia_search`。
+
+首先进入[Algolia官方网站](https://www.algolia.com/)，注册账号。可以直接使用你的github账号。
+
+填写信息后（部分信息可跳过不填），点击页面上的粉红色按钮`NEW INDEX`，新建一个索引，起一个名字（后面会用到）。
+
+来到[API Keys](https://www.algolia.com/api-keys)页面，`Application ID`和`Search-Only API Key`都是后面要用的。
+
+再来到`All API Keys`标签，点击Edit，在ACL选项中打开`search`、`addObject`、`deleteObject`、`listIndexes`、`deleteIndex`。
+
+然后安装插件。在主题根目录下执行
+>	npm install hexo-algoliasearch --save
+
+然后在根目录的站点配置文件中，增添
+```yml
+algolia:
+  applicationID: 'appId'
+  apiKey: 'apiKey'
+  indexName: 'indexName'
+  chunkSize: 5000
+```
+将刚刚记录下来的值填进去。
+
+但还没结束。下一步需要让Algolia记录你的文章数据。
+
+在根目录下打开Git Bash，输入
+>export HEXO_ALGOLIA_INDEXING_KEY=Search-Only API key
+
+（注：若用cmd，要将export换成set，但此法可能会导致不可预知的错误，因此建议使用Git Bash）
+>hexo algolia
+
+顺利的话，Algolia后台的`Indices`下应该就能看到我们的博客的信息了。
+
+最后添加页面上的入口及脚本。进入主题目录下，Git Bash输入
+>git clone https://github.com/theme-next/theme-next-algolia-instant-search source/lib/algolia-instant-search
+
+在`source/lib/`目录下安装algolia-instant-search所需的文件。
+
+最后，把主题配置文件中的`algolia_search.enable`，属性设为true，即可开启搜索功能。
+
+更详细信息，可参考github上的[文档](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md)。
 
 ### **评论**
 
-（未完待续）
+本文直接使用了[GITALK](https://gitalk.github.io/)。这种方式的优点是配置简单，缺点是不支持无登陆评论。
+
+GITALK是利用github API，基于Github issue开发的评论系统。
+
+首先要去[这里](https://github.com/settings/applications/new)申请一个新app。四个位置依次填入app名称、博客地址`https://xxxx.github.io`、描述（任填）以及回调地址（仍然填博客地址）。点击绿色按钮创建。
+
+完成后，记住app的信息，在主题配置文件中搜索`# Gitalk`，进行设置
+```yml
+##next/_config.yml
+    # Gitalk
+    # Demo: https://gitalk.github.io
+​    gitalk:
+​      enable: false     # 设为true即可启用
+​      github_id:        # Github repo owner，填入你的用户名
+​      repo:             # Repository name to store issues，新建的用于保存评论数据的仓库名，填入博客的repo名即可，如xxxx.github.io`
+​      client_id:        # Github Application Client ID，填入app信息
+​      client_secret:    # Github Application Client Secret，填入app信息
+​      admin_user:       # GitHub repo owner and collaborators, only these guys can initialize github issues
+​      distraction_free_mode: true # Facebook-like distraction free mode
+      # Gitalk's display language depends on user's browser or system environment
+      # If you want everyone visiting your site to see a uniform language, you can set a force language value
+      # Available value: en, es-ES, fr, ru, zh-CN, zh-TW
+​      language:
+```
+这样就完成了。
+
+使用时，需要登录github账号，在文章末尾处进行初始化。只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能。
