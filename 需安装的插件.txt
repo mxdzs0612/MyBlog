@@ -1,2 +1,2 @@
-npm install hexo-algoliasearch --save
+# npm install hexo-algoliasearch --save
 npm install hexo-generator-searchdb --save
