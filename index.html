@@ -135,16 +135,6 @@
 
 
 
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a6eeff48a3697e79204af8c578da3803";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 
 
 
@@ -374,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/使用hexo搭建博客3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/使用hexo搭建博客3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mxdzs0612">
@@ -394,7 +384,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/31/使用hexo搭建博客3/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客：个性化篇</a>
+                <a href="/其他/使用hexo搭建博客3/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客：个性化篇</a>
               
             
           </h1>
@@ -434,7 +424,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-31 12:38:01" itemprop="dateModified" datetime="2019-07-31T12:38:01+08:00">2019-07-31</time>
+                <time title="修改时间：2019-07-31 14:03:58" itemprop="dateModified" datetime="2019-07-31T14:03:58+08:00">2019-07-31</time>
               </span>
             
           
@@ -485,8 +475,30 @@
       
         
           
-            <p>本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同，</p>
-<p>（待续）</p>
+            <p>本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同.</p>
+<p>NexT的页面是通过<code>.swig</code>格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。</p>
+<h2 id="永久链接"><a href="#永久链接" class="headerlink" title="永久链接"></a>永久链接</h2><p>更改博客的配置文件的<code>permalink</code>属性，即可修改文章的URL形式。</p>
+<p>支持的修改类型请参考Hexo的<a href="https://hexo.io/zh-cn/docs/permalinks.html" target="_blank" rel="noopener">官方文档</a>。</p>
+<h2 id="文末提示"><a href="#文末提示" class="headerlink" title="文末提示"></a>文末提示</h2><p>在路径<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件,并添加以下内容：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span>-------------本文结束<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>感谢您的阅读-------------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>中间的内容可按个人喜好修改，符合HTML语法即可。</p>
+<p>打开同目录下的<code>post.swig</code>文件，搜索<code>post-footer</code>，在其所在标签上方增加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  &#123;% if not is_index %&#125;</span><br><span class="line">    &#123;% include 'passage-end-tag.swig' %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>最后在主题的配置文件中的任意位置添加</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文章末尾添加“本文结束”标记</span></span><br><span class="line"><span class="attr">passage_end_tag:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="网页底部内容"><a href="#网页底部内容" class="headerlink" title="网页底部内容"></a>网页底部内容</h2><p>在主题配置文件中搜索<code>footer:</code>属性，按个人喜好进行配置即可。</p>
+<p>可进行控制的项目有：</p>
+<ul>
+<li>网站从哪年起建立</li>
+<li>所显示的图案及样式（依然是之前介绍过的fa图标，可设定其颜色以及是否为动态的）</li>
+<li>版权所有者声明，默认与author相同</li>
+<li>是否显示Hexo、NexT的链接及版本号</li>
+<li>是否显示网址ICP备案号</li>
+</ul>
+<h2 id="canvas"><a href="#canvas" class="headerlink" title="canvas"></a>canvas</h2><h2 id="动态标题栏"><a href="#动态标题栏" class="headerlink" title="动态标题栏"></a>动态标题栏</h2><h2 id="点击效果"><a href="#点击效果" class="headerlink" title="点击效果"></a>点击效果</h2><h2 id="鼠标样式"><a href="#鼠标样式" class="headerlink" title="鼠标样式"></a>鼠标样式</h2><p>（待续）</p>
 
           
         
@@ -546,7 +558,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/使用hexo搭建博客2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/使用hexo搭建博客2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mxdzs0612">
@@ -566,7 +578,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/29/使用hexo搭建博客2/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客：主题篇</a>
+                <a href="/其他/使用hexo搭建博客2/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客：主题篇</a>
               
             
           </h1>
@@ -877,7 +889,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/使用hexo搭建博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/其他/使用hexo搭建博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mxdzs0612">
@@ -897,7 +909,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/29/使用hexo搭建博客/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客：基础篇</a>
+                <a href="/其他/使用hexo搭建博客/" class="post-title-link" itemprop="url">使用hexo在github上搭建博客：基础篇</a>
               
             
           </h1>
@@ -1356,6 +1368,32 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
