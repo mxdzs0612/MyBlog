@@ -135,6 +135,16 @@
 
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a6eeff48a3697e79204af8c578da3803";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -596,7 +606,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-31 12:30:28" itemprop="dateModified" datetime="2019-07-31T12:30:28+08:00">2019-07-31</time>
+                <time title="修改时间：2019-07-31 12:44:20" itemprop="dateModified" datetime="2019-07-31T12:44:20+08:00">2019-07-31</time>
               </span>
             
           
@@ -748,7 +758,7 @@
 <h3 id="设置网站图标"><a href="#设置网站图标" class="headerlink" title="设置网站图标"></a><strong>设置网站图标</strong></h3><p>网站图标就是显示在网页标签最左边的那个小图片。</p>
 <p>先将图标文件复制到主题目录中的<code>images</code>文件夹下，然后在主题的配置文件中找到<code>favicon</code>关键字，按照提示修改为相对路径即可。</p>
 <h2 id="集成第三方功能"><a href="#集成第三方功能" class="headerlink" title="集成第三方功能"></a>集成第三方功能</h2><p>NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考<a href="https://theme-next.org/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
-<p>理论上也可以使用<a href="https://hexo.io/plugins/index.html" target="_blank" rel="noopener">hexo的插件</a>，进行下载。<del>但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/issues" target="_blank" rel="noopener">issue</a>进行教学。</del> 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务，经尝试可以成功开启。</p>
+<p>理论上也可以使用<a href="https://hexo.io/plugins/index.html" target="_blank" rel="noopener">hexo的插件</a>，进行下载。<del>但是在NexT主题下，笔者的尝试<ruby>全部失败<rt>全部木大</rt></ruby>了。如果读者知道该怎么做，欢迎发<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/issues" target="_blank" rel="noopener">issue</a>进行教学。</del> 经尝试发现，凡是出现这种情况的，都是因为对应的插件的用法不是那么简单，不是那种安装了、enable设为true了就能用的，需要更多更复杂的配置。一些比较简单的、集成程度较好的第三方服务可以成功开启。</p>
 <h3 id="阅读数量统计"><a href="#阅读数量统计" class="headerlink" title="阅读数量统计"></a><strong>阅读数量统计</strong></h3><p>NexT集成的阅读数量统计工具非常多，这里就以最简单的不蒜子为例。</p>
 <p>在主题的配置文件中搜索<code>busuanzi_count</code>，将下面的enable属性设为true即可。下面几条属性可自行设置。</p>
 <p>total_visitors：总访问人数统计；total_views：总访问量统计。这两个值会显示在页面的最下面。</p>
@@ -756,7 +766,7 @@
 <p>xxx_icon可设置这些访问量的示意图标，图标采用的是<a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">Font Awesome Icons</a>，可自行替换成自己喜欢的。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  total_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_views_icon:</span> <span class="string">eye</span></span><br><span class="line"><span class="attr">  post_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
 
-<p>不蒜子的缺点是统计不是很准（只多不少）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的建议考虑谷歌/百度的统计。</p>
+<p>不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 现在LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以考虑谷歌/百度的统计。</p>
 <h3 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a><strong>搜索功能</strong></h3><p>在主题配置文件中搜索<code># Search Services</code>注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即<code>algolia_search</code>。</p>
 <p>首先进入<a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia官方网站</a>，注册账号。可以直接使用你的github账号。</p>
 <p>填写信息后（部分信息可跳过不填），点击页面上的粉红色按钮<code>NEW INDEX</code>，新建一个索引，起一个名字（后面会用到）。</p>
@@ -1346,32 +1356,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
-    </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 
