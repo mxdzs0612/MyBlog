@@ -34,10 +34,21 @@ tags: [github, hexo]
 <img src="/images/表情包/黄大叔.gif">
 
 ## 在线多媒体
-（待补完）
+添加外部链接的图片就更简单了，直接将图片的URL贴进小括号中即可。
+```md
+![文字说明](图片地址)
+```
+如
+![我的头像](https://avatars2.githubusercontent.com/u/35512473?s=40&v=4)
+
+音乐和视频需要链接iframe格式的播放器插件，如
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4970195&auto=1&height=66"></iframe>
 
 ## README文件
-（待补完）
+在主题的`source`根目录下添加一个`README.md`文件，正常填写内容。
+
+然后打开博客的配置文件，搜索`skip_render`参数，设为`README.md`。这样，部署博客时就会自动跳过README.md文件，内容可以正常显示在github仓库的首页。
 
 ---
 关于Hexo建站的内容就先写这么多吧。如果发现更多好点子，我会继续补充。如有过时、疏漏或错误之处，还请发issue通知我，我看到了就会更改，谢谢支持！
