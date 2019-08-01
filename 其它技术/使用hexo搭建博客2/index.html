@@ -71,7 +71,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文介绍了hexo最常见的主题，NexT主题的基本用法。  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-01T06:21:05.407Z">
+<meta property="og:updated_time" content="2019-08-01T10:12:35.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：主题篇">
 <meta name="twitter:description" content="本文介绍了hexo最常见的主题，NexT主题的基本用法。  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。">
@@ -310,7 +310,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-01 14:21:05" itemprop="dateModified" datetime="2019-08-01T14:21:05+08:00">2019-08-01</time>
+                <time title="修改时间：2019-08-01 18:12:35" itemprop="dateModified" datetime="2019-08-01T18:12:35+08:00">2019-08-01</time>
               </span>
             
           
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">8.9k</span>
+              <span title="本文字数">9k</span>
             </span>
           
             <span class="post-meta-item">
@@ -545,9 +545,10 @@
 <p>然后在任意配置文件中（建议在主题配置文件中）新建如下配置</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Demo: https://utteranc.es/  http://trumandu.github.io/about/</span></span><br><span class="line"><span class="attr">utteranc:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="comment">#Github repo such as :TrumanDu/comments</span></span><br><span class="line"><span class="attr">  pathname:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="comment"># theme: github-light,github-dark,github-dark-orange</span></span><br><span class="line"><span class="attr">  theme:</span> <span class="string">github-light</span></span><br><span class="line"><span class="attr">  cdn:</span> <span class="attr">https://utteranc.es/client.js</span></span><br></pre></td></tr></table></figure>
 
-<p>其中，repo下填写你想把哪个仓库的issue当作评论的位置，如<code>xxxx/xxxx.github.io</code>。其它选项按注释设置即可。</p>
+<p>其中，repo下填写你想把哪个仓库的issue当作评论的位置，如<code>xxxx/xxxx.github.io</code>。其它选项按注释设置或保留原样即可。</p>
 <p>重新生成博客，在每篇文章的最下方即会出现utterances评论。登录github账号，任何人可以新建评论，初始化工作将由utterances机器人完成，非常方便。</p>
-<p>缺点也有一些，那就是目前界面都是英文的。不过这无伤大雅。当然，如果读者知道怎么解决，烦请告诉我。</p>
+<p>缺点也有一些，首先，目前界面都是英文的。虽然无伤大雅，但还是希望能够保持界面语言的一致性。</p>
+<p>第二，目前issue的名称似乎只支持pathname，当路径为中文时，此种方式会产生乱码。笔者没有进行尝试，不知道按照GITALK的方式进行配置是否有效，希望能够在后续的文档中有说明吧。</p>
 <p>如果出现跳转错误的问题（如登录后跳转到<a href="https://yoursite.com/），请在博客的配置文件中搜索`#" target="_blank" rel="noopener">https://yoursite.com/），请在博客的配置文件中搜索`#</a> URL<code>，将</code>url: <code>配置为</code>/`或你的站点的URL地址。</p>
 <h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a><strong>字数统计</strong></h3><p>首先在根目录运行Git Bash，执行</p>
 <blockquote>
