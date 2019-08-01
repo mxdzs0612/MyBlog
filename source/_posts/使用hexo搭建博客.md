@@ -8,6 +8,9 @@ tags: [github, hexo]
 本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。
 
 关于hexo的简介，可以参考[官方文档](https://hexo.io/zh-cn/docs/)。
+
+<!-- more -->
+
 ```
 操作系统： Windows 10 1903专业版
 编辑器： VS Code & Notepad++
