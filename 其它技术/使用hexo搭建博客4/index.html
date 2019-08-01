@@ -71,13 +71,13 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文将介绍如何在博客中添加多媒体内容，以及一些不太好归类的杂七杂八的小东西。 本地图片有时候我们想把自己设备上的图片传到博客上。这项工作需要借助第三方工具。 在根路径下打开Git Bash，执行  npm install hexo-asset-image –save  修改博客的配置文件，将post_asset_folder:设为true。 此后，每次新建博客的时候，都会在相同目录下新建一个同名文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="/images/%E6%8A%BD%E7%83%9F.gif">
-<meta property="og:image" content="/images/%E8%A1%A8%E6%83%85%E5%8C%85/%E9%BB%84%E5%A4%A7%E5%8F%94.gif">
-<meta property="og:updated_time" content="2019-08-01T04:55:06.535Z">
+<meta property="og:image" content="/images/%E8%A1%A8%E6%83%85%E5%8C%85/%E6%8A%BD%E7%83%9F.gif">
+<meta property="og:image" content="/images/表情包/黄大叔.gif">
+<meta property="og:updated_time" content="2019-08-01T05:42:19.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：多媒体与杂项篇">
 <meta name="twitter:description" content="本文将介绍如何在博客中添加多媒体内容，以及一些不太好归类的杂七杂八的小东西。 本地图片有时候我们想把自己设备上的图片传到博客上。这项工作需要借助第三方工具。 在根路径下打开Git Bash，执行  npm install hexo-asset-image –save  修改博客的配置文件，将post_asset_folder:设为true。 此后，每次新建博客的时候，都会在相同目录下新建一个同名文">
-<meta name="twitter:image" content="/images/%E6%8A%BD%E7%83%9F.gif">
+<meta name="twitter:image" content="/images/%E8%A1%A8%E6%83%85%E5%8C%85/%E6%8A%BD%E7%83%9F.gif">
   <link rel="canonical" href="/其它技术/使用hexo搭建博客4/">
 
 
@@ -313,7 +313,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-01 12:55:06" itemprop="dateModified" datetime="2019-08-01T12:55:06+08:00">2019-08-01</time>
+                <time title="修改时间：2019-08-01 13:42:19" itemprop="dateModified" datetime="2019-08-01T13:42:19+08:00">2019-08-01</time>
               </span>
             
           
@@ -350,7 +350,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">475</span>
+              <span title="本文字数">613</span>
             </span>
           
             <span class="post-meta-item">
@@ -380,15 +380,18 @@
 <p>npm install hexo-asset-image –save</p>
 </blockquote>
 <p>修改博客的配置文件，将<code>post_asset_folder:</code>设为true。</p>
-<p>此后，每次新建博客的时候，都会在相同目录下新建一个同名文件夹。将图片放入此文件夹中，然后按照markdown语法引入图片即可。</p>
+<p>此后，每次新建博客的时候，都会在相同目录下新建一个同名文件夹。将图片放入此文件夹中，然后按照markdown语法引入图片即可。文件夹当然也可以手动创建。</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">文字说明</span>](<span class="link">文件夹名/图片名.jpg</span>)</span><br></pre></td></tr></table></figure>
 
-<p>如果不想这么麻烦，可以直接把图片塞到主题的<code>source\images</code>目录下。这样可以不用安装额外的包，但可能导致图片管理困难。此外，在本地预览博客文件时，无法看到图片，从而无法预览效果。</p>
-<p>引入图片时，使用绝对路径即可。如</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">文字说明</span>](<span class="link">/images/图片名.jpg</span>)</span><br></pre></td></tr></table></figure>
+<p>如果不想这么麻烦，可以直接把图片塞到主题的<code>source\images</code>目录下。这样可以不用安装额外的包，<del>但可能导致图片管理困难</del> 管理起来也并不困难，继续创建子文件夹即可，分类很方便。比较麻烦的一点是，用本地编辑器的预览功能（如VS Code）预览博客文件时，无法看到图片，从而无法预知实际效果。此外，markdown语法的文字说明似乎不起作用。</p>
+<p>引入图片时，使用绝对路径即可。甚至可以用HTML语法，如</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/images/图片名.jpg"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%8A%BD%E7%83%9F.gif" alt="文字说明"></p>
-<p><img src="/images/%E8%A1%A8%E6%83%85%E5%8C%85/%E9%BB%84%E5%A4%A7%E5%8F%94.gif" alt="文字说明"></p>
+<p><img src="/images/%E8%A1%A8%E6%83%85%E5%8C%85/%E6%8A%BD%E7%83%9F.gif" alt="抽烟"></p>
+<img src="/images/表情包/黄大叔.gif">
+
+<h2 id="在线多媒体"><a href="#在线多媒体" class="headerlink" title="在线多媒体"></a>在线多媒体</h2><p>（待补完）</p>
+<h2 id="README文件"><a href="#README文件" class="headerlink" title="README文件"></a>README文件</h2><p>（待补完）</p>
 <hr>
 <p>关于Hexo建站的内容就先写这么多吧。如果发现更多好点子，我会继续补充。如有过时、疏漏或错误之处，还请发issue通知我，我看到了就会更改，谢谢支持！</p>
 
@@ -402,8 +405,9 @@
 	
 		<div>
     
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-        <div style="text-align:center;color: #FF0000;font-size:14px;">请尊重原创<i class="fa fa-telegram"></i>转载请注明地址并通知作者</div>		
+        <div style="text-align:center;color: #ccc;font-size:12px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+        <div style="text-align:center;color: #FF0000;font-size:14px;">请尊重原创<i class="fa fa-telegram"></i>转载请注明地址并通知作者</div>
+        <div style="text-align:center;color: #ccc;font-size:12px;">不足之处还请不吝赐教！</div>		
     
 </div>
 	
@@ -607,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地图片"><span class="nav-number">1.</span> <span class="nav-text">本地图片</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地图片"><span class="nav-number">1.</span> <span class="nav-text">本地图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在线多媒体"><span class="nav-number">2.</span> <span class="nav-text">在线多媒体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#README文件"><span class="nav-number">3.</span> <span class="nav-text">README文件</span></a></li></ol></div>
             
 
           </div>
