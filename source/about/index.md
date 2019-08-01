@@ -2,5 +2,6 @@
 title: about
 description: "本站&作者"
 date: 2019-07-29 18:46:05
+comments: false
 ---
 本人目前还非常菜，什么都不会，还请各位大佬多多指教
