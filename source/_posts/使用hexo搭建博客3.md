@@ -1,22 +1,41 @@
 ---
 title: 使用hexo在github上搭建博客：个性化篇
-category: 建站
+category: 其它技术
 tags: [github, hexo]
 date: 2019-07-31 12:31:20
 ---
 
-本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同。主要参考资料为官方网站的[文档](https://theme-next.org/docs/)。
+本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同。主要参考资料为官方网站的[文档](https://theme-next.org/docs/)。当然，很多东西都已经写在配置文件的注释里了，也可以自行探索。
 
 NexT的页面是通过`.swig`格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。
 
 ## 永久链接
-
 更改博客的配置文件的`permalink`属性，即可修改文章的URL形式。
 
 支持的修改类型与修改方法请参考Hexo的[官方文档](https://hexo.io/zh-cn/docs/permalinks.html)。
 
-## 文末提示
+## 侧边栏设置
+最后在主题的配置文件中搜索`social:`，即可配置在侧边栏要显示的社交链接。其中，“||”之后的是fontawesome图标的名称。
 
+同样，`links:`后可以配置相关链接。
+```yml
+social:
+  GitHub: https://github.com/mxdzs0612 || github #站点名称: 链接URL || 图标名称
+
+social_icons:
+  enable: true #是否显示图标
+  icons_only: true #是否只显示图标，不显示站点名称
+  transition: true
+
+links_icon: link
+links_title: 友情链接
+links_layout: block
+#links_layout: inline
+links:
+  #Title: http://example.com
+```
+
+## 文末提示
 在路径`\themes\next\layout\_macro`中新建`passage-end-tag.swig`文件,并添加以下内容：
 ```html
 <div>
@@ -90,6 +109,8 @@ codeblock:
 
 然后还可开启动态背景，最常用的是[Canvas Nest](https://github.com/hustcc/canvas-nest.js)。将`canvas_nest`的enable设为true，表示开启。其余属性请自行探索。
 
+修改`pace:`的效果则是会在页面顶部增添一个动态的加载条。
+
 想要成功开启，还要引入相应的js文件。这里建议采用CDN，免去git clone的麻烦。搜索`vendors:`，根据注释中的Example引入所需的js文件即可。
 
 ## 动态标题栏
@@ -132,5 +153,6 @@ codeblock:
 ```
 搞定！
 
----
-关于Hexo建站的内容就先写这么多吧。如果发现更多好点子，我会继续补充。如有过时、疏漏或错误之处，还请发issue通知我，我看到了就会更改，谢谢支持！
+## 首页文章
+文章在首页全部展示实在太长了。在主题的配置文件中搜索`auto_excerpt:`，将`enable`改为true，即可只显示`length`中指定的字数，并在下方显示“阅读全文”按钮。对点开后的文章并不影响。
+
