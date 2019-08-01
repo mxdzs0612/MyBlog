@@ -21,15 +21,18 @@ tags: [github, hexo]
 ```md
 ![文字说明](文件夹名/图片名.jpg)
 ```
-如果不想这么麻烦，可以直接把图片塞到主题的`source\images`目录下。这样可以不用安装额外的包，~~但可能导致图片管理困难~~ 管理起来也并不困难，继续创建子文件夹即可，分类很方便。比较麻烦的一点是，用本地编辑器的预览功能（如VS Code）预览博客文件时，无法看到图片，从而无法预知实际效果。此外，markdown语法的文字说明似乎不起作用。
+如果不想这么麻烦，可以直接把图片塞到主题的`source\images`目录下。这样可以不用安装额外的包，~~但可能导致图片管理困难~~ 管理起来也并不困难，继续创建子文件夹即可，分类很方便。比较麻烦的一点是，用本地编辑器的预览功能（如VS Code）预览博客文件时，无法看到图片，从而无法预知实际效果。
 
-引入图片时，使用绝对路径即可。甚至可以用HTML语法，如
+引入图片时，使用绝对路径即可。
+```md
+![文字说明](/images/图片名.gif)
+```
+![抽烟](/images/表情包/抽烟.gif)
 
+除markdown语句外，可以用HTML语法，如
 ```html
 <img src="/images/图片名.jpg">
 ```
-
-![抽烟](/images/表情包/抽烟.gif)
 
 <img src="/images/表情包/黄大叔.gif">
 
@@ -38,12 +41,18 @@ tags: [github, hexo]
 ```md
 ![文字说明](图片地址)
 ```
-如
-![我的头像](https://avatars2.githubusercontent.com/u/35512473?s=40&v=4)
+如我的头像
+![我的头像](https://avatars2.githubusercontent.com/u/35512473?s=100&v=4)
 
 音乐和视频需要链接iframe格式的播放器插件，如
 
+```html
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4970195&auto=1&height=66"></iframe>
+```
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4970195&auto=1&height=66"></iframe>
+
+这种插件通常可以从资源所在的网站获取。
 
 ## README文件
 在主题的`source`根目录下添加一个`README.md`文件，正常填写内容。
