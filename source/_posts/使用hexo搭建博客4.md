@@ -1,5 +1,5 @@
 ---
-title: 使用hexo在github上搭建博客：多媒体篇
+title: 使用hexo在github上搭建博客：多媒体与杂项篇
 date: 2019-08-01 09:16:13
 category: 其它技术
 tags: [github, hexo]

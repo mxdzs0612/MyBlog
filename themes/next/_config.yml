@@ -678,6 +678,14 @@ gitalk:
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
 
+# Demo: https://utteranc.es/  http://trumandu.github.io/about/
+utteranc:
+  enable: true
+  repo: mxdzs0612/mxdzs0612.github.io #Github repo such as :TrumanDu/comments
+  pathname: pathname
+  # theme: github-light,github-dark,github-dark-orange
+  theme: github-light
+  cdn: https://utteranc.es/client.js
 
 # ---------------------------------------------------------------
 # Content Sharing Services

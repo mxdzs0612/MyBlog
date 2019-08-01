@@ -9,7 +9,9 @@ tags: [github, hexo]
 
  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。
 
- 注意，由于NexT在不断更新、演进，搜索引擎检索到的许多配置方法都已过时。过时主要表现为，本来需要一点一点手动加的功能都被NexT集成了，这对新用户很友好，老用户就只能泪流满面了。本文写于2019年7月底，笔者无法保证本文中的信息今后不会过时、失效，请读者注意甄别。
+ 本教程不会完全手把手教，需要读者有一定的自主学习能力，要能够在借助或不借助翻译软件或搜索引擎的情况下，看懂英文文档与注释。
+
+ 注意，由于NexT在不断更新、演进，搜索引擎检索到的许多配置方法都已过时。过时主要表现为，本来需要一点一点手动加的功能都被NexT集成了，这对新用户很友好，老用户就只能泪流满面了。本文写于2019年7月底，NexT的版本为7.2.0，笔者无法保证本文中的信息今后不会过时、失效，请读者注意甄别。
 
  ## 安装
  hexo的默认主题为landscape，可以在[此页面](https://hexo.io/themes/)中选择喜欢的主题。但是不管选哪个，都需要自己下载。这里就以NexT为例了。
@@ -58,7 +60,7 @@ NexT主题共提供了四种风格，可以点击[官方github中Live Preview标
 #scheme: Pisces
 scheme: Gemini
 ```
-不进行设置时，默认选择的是第一个（Muse）。不是很建议选择Mist主题，因为后续支持的内容可能比较少。
+~~不进行设置时，默认选择的是第一个（Muse）。~~ 现在默认主题已经变成了Gemini。不是很建议选择Mist主题，因为后续支持的内容可能比较少。
 
 ### **菜单栏**
 在主题的配置文件中找到`Menu`关键字，进行设置。想要哪个就去掉哪个配置前面的“#”注释。
@@ -270,9 +272,36 @@ GITALK是利用github API、基于Github issue开发的评论系统。
 ```
 这样就完成了。
 
-使用时，需要登录github账号才能评论，评论呈现在页面最下方。每篇文章都要进行初始化，建立一个原始的issue，才能增添新的评论。而只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者在考虑更换评论系统，本站的评论功能暂时关闭。
+使用时，需要登录github账号才能评论，评论呈现在页面最下方。每篇文章都要进行初始化，建立一个原始的issue，才能增添新的评论。而只有在`admin_user`中配置了用户名的用户可以开启某篇文章的评论功能，较为麻烦。因此笔者在考虑更换评论系统，~~本站的评论功能暂时关闭。~~ 更换已完成，请见下文。
 
 如果之前注册了LeanCloud，使用LeanCloud提供的评论插件`Valine`是一个非常不错的选择。这是少有的支持无登陆评论的插件。免费版虽有诸多限制，但也足够使用，推荐不介意上传自己手持身份证照片的读者采用Valine，具体教程还请参考[官方文档](https://theme-next.org/docs/third-party-services/comments-and-widgets#Valine-China)。
+
+### **utterances评论**
+NexT 7.3.0 + 版本集成了[utterances](https://utteranc.es/)评论。这一工具原理和GITALK类似，但是索取的权限少，并且不用指定某个人来初始化，因此好用得多，推荐给大家。
+
+首先来[这里](https://github.com/apps/utterances)为utterances在github上授权。只有这样，才能让utterances有资格访问你的issue。还可指定utterances能够访问的仓库，可见其权限控制做的非常好。
+
+授权完毕后，来到博客根目录，打开Git Bash，执行
+>npm install --save github:theme-next/hexo-next-utteranc
+
+然后在任意配置文件中（建议在主题配置文件中）新建如下配置
+```yml
+# Demo: https://utteranc.es/  http://trumandu.github.io/about/
+utteranc:
+  enable: true
+  repo: #Github repo such as :TrumanDu/comments
+  pathname: pathname
+  # theme: github-light,github-dark,github-dark-orange
+  theme: github-light
+  cdn: https://utteranc.es/client.js
+```
+其中，repo下填写你想把哪个仓库的issue当作评论的位置，如`xxxx/xxxx.github.io`。其它选项按注释设置即可。
+
+重新生成博客，在每篇文章的最下方即会出现utterances评论。登录github账号，任何人可以新建评论，初始化工作将由utterances机器人完成，非常方便。
+
+缺点也有一些，那就是目前界面都是英文的。不过这无伤大雅。当然，如果读者知道怎么解决，烦请告诉我。
+
+如果出现跳转错误的问题（如登录后跳转到https://yoursite.com/），请在博客的配置文件中搜索`# URL`，将`url: `配置为`/`或你的站点的URL地址。
 
 ### **字数统计**
 首先在根目录运行Git Bash，执行
@@ -298,7 +327,7 @@ symbols_count_time:
   awl: 2
   wpm: 300
 ```
-上述设置是对中文博客的推荐设置，如想自定义，请参考[官方文档](https://github.com/theme-next/hexo-symbols-count-time)。
+上述设置是[官方文档](https://github.com/theme-next/hexo-symbols-count-time)对中文博客的推荐设置，当然也可以自定义为合适的值。
 
 这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。
 
