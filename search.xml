@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[使用hexo在github上搭建博客：多媒体与杂项篇]]></title>
     <url>%2F%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF%2F%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A24%2F</url>
-    <content type="text"><![CDATA[关于Hexo建站的内容就先写这么多吧。如果发现更多好点子，我会继续补充。如有过时、疏漏或错误之处，还请发issue通知我，我看到了就会更改，谢谢支持！]]></content>
+    <content type="text"><![CDATA[本文将介绍如何在博客中添加多媒体内容，以及一些不太好归类的杂七杂八的小东西。 本地图片有时候我们想把自己设备上的图片传到博客上。这项工作需要借助第三方工具。 在根路径下打开Git Bash，执行 npm install hexo-asset-image –save 修改博客的配置文件，将post_asset_folder:设为true。 此后，每次新建博客的时候，都会在相同目录下新建一个同名文件夹。将图片放入此文件夹中，然后按照markdown语法引入图片即可。 1![文字说明](文件夹名/图片名.jpg) 如果不想这么麻烦，可以直接把图片塞到主题的source\images目录下。这样可以不用安装额外的包，但可能导致图片管理困难。此外，在本地预览博客文件时，无法看到图片，从而无法预览效果。 引入图片时，使用绝对路径即可。如 1![文字说明](/images/图片名.jpg) 关于Hexo建站的内容就先写这么多吧。如果发现更多好点子，我会继续补充。如有过时、疏漏或错误之处，还请发issue通知我，我看到了就会更改，谢谢支持！]]></content>
       <categories>
         <category>其它技术</category>
       </categories>
