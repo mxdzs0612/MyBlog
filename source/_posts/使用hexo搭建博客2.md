@@ -81,7 +81,7 @@ menu:
 >hexo new page tags
 
 此操作会在`\source\tags`路径下生成一个`index.md`文件，其内容为
-```
+```md
 ---
 title: tags
 date: 2019-07-29 09:07:39
@@ -162,7 +162,7 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 ```
-不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 近期改版后，LeanCloud需要上传身份证照片实名认证才能使用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以自行查找其他统计方法。
+不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，~~个人推荐[LeanCloud](https://leancloud.cn/)。~~ 近期改版后，LeanCloud需要上传身份证照片实名认证才能创建新应用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以自行查找其他统计方法。
 
 ### **搜索功能**
 在主题配置文件中搜索`# Search Services`注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即`algolia_search`。
@@ -207,7 +207,7 @@ algolia:
 
 更详细信息，可参考github上的[文档](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md)。
 
-### **本地搜索功能**
+### <font color=blue>**本地搜索功能**</font>
 algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。因此本站决定换用`Local Search`。个人也更推荐这种搜索方式。
 
 首先在根目录打开Git Bash，运行
@@ -276,7 +276,7 @@ GITALK是利用github API、基于Github issue开发的评论系统。
 
 如果之前注册了LeanCloud，使用LeanCloud提供的评论插件`Valine`是一个非常不错的选择。这是少有的支持无登陆评论的插件。免费版虽有诸多限制，但也足够使用，推荐不介意上传自己手持身份证照片的读者采用Valine，具体教程还请参考[官方文档](https://theme-next.org/docs/third-party-services/comments-and-widgets#Valine-China)。
 
-### **utterances评论**
+### <font color=blue>**utterances评论**</font>
 NexT 7.3.0 + 版本集成了[utterances](https://utteranc.es/)评论。这一工具原理和GITALK类似，但是索取的权限少，并且不用指定某个人来初始化，因此好用得多，推荐给大家。
 
 首先来[这里](https://github.com/apps/utterances)为utterances在github上授权。只有这样，才能让utterances有资格访问你的issue。还可指定utterances能够访问的仓库，可见其权限控制做的非常好。

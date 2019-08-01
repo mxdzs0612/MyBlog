@@ -109,7 +109,7 @@ codeblock:
 
 然后还可开启动态背景，最常用的是[Canvas Nest](https://github.com/hustcc/canvas-nest.js)。将`canvas_nest`的enable设为true，表示开启。其余属性请自行探索。
 
-修改`pace:`的效果则是会在页面顶部增添一个动态的加载条。
+修改`pace:`的效果则是会在页面顶部增添一个动态的加载条，显示页面加载的进度。
 
 想要成功开启，还要引入相应的js文件。这里建议采用CDN，免去git clone的麻烦。搜索`vendors:`，根据注释中的Example引入所需的js文件即可。
 
@@ -153,6 +153,6 @@ codeblock:
 ```
 搞定！
 
-## 首页文章
+## 首页文章阅读全文
 文章在首页全部展示实在太长了。在主题的配置文件中搜索`auto_excerpt:`，将`enable`改为true，即可只显示`length`中指定的字数，并在下方显示“阅读全文”按钮。对点开后的文章并不影响。
 
