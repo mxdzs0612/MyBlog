@@ -102,7 +102,7 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Disable Baidu transformation on mobile devices.
-disable_baidu_transformation: false
+disable_baidu_transformation: true
 
 # Set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
@@ -121,11 +121,11 @@ exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
-google_site_verification:
+google_site_verification: D-2qw1qaLc7ftJ97hF9PEyutP0g0y157gHiEluGahSk
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmaster
-bing_site_verification:
+bing_site_verification: 6383101F6A7D13644824FC6504BBADEF
 
 # Yandex Webmaster tools verification.
 # See: https://webmaster.yandex.ru
@@ -157,7 +157,7 @@ menu:
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  commonweal: /404/ || heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -447,7 +447,7 @@ codeblock:
 github_banner:
   enable: true
   permalink: https://github.com/mxdzs0612/mxdzs0612.github.io
-  title: 点个star
+  title: 给本博客点个star
 
 
 # ---------------------------------------------------------------

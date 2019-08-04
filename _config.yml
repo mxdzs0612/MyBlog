@@ -4,7 +4,7 @@
 
 # Site
 title: mxdzs0612的博客
-subtitle: 我是副标题
+subtitle: 内容慢慢补充吧，如果有能力的话……
 description: 试着搭个博客
 keywords:
 author: mxdzs0612
@@ -13,9 +13,10 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+## permalink: https://hexo.io/zh-cn/docs/permalinks.html
 url: /
 root: /
-permalink: :category/:title/
+permalink: :category/:year-:month-:day-:title.html
 permalink_defaults:
 
 # Directory
@@ -74,6 +75,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+plugins: hexo-generator-sitemap
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

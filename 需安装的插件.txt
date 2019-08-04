@@ -1,3 +1,4 @@
 npm install hexo-generator-searchdb --save
 npm install hexo-symbols-count-time --save
 npm install --save github:theme-next/hexo-next-utteranc
+npm install hexo-generator-sitemap --save
