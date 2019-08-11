@@ -8,6 +8,8 @@ tags: [总结]
 
 这份资料主要是给自己看的。如果真的有读者看到，欢迎去右上角点个star。
 
+<!-- more -->
+
 ## 资料总结篇
 Java学习+面试指南： https://github.com/Snailclimb/JavaGuide
 

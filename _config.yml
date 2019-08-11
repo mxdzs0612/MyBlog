@@ -4,8 +4,8 @@
 
 # Site
 title: mxdzs0612的博客
-subtitle: 内容慢慢补充吧，如果有能力的话……
-description: 试着搭个博客
+subtitle: 个人技术分享站
+description: 内容慢慢补充吧，如果有能力的话……
 keywords:
 author: mxdzs0612
 language: zh-CN
@@ -14,7 +14,7 @@ timezone:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 ## permalink: https://hexo.io/zh-cn/docs/permalinks.html
-url: /
+url: https://mxdzs0612.github.io/
 root: /
 permalink: :category/:year-:month-:day-:title.html
 permalink_defaults:
