@@ -75,7 +75,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同。主要参考资料为官方网站的文档。当然，很多东西都已经写在配置文件的注释里了，也可以自行探索。 NexT的页面是通过.swig格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。当然很多功能都在主题的配置文件里面集成好了，并不需要我们手动修改源码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T01:54:55.570Z">
+<meta property="og:updated_time" content="2019-08-12T05:24:34.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：个性化篇">
 <meta name="twitter:description" content="本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同。主要参考资料为官方网站的文档。当然，很多东西都已经写在配置文件的注释里了，也可以自行探索。 NexT的页面是通过.swig格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。当然很多功能都在主题的配置文件里面集成好了，并不需要我们手动修改源码。">
@@ -325,7 +325,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-12 09:54:55" itemprop="dateModified" datetime="2019-08-12T09:54:55+08:00">2019-08-12</time>
+                <time title="修改时间：2019-08-12 13:24:34" itemprop="dateModified" datetime="2019-08-12T13:24:34+08:00">2019-08-12</time>
               </span>
             
           
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">6.8k</span>
+              <span title="本文字数">7.1k</span>
             </span>
           
             <span class="post-meta-item">
@@ -372,7 +372,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">11 分钟</span>
+              <span title="阅读时长">12 分钟</span>
             </span>
           
 
@@ -395,6 +395,10 @@
 <h2 id="侧边栏设置"><a href="#侧边栏设置" class="headerlink" title="侧边栏设置"></a>侧边栏设置</h2><p>最后在主题的配置文件中搜索<code>social:</code>，即可配置在侧边栏要显示的社交链接。其中，“||”之后的是fontawesome图标的名称。</p>
 <p>同样，<code>links:</code>后可以配置相关链接。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line"><span class="attr">  GitHub:</span> <span class="attr">https://github.com/mxdzs0612</span> <span class="string">||</span> <span class="string">github</span> <span class="comment">#站点名称: 链接URL || 图标名称</span></span><br><span class="line"></span><br><span class="line"><span class="attr">social_icons:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment">#是否显示图标</span></span><br><span class="line"><span class="attr">  icons_only:</span> <span class="literal">true</span> <span class="comment">#是否只显示图标，不显示站点名称</span></span><br><span class="line"><span class="attr">  transition:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">links_icon:</span> <span class="string">link</span></span><br><span class="line"><span class="attr">links_title:</span> <span class="string">友情链接</span></span><br><span class="line"><span class="attr">links_layout:</span> <span class="string">block</span></span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line">  <span class="comment">#Title: http://example.com</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h2><p>很多网站都自带一个按键，点击后可回到页面最上方。NexT也为我们集成了这一功能。</p>
+<p>在主图配置文件中搜索<code>back2top:</code>，我们可以看到共有三个可选配置项。其作用分别如下。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="comment"># 开启右下角的回到顶部箭头</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 在侧边栏下方也添加回到顶部按钮</span></span><br><span class="line"><span class="attr">  sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># 回到顶部不止显示箭头，也显示百分比</span></span><br><span class="line"><span class="attr">  scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="文末提示"><a href="#文末提示" class="headerlink" title="文末提示"></a>文末提示</h2><p>在路径<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件,并添加以下内容：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span>-------------本文结束<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>感谢您的阅读-------------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -610,7 +614,11 @@
         
           
         
-        <span class="site-state-item-count">3</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -685,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#永久链接"><span class="nav-number">1.</span> <span class="nav-text">永久链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏设置"><span class="nav-number">2.</span> <span class="nav-text">侧边栏设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文末提示"><span class="nav-number">3.</span> <span class="nav-text">文末提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页底部内容"><span class="nav-number">4.</span> <span class="nav-text">网页底部内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签样式"><span class="nav-number">5.</span> <span class="nav-text">标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码风格"><span class="nav-number">6.</span> <span class="nav-text">代码风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github横幅"><span class="nav-number">7.</span> <span class="nav-text">Github横幅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript动画"><span class="nav-number">8.</span> <span class="nav-text">JavaScript动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态标题栏"><span class="nav-number">9.</span> <span class="nav-text">动态标题栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现心形效果"><span class="nav-number">10.</span> <span class="nav-text">点击出现心形效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章不显示全文"><span class="nav-number">11.</span> <span class="nav-text">首页文章不显示全文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#live2d模型"><span class="nav-number">12.</span> <span class="nav-text">live2d模型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#永久链接"><span class="nav-number">1.</span> <span class="nav-text">永久链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏设置"><span class="nav-number">2.</span> <span class="nav-text">侧边栏设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回到顶部"><span class="nav-number">3.</span> <span class="nav-text">回到顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文末提示"><span class="nav-number">4.</span> <span class="nav-text">文末提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页底部内容"><span class="nav-number">5.</span> <span class="nav-text">网页底部内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签样式"><span class="nav-number">6.</span> <span class="nav-text">标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码风格"><span class="nav-number">7.</span> <span class="nav-text">代码风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github横幅"><span class="nav-number">8.</span> <span class="nav-text">Github横幅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript动画"><span class="nav-number">9.</span> <span class="nav-text">JavaScript动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态标题栏"><span class="nav-number">10.</span> <span class="nav-text">动态标题栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现心形效果"><span class="nav-number">11.</span> <span class="nav-text">点击出现心形效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章不显示全文"><span class="nav-number">12.</span> <span class="nav-text">首页文章不显示全文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#live2d模型"><span class="nav-number">13.</span> <span class="nav-text">live2d模型</span></a></li></ol></div>
             
 
           </div>
@@ -721,7 +729,7 @@
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">39 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
