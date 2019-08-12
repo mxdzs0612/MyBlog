@@ -163,3 +163,45 @@ codeblock:
 如果你希望手动控制在哪里显示阅读全文，NexT也是支持的。在文章中你想截断的位置增加`<!-- more -->`即可。官方推荐的也是这种控制方式。
 
 如果`scroll_to_more`设置为true，点开“阅读全文”后，会直接滚动到原文中`<!-- more -->`下方，跳过了首页预览看到过的那一部分。
+
+## live2d模型
+可以在博客上添加一个live2d看板娘。
+
+首先执行
+>npm install --save hexo-helper-live2d
+
+然后在[这里](https://github.com/summerscar/live2dDemo)挑选你喜欢的模型，甚至可以在[这里](http://summerscar.me/live2dDemo/)预览。挑选好后克隆仓库。当然也可以通过npm安装，但个人不是很推荐。
+
+在`assets`文件夹中找到你选好的模型，记住文件夹名称。此文件夹里必须要有`xxxx.model.json`文件。
+
+然后将下面这段代码复制到任意一个配置文件中。
+```yml
+## Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+    enable: true
+  # enable: false
+    scriptFrom: local # 默认
+    pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+    pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+    pluginModelPath: assets/ # 模型文件相对与插件根目录路径
+  # scriptFrom: jsdelivr # jsdelivr CDN
+  # scriptFrom: unpkg # unpkg CDN
+  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+    tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+    debug: false # 调试, 是否在控制台输出日志
+    model:
+      use: live2d-widget-model-wanko # npm-module package name
+    # use: wanko # 博客根目录/live2d_models/ 下的目录名
+    # use: ./wives/wanko # 相对于博客根目录的路径
+    # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
+    display: # 模型位置，根据不同的模型自行调整
+      position: right
+      width: 150
+      height: 300
+    mobile: # 是否适用于移动端
+      show: true
+```
+将刚刚记住的名称复制到`model.use: `属性中，重新生成即可。
+
+个人最推荐使用`tsumiki`，因为“功能”最全。当然笔者也并没有一一试过，读者可以选择自己喜欢的那个。
