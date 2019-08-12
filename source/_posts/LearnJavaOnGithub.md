@@ -1,16 +1,16 @@
 ---
-title: LearnJavaOnGithub
+title: Github上的一些不错的Java学习资源
 date: 2019-08-11 21:59:37
 category: Java
 tags: [总结]
 ---
-这里总结一下在Github上看到的比较好的Java学习资料，大部分都是中文的。
+这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。
 
-这份资料主要是给自己看的。如果真的有读者看到，欢迎去右上角点个star。
+这份资料主要是给自己看的。如果真的有读者读到本文并且喜欢的话，还望去右上角给我点个star。
 
 <!-- more -->
 
-## 资料总结篇
+## 完全总结篇
 Java学习+面试指南： https://github.com/Snailclimb/JavaGuide
 
 Cyc Tech Interview Guide： https://github.com/CyC2018/CS-Notes
@@ -23,7 +23,7 @@ Java工程师成神之路： https://github.com/hollischuang/toBeTopJavaer
 
 互联网 Java 工程师进阶知识完全扫盲： https://github.com/doocs/advanced-java
 
-## 知识细节篇
+## 知识体系篇
 All Algorithms implemented in Java (英文)： https://github.com/TheAlgorithms/Java
 
 Design patterns implemented in Java (英文)： https://github.com/iluwatar/java-design-patterns
@@ -57,8 +57,12 @@ Java开发者技术书籍大全： https://github.com/sorenduan/awesome-java-boo
 
 On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 
-## 开源工具篇
+effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
+
+## 实用工具篇
 （较多，待补充）
 
 ## 其它类型篇
 互联网公司技术架构： https://github.com/davideuler/architecture.of.internet-product
+
+大牛企业内部pdf与PPT： https://github.com/0voice/from_coder_to_expert
