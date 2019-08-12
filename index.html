@@ -883,7 +883,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-05 08:28:34" itemprop="dateModified" datetime="2019-08-05T08:28:34+08:00">2019-08-05</time>
+                <time title="修改时间：2019-08-12 13:44:48" itemprop="dateModified" datetime="2019-08-12T13:44:48+08:00">2019-08-12</time>
               </span>
             
           
@@ -1111,6 +1111,11 @@
     </ul>
   </div>
 
+            <!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
+          
         </div>
       </div>
 
@@ -1256,6 +1261,24 @@
 
 
 
+
+
+    <!-- calendar widget -->
+
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#CloudCalendar').aCalendar('zh-CN',
+            $.extend(
+                '', {
+                    single:true,
+                    root:'/schedule/'
+                }
+            )
+        );
+    });
+    </script>
 
 
 
