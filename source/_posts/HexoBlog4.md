@@ -77,14 +77,14 @@ tags: [github, hexo]
 更多搜索引擎，请参考[官方文档](https://theme-next.org/docs/theme-settings/seo.html)。
 
 ## 站点地图
-感觉站点地图还是有必要加的，容我再观察几天。步骤如下：
+感觉站点地图还是有必要加的，不然搜索引擎无法索引到你的网站的具体文章。添加的步骤如下：
 
 首先在根目录下执行
 >npm install hexo-generator-sitemap --save
 
 然后重新编译。部署，自动生成的站点地图就会出现。
 
-在对应搜索引擎的网站提交你的网站的站点地图地址即可，默认为`https://xxxx.github.io/sitemap.xml`。
+在对应搜索引擎的网站提交你的网站的站点地图地址即可，默认为`https://xxxx.github.io/sitemap.xml`。你也可以在浏览器输入此url查看效果。
 
 理论上，这样能够让搜索引擎更好地捕捉你的网站。
 

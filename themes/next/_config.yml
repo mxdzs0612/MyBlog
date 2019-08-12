@@ -267,7 +267,7 @@ sidebar:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
   scrollpercent: true
 
@@ -339,13 +339,13 @@ wechat_subscriber:
 reward_settings:
   # If true, reward would be displayed in every article by default.
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
-  enable: false
+  enable: true
   animation: false
-  #comment: Donate comment here.
+  comment: 一分钱也是钱！
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/QRCode/wechatpay.png
+  alipay: /images/QRCode/alipay.jpg
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
