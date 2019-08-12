@@ -1,8 +1,8 @@
 ---
 title: Github上的一些不错的Java学习资源
 date: 2019-08-11 21:59:37
-category: Java
-tags: [总结]
+category: 后端开发
+tags: [总结, Java, Web]
 ---
 这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。
 

@@ -38,7 +38,19 @@ links_layout: block
 links:
   #Title: http://example.com
 ```
+## 回到顶部
+很多网站都自带一个按键，点击后可回到页面最上方。NexT也为我们集成了这一功能。
 
+在主图配置文件中搜索`back2top: `，我们可以看到共有三个可选配置项。其作用分别如下。
+```yml
+back2top:
+  # 开启右下角的回到顶部箭头
+  enable: true
+  # 在侧边栏下方也添加回到顶部按钮
+  sidebar: false
+  # 回到顶部不止显示箭头，也显示百分比
+  scrollpercent: true
+```
 ## 文末提示
 在路径`\themes\next\layout\_macro`中新建`passage-end-tag.swig`文件,并添加以下内容：
 ```html
