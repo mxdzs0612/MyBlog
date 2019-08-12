@@ -336,3 +336,25 @@ symbols_count_time:
 这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。
 
 如果`item_text_total`设置为true，在页面最下方还会显示站点总字数与站点阅读总时长的估计值。
+
+### **日历插件**
+NexT适配了一个云日历插件，可以在日历上显示提交标记。
+在根目录下打开Git Bash，执行
+>npm install --save github:theme-next/theme-next-calendar
+
+安装插件。然后在NexT的主题配置文件中添加配置
+```yml
+CloudCalendar:
+  enable: true
+  language: zh-CN
+  single: true
+  root: /calendar/
+  calendarCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js
+  langCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js
+  #disableSidebar: false
+```
+即可使用。
+
+此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。
+
+这种做法的缺点是无法进行自定义的配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用[这种方法](https://github.com/icecory/theme-next-calendar)安装。
