@@ -210,10 +210,10 @@ algolia:
 更详细信息，可参考github上的[文档](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md)。
 
 ### <font color=blue>**本地搜索功能**</font>
-algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。因此本站决定换用`Local Search`。个人也更推荐这种搜索方式。
+algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。虽然在校学生可以申请到一年的免费使用权，但笔者还是觉得不解决根本问题。因此本站决定换用`Local Search`。个人也更推荐这种搜索方式。
 
 首先在根目录打开Git Bash，运行
->$ npm install hexo-generator-searchdb --save
+>npm install hexo-generator-searchdb --save
 
 在博客配置文件增添下列语句：
 ```yml
@@ -244,7 +244,7 @@ local_search:
 
 这种方式就简单了很多，缺点是需要额外的一些安装包，换设备部署应重新安装。
 
-此外，这种方法的原理是在本地生成一个包含索引的`search.xml`文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会占用不少空间。
+此外，这种方法的原理是在本地生成一个包含索引的`search.xml`文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会降低博客生成效率。
 
 ### **评论**
 
@@ -331,7 +331,7 @@ symbols_count_time:
   awl: 2
   wpm: 300
 ```
-上述设置是[官方文档](https://github.com/theme-next/hexo-symbols-count-time)对中文博客的推荐设置，当然也可以自定义为合适的值。
+上述设置是[官方文档](https://github.com/theme-next/hexo-symbols-count-time)对以汉字为主的博客的推荐设置，当然也可以按个人喜好自定义为合适的值。
 
 这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。
 
@@ -355,6 +355,6 @@ CloudCalendar:
 ```
 即可使用。
 
-此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。
+此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。此外，在低分辨率的屏幕上，增加日历会使侧边栏出现一个滚动条，可能会影响美观。
 
-这种做法的缺点是无法进行自定义的配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用[这种方法](https://github.com/icecory/theme-next-calendar)安装。
+这种安装方式的缺点是无法进行自定义的配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用[这种方法](https://github.com/icecory/theme-next-calendar)安装，就可以自行修改文件。
