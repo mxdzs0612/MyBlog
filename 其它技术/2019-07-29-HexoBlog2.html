@@ -75,7 +75,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文介绍了hexo最常见的主题，NexT主题的基本用法。  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T06:56:20.753Z">
+<meta property="og:updated_time" content="2019-08-14T06:56:53.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：主题篇">
 <meta name="twitter:description" content="本文介绍了hexo最常见的主题，NexT主题的基本用法。  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。">
@@ -325,7 +325,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-12 14:56:20" itemprop="dateModified" datetime="2019-08-12T14:56:20+08:00">2019-08-12</time>
+                <time title="修改时间：2019-08-14 14:56:53" itemprop="dateModified" datetime="2019-08-14T14:56:53+08:00">2019-08-14</time>
               </span>
             
           
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">9.5k</span>
+              <span title="本文字数">9.6k</span>
             </span>
           
             <span class="post-meta-item">
@@ -528,10 +528,10 @@
 <p>在<code>source/lib/</code>目录下安装algolia-instant-search所需的文件。</p>
 <p>最后，把主题配置文件中的<code>algolia_search.enable</code>，属性设为true，即可开启搜索功能。</p>
 <p>更详细信息，可参考github上的<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/ALGOLIA-SEARCH.md" target="_blank" rel="noopener">文档</a>。</p>
-<h3 id="本地搜索功能"><a href="#本地搜索功能" class="headerlink" title="本地搜索功能"></a><font color="blue"><strong>本地搜索功能</strong></font></h3><p>algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。因此本站决定换用<code>Local Search</code>。个人也更推荐这种搜索方式。</p>
+<h3 id="本地搜索功能"><a href="#本地搜索功能" class="headerlink" title="本地搜索功能"></a><font color="blue"><strong>本地搜索功能</strong></font></h3><p>algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。虽然在校学生可以申请到一年的免费使用权，但笔者还是觉得不解决根本问题。因此本站决定换用<code>Local Search</code>。个人也更推荐这种搜索方式。</p>
 <p>首先在根目录打开Git Bash，运行</p>
 <blockquote>
-<p>$ npm install hexo-generator-searchdb –save</p>
+<p>npm install hexo-generator-searchdb –save</p>
 </blockquote>
 <p>在博客配置文件增添下列语句：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">  format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
@@ -541,7 +541,7 @@
 
 <p>搜索功能的位置和algolia一样，也在菜单栏的最下面，并且支持全文搜索。此外，也可自己定制样式，非常好用。</p>
 <p>这种方式就简单了很多，缺点是需要额外的一些安装包，换设备部署应重新安装。</p>
-<p>此外，这种方法的原理是在本地生成一个包含索引的<code>search.xml</code>文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会占用不少空间。</p>
+<p>此外，这种方法的原理是在本地生成一个包含索引的<code>search.xml</code>文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会降低博客生成效率。</p>
 <h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a><strong>评论</strong></h3><p>本站原先使用了<a href="https://gitalk.github.io/" target="_blank" rel="noopener">GITALK</a>。这种方式的优点是配置简单，缺点是不支持无登陆评论。</p>
 <p>GITALK是利用github API、基于Github issue开发的评论系统。</p>
 <p>首先要去<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">这里</a>申请一个新app。四个位置依次填入app名称、博客地址<code>https://xxxx.github.io</code>、描述（任填）以及回调地址（仍然填博客地址）。点击绿色按钮创建。</p>
@@ -575,7 +575,7 @@
 <p>最后，在主题的配置文件中搜索<code>symbols_count_time:</code>，进行如下修改</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Post wordcount display settings</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/theme-next/hexo-symbols-count-time</span></span><br><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line"><span class="attr">  separated_meta:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  item_text_post:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  item_text_total:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  awl:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">  wpm:</span> <span class="number">300</span></span><br></pre></td></tr></table></figure>
 
-<p>上述设置是<a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">官方文档</a>对中文博客的推荐设置，当然也可以自定义为合适的值。</p>
+<p>上述设置是<a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">官方文档</a>对以汉字为主的博客的推荐设置，当然也可以按个人喜好自定义为合适的值。</p>
 <p>这样，在每篇文章的标题下，会显示文章的字数与预计所需阅读时间。</p>
 <p>如果<code>item_text_total</code>设置为true，在页面最下方还会显示站点总字数与站点阅读总时长的估计值。</p>
 <h3 id="日历插件"><a href="#日历插件" class="headerlink" title="日历插件"></a><strong>日历插件</strong></h3><p>NexT适配了一个云日历插件，可以在日历上显示提交标记。<br>在根目录下打开Git Bash，执行</p>
@@ -586,8 +586,8 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">CloudCalendar:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">  single:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  root:</span> <span class="string">/calendar/</span></span><br><span class="line"><span class="attr">  calendarCdn:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js</span></span><br><span class="line"><span class="attr">  langCdn:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js</span></span><br><span class="line">  <span class="comment">#disableSidebar: false</span></span><br></pre></td></tr></table></figure>
 
 <p>即可使用。</p>
-<p>此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。</p>
-<p>这种做法的缺点是无法进行自定义的配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用<a href="https://github.com/icecory/theme-next-calendar" target="_blank" rel="noopener">这种方法</a>安装。</p>
+<p>此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。此外，在低分辨率的屏幕上，增加日历会使侧边栏出现一个滚动条，可能会影响美观。</p>
+<p>这种安装方式的缺点是无法进行自定义的配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用<a href="https://github.com/icecory/theme-next-calendar" target="_blank" rel="noopener">这种方法</a>安装，就可以自行修改文件。</p>
 
     </div>
 
