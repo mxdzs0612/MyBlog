@@ -75,7 +75,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T05:44:48.218Z">
+<meta property="og:updated_time" content="2019-08-14T00:35:05.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：基础篇">
 <meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。">
@@ -325,7 +325,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-12 13:44:48" itemprop="dateModified" datetime="2019-08-12T13:44:48+08:00">2019-08-12</time>
+                <time title="修改时间：2019-08-14 08:35:05" itemprop="dateModified" datetime="2019-08-14T08:35:05+08:00">2019-08-14</time>
               </span>
             
           
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">4k</span>
+              <span title="本文字数">4.2k</span>
             </span>
           
             <span class="post-meta-item">
@@ -389,11 +389,12 @@
 <p>关于hexo的简介，可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
 <a id="more"></a>
 
+<p>依照本文以及接下来的若干篇文章的步骤进行操作，读者即可自行搭建出和本博客类似的博客。本博客的每一个组件的增加和配置都会在接下来的文章中进行讲解。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">操作系统： Windows 10 1903专业版</span><br><span class="line">编辑器： VS Code &amp; Notepad++</span><br><span class="line">浏览器： Chrome</span><br></pre></td></tr></table></figure>
 
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>首先需要安装、配置好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>首先注册<a href="https://github.com/" target="_blank" rel="noopener">github</a>账号。</p>
+<p>然后需要安装、配置好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>。git的配置中，用户名和邮箱应与github相同。</p>
 <p>安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js</a>。</p>
-<p>然后注册<a href="https://github.com/" target="_blank" rel="noopener">github</a>账号。git的配置中，用户名和邮箱应与github相同。</p>
 <p>具体安装过程还请自行探索或在搜索引擎中检索，此处从略。</p>
 <p>然后配置ssh密钥。在控制台输入</p>
 <blockquote>
@@ -405,9 +406,9 @@
 <h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github的右上角点击<a href="https://github.com/new" target="_blank" rel="noopener">Create a new repository</a>。</p>
 <p>在<code>Repository name</code>中填入<strong>你的用户名.github.io</strong>，如<code>mxdzs0612.github.io</code>即为本博客的仓库名。<br>这同时也是博客的域名。在下文中，将用“xxxx”代替用户名。</p>
 <p>其它选项任填，完毕后点击绿色按钮创建。</p>
-<h2 id="准备分支"><a href="#准备分支" class="headerlink" title="准备分支"></a>准备分支</h2><p>为了能够在多台设备上维护博客，同时对博客源文件在github上进行备份，这里建议直接新建分支。如果不想备份，可以忽略相关内容。</p>
-<p>点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其<a href="https://github.com/mxdzs0612/mxdzs0612.github.io/settings/branches" target="_blank" rel="noopener">设置</a>为主要（默认）分支。</p>
-<p>后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。分支名可任取。</p>
+<h2 id="准备分支"><a href="#准备分支" class="headerlink" title="准备分支"></a>准备分支</h2><p>为了能够在多台设备上维护博客，同时对博客源文件在github上进行备份，这里建议直接新建分支。如果不想备份，可以忽略此小节以及后文中的相关内容。</p>
+<p>点击仓库左上角的Branch标签，默认值为master。在这里新建hexo分支，并将其设置为主要（默认）分支。分支名可任取。</p>
+<p>后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。</p>
 <p>在本地某个文件夹下打开Git Bash，用SSH方式克隆仓库。指令为</p>
 <blockquote>
 <p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
@@ -428,7 +429,7 @@
 </blockquote>
 <p>Bash中，当前分支应显示为hexo。</p>
 <p>此时，hexo的安装应该已完成。</p>
-<p>Windows系统不建议在cmd中安装hexo，因为这样会直接安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，严重影响使用。后面的文章中用npm命令安装的各种插件都建议使用Git Bash操作。</p>
+<p>Windows系统不建议在cmd中安装hexo，因为这样可能会直接安装到系统盘个人目录下的某个文件夹中，控制台会出现各种找不到指令的问题，之后的配置非常复杂，严重影响使用。Git Bash就不一样，会装在当前目录下。后面的文章中，所有使用npm命令进行安装的插件都建议使用Git Bash操作。</p>
 <h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开目录下的<code>_config.yml</code>文件，继续修改其中的内容。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
 <p>基本的配置在<code># Site</code>下，即</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">这是一个博客</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">这是一个副标题</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">试着搭个博客</span> <span class="comment"># 网页描述，类似座右铭，一般会显示在author附近</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">mxdzs0612</span> <span class="comment"># 站长信息</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 网站语言，部分主题的默认语言是英文，建议修改</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment"># 网站时区，默认使用电脑的时区</span></span><br></pre></td></tr></table></figure>
@@ -436,7 +437,7 @@
 <p>然后比较重要的是<code># Deployment</code>下的部署信息，即</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/xxxx/xxxx.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
-<p>请务必将_config.yml中的deploy下branch参数的值修改为master，这样编译好的静态文件将被上传到master分支。</p>
+<p>请务必将_config.yml中的deploy下branch参数的值修改为master，这样编译好的静态文件才会被上传到master分支。</p>
 <h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><h3 id="博客的部署"><a href="#博客的部署" class="headerlink" title="博客的部署"></a><strong>博客的部署</strong></h3><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
 <blockquote>
 <p>hexo generate</p>
@@ -444,7 +445,7 @@
 <blockquote>
 <p>hexo server</p>
 </blockquote>
-<p>在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，可以在本地预览博客的效果。其中预置了一个hello-world.md文件，因此会有一篇默认博客。</p>
+<p>在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，可以在本地预览博客的效果。初始化后会预置一个hello-world.md文件，因此会有一篇默认博客。</p>
 <p>如果需要新建文章，输入</p>
 <blockquote>
 <p>hexo new “文章名”</p>
@@ -462,8 +463,8 @@
 <blockquote>
 <p>hexo deploy</p>
 </blockquote>
-<p>如果是第一次执行此过程，中段会跳出github登录提示，用自己的账户登录即可。</p>
-<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没有变化，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R）。如果对文章进行进行了修改，通常也需强制刷新、清除缓存后才能看到效果。</p>
+<p>如果是第一次执行此过程，中段会跳出github登录提示，用仓库所在的账户登录即可。</p>
+<p>这时访问 xxxx.github.io ，即可看到文章已发布。如果没有变化，请等待几秒钟（十秒左右），然后强制清除缓存并刷新页面（Chrome浏览器的快捷键为Ctrl+Shift+R），即可看到效果。对文章进行进行的修改，通常也需强制刷新、清除浏览器缓存后才能看到效果。</p>
 <p>后两步操作可合并、简写成一步，即</p>
 <blockquote>
 <p>hexo g -d</p>
@@ -481,10 +482,10 @@
 <p>git push </p>
 </blockquote>
 <p>推送到远程仓库。如此即可将源代码上传至hexo分支。</p>
-<p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃、文件丢失，交换顺序可能就会导致源码丢失。</p>
-<h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，但没有备份源码，备份的操作与之前几乎相同。唯一的区别是，建立分支之后的branch中已经有内容了，此时的内容是部署的文件而非源码。</p>
-<p>因此，clone之后，只需将clone下来的文件中除.git文件夹以外的文件全部删掉，我们只需要.git中的信息。将原来写的博客的源文件整体复制过来即可。</p>
-<p>注意，复制过来的源文件中应该包含一个<code>.gitignore</code>文件，如果没有需要手动创建，内容为</p>
+<p>日常使用时，建议的执行顺序为先备份源代码，再部署。虽然一般不会出现什么问题，但万一突然断网甚至系统崩溃导致文件丢失，交换顺序可能就会使源码再也恢复不了啦。</p>
+<h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，没有备份源码，但又突然想备份了，还是有救的。备份的操作与之前几乎相同，依然要创建分支。区别在于建立的分支中已经有内容了，此时的内容是部署的文件的一份拷贝，而非源码。</p>
+<p>因此，clone之后，要将clone下来的文件中除.git文件夹以外的文件全部删掉，我们只需要.git中的信息。将原来写的博客的源文件整体复制到.git文件夹所在的目录，就算是改好了。</p>
+<p>注意，复制过来的源文件中应该包含一个<code>.gitignore</code>文件，如果没有则需要手动创建，内容为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
 
 <p>如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
@@ -508,17 +509,17 @@
 <blockquote>
 <p>npm install hexo-deployer-git</p>
 </blockquote>
-<p><strong>切记不要执行hexo init</strong>，否则之前写好的东西就都没了。</p>
-<p>这样就在新的设备上也安装好了hexo。此后的修改配置部署操作就都如常了。也要重新申请一个ssh密钥。请参考上文，自行操作。</p>
+<p><strong>切记不要执行hexo init</strong>，否则之前写好的东西就都被丢弃了。</p>
+<p>这样就在新的设备上也安装好了hexo。此后的修改配置部署操作就都如常了。注意要为新设备重新申请一个ssh密钥。请参考上文，自行操作。</p>
 <p>当然，如果额外安装过hexo插件，就只能找个地方记住自己装了哪些东西，然后在新设备上再装一遍。否则可能出现在另一台设备上生成的博客缺少东西的情况。</p>
 <p>注意，如果在其它设备修改过文件，在新设备上进行操作之前，一定记得要先使用下述指令</p>
 <blockquote>
 <p>git pull</p>
 </blockquote>
-<p>将本地仓库与远程仓库同步（拉取+合并）。否则可能出现版本冲突、无法push的情况，造成不必要的麻烦。。</p>
+<p>将本地仓库与远程仓库同步（拉取+合并）。否则可能出现版本冲突、无法push的情况，还要手动处理，造成不必要的麻烦。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>发布新文章的步骤如下：在控制台输入</p>
 <blockquote>
-<p>hexo n “文章名” </p>
+<p>hexo n “文件名” </p>
 </blockquote>
 <p>编辑完毕后，执行</p>
 <blockquote>
@@ -979,5 +980,5 @@
   <script type="text/javascript" src="/js/src/clicklove.js"></script>
   <!--崩溃欺骗-->
   <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nepmaid.model.json"},"display":{"position":"left","width":300,"height":400},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/nepmaid.model.json"},"display":{"position":"right","width":300,"height":400},"mobile":{"show":false},"log":false});</script></body>
 </html>
