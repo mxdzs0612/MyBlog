@@ -29,7 +29,7 @@ tags: [github, hexo]
 ```
 ![抽烟](/images/表情包/抽烟.gif)
 
-除markdown语句外，可以用HTML语法，如
+除markdown语句外，亦可用HTML语法，如
 ```html
 <img src="/images/图片名.jpg">
 ```
