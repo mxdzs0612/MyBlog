@@ -39,6 +39,8 @@ Spring Boot 系列实战合集:  https://github.com/hansonwang99/Spring-Boot-In-
 
 Spring Boot 教程、技术栈示例代码，快速简单上手教程： https://github.com/ityouknow/spring-boot-examples
 
+spring boot demo https://github.com/xkcoding/spring-boot-demo
+
 微人事： https://github.com/lenve/vhr
 
 电商系统： https://github.com/macrozheng/mall
