@@ -32,7 +32,7 @@ Design patterns implemented in Java (英文)： https://github.com/iluwatar/java
 
 系统设计入门： https://github.com/donnemartin/system-design-primer
 
-## 开源项目篇
+## 框架使用篇
 Spring Boot 系列实战合集:  https://github.com/hansonwang99/Spring-Boot-In-Action
 
 循序渐进，学习Spring Boot： https://github.com/wuyouzhuguli/SpringAll
@@ -43,6 +43,7 @@ spring boot demo： https://github.com/xkcoding/spring-boot-demo
 
 hope-boot脚手架： https://github.com/hope-for/hope-boot
 
+## 开源项目篇
 微人事： https://github.com/lenve/vhr
 
 电商系统： https://github.com/macrozheng/mall
