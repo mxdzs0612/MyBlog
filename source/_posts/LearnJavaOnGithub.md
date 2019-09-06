@@ -6,7 +6,7 @@ tags: [总结, Java, Web]
 ---
 这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。
 
-这份资料主要是给自己看的。如果真的有读者读到本文并且喜欢的话，还望去右上角给我点个star。
+这份资料主要是方便自己看的。不过，如果真的有读者读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。
 
 <!-- more -->
 
@@ -22,6 +22,8 @@ Cyc Tech Interview Guide： https://github.com/CyC2018/CS-Notes
 Java工程师成神之路： https://github.com/hollischuang/toBeTopJavaer
 
 互联网 Java 工程师进阶知识完全扫盲： https://github.com/doocs/advanced-java
+
+面试总结： https://github.com/gzc426/Java-Interview https://github.com/xbox1994/Java-Interview 
 
 ## 知识体系篇
 All Algorithms implemented in Java (英文)： https://github.com/TheAlgorithms/Java
@@ -55,6 +57,8 @@ hope-boot脚手架： https://github.com/hope-for/hope-boot
 
 Coding Interview University (英文)： https://github.com/jwasham/coding-interview-university
 
+Everything you need to know to get the job： https://github.com/kdn251/interviews
+
 ## 读书充电篇
 Java开发者技术书籍大全： https://github.com/sorenduan/awesome-java-books
 
@@ -65,7 +69,9 @@ On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
 
 ## 实用工具篇
-（较多，待补充）
+WxJava （微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
+
+史上最全的整合第三方登录的开源库： https://github.com/justauth/JustAuth
 
 ## 其它类型篇
 互联网公司技术架构： https://github.com/davideuler/architecture.of.internet-product
