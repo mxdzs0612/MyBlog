@@ -43,8 +43,6 @@ Spring Boot 教程、技术栈示例代码，快速简单上手教程： https:/
 
 spring boot demo： https://github.com/xkcoding/spring-boot-demo
 
-hope-boot脚手架： https://github.com/hope-for/hope-boot
-
 ## 开源项目篇
 微人事： https://github.com/lenve/vhr
 
@@ -72,6 +70,10 @@ effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chine
 WxJava （微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
 
 史上最全的整合第三方登录的开源库： https://github.com/justauth/JustAuth
+
+hope-boot脚手架： https://github.com/hope-for/hope-boot
+
+JHipster： https://github.com/jhipster/generator-jhipster
 
 ## 其它类型篇
 互联网公司技术架构： https://github.com/davideuler/architecture.of.internet-product
