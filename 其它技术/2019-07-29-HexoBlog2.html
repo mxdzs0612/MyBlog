@@ -75,7 +75,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文介绍了hexo最常见的主题，NexT主题的基本用法。  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T06:56:53.337Z">
+<meta property="og:updated_time" content="2019-09-09T02:44:17.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：主题篇">
 <meta name="twitter:description" content="本文介绍了hexo最常见的主题，NexT主题的基本用法。  这一主题使用人数多，自由度高，可扩展性强，且美观简洁，是一款综合性能较好的主题。本博客也使用了NexT主题搭建。">
@@ -325,7 +325,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-14 14:56:53" itemprop="dateModified" datetime="2019-08-14T14:56:53+08:00">2019-08-14</time>
+                <time title="修改时间：2019-09-09 10:44:17" itemprop="dateModified" datetime="2019-09-09T10:44:17+08:00">2019-09-09</time>
               </span>
             
           
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">9.6k</span>
+              <span title="本文字数">9.7k</span>
             </span>
           
             <span class="post-meta-item">
@@ -483,9 +483,10 @@
 <p>如果头像要使用在线地址，修改url的属性，内容填入图片的完整地址即可。如笔者使用自己的github头像，就可以这样配置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line"><span class="attr">  url:</span> <span class="attr">https://avatars2.githubusercontent.com/u/35512473</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line"><span class="attr">  rounded:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line"><span class="attr">  rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
-<p>如果要使用本地文件，则应将头像文件放在主题文件夹的<code>themes\next\source\images</code>路径下，然后修改url的属性为<code>avatar: /images/avatar.png</code>即可。</p>
-<p>也可在source文件夹下新建upload目录，配置为<code>avatar: /uploads/avatar.png</code>。</p>
-<p>其余选项的作用还请阅读注释或官方文档，自行探索。</p>
+<p>如果要使用本地文件，则应将头像文件放在主题文件夹的<code>themes\next\source\images</code>路径下，然后修改url的属性为<code>url: /images/avatar.png</code>即可。图片名称请自行设置。</p>
+<p>也可在source文件夹下新建upload目录，配置为<code>url: /uploads/avatar.png</code>。</p>
+<p>这里是非常自由的，可参考第四篇文章中插入图片的方式。</p>
+<p><code>rounded</code>选项设为true后，头像将变成圆形。再把<code>rotated</code>打开，鼠标放上去后，头像会非常鬼畜地转动，很有意思。</p>
 <h3 id="设置网站图标"><a href="#设置网站图标" class="headerlink" title="设置网站图标"></a><strong>设置网站图标</strong></h3><p>网站图标就是显示在网页标签最左边的那个小图片。</p>
 <p>先将图标文件复制到主题目录中的<code>images</code>文件夹下，然后在主题的配置文件中找到<code>favicon</code>关键字，按照提示修改为相对路径即可。</p>
 <h2 id="集成第三方功能"><a href="#集成第三方功能" class="headerlink" title="集成第三方功能"></a>集成第三方功能</h2><p>NexT内部集成了大量第三方的工具。这里将挑选几个进行介绍。更多可用内容，请参考<a href="https://theme-next.org/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
@@ -497,7 +498,7 @@
 <p>xxx_icon可设置这些访问量的示意图标，图标采用的是<a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">Font Awesome Icons</a>，可自行替换成自己喜欢的。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_visitors_icon:</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  total_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  total_views_icon:</span> <span class="string">eye</span></span><br><span class="line"><span class="attr">  post_views:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  post_views_icon:</span> <span class="string">eye</span></span><br></pre></td></tr></table></figure>
 
-<p>不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 近期改版后，LeanCloud需要上传身份证照片实名认证才能创建新应用，个人对此非常介意，因此不再推荐。不想用不蒜子的同学可以自行查找其他统计方法。</p>
+<p>不蒜子的缺点是统计不是很准（只多不少，很容易刷数据）。如想使用其它第三方统计工具，<del>个人推荐<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>。</del> 近期改版后，LeanCloud需要上传身份证照片实名认证才能创建新应用，个人对此非常介意，因此不再推荐。请不想用不蒜子的同学自行查找其他统计方法。</p>
 <h3 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a><strong>搜索功能</strong></h3><p>在主题配置文件中搜索<code># Search Services</code>注释，下面包含了NexT集成的两种配置方式。先来介绍第一种，即<code>algolia_search</code>。</p>
 <p>首先进入<a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia官方网站</a>，注册账号。可以直接使用你的github账号。</p>
 <p>填写信息后（部分信息可跳过不填），点击页面上的粉红色按钮<code>NEW INDEX</code>，新建一个索引，起一个名字（后面会用到）。</p>
@@ -541,7 +542,7 @@
 
 <p>搜索功能的位置和algolia一样，也在菜单栏的最下面，并且支持全文搜索。此外，也可自己定制样式，非常好用。</p>
 <p>这种方式就简单了很多，缺点是需要额外的一些安装包，换设备部署应重新安装。</p>
-<p>此外，这种方法的原理是在本地生成一个包含索引的<code>search.xml</code>文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，会降低博客生成效率。</p>
+<p>此外，这种方法的原理是在本地生成一个包含索引的<code>search.xml</code>文件。感兴趣的读者可以点开看看其中有什么内容。随着文章数量增多，文件将越来越大，可能会降低博客的生成与备份效率。</p>
 <h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a><strong>评论</strong></h3><p>本站原先使用了<a href="https://gitalk.github.io/" target="_blank" rel="noopener">GITALK</a>。这种方式的优点是配置简单，缺点是不支持无登陆评论。</p>
 <p>GITALK是利用github API、基于Github issue开发的评论系统。</p>
 <p>首先要去<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">这里</a>申请一个新app。四个位置依次填入app名称、博客地址<code>https://xxxx.github.io</code>、描述（任填）以及回调地址（仍然填博客地址）。点击绿色按钮创建。</p>
@@ -562,7 +563,7 @@
 
 <p>其中，repo下填写你想把哪个仓库的issue当作评论的位置，如<code>xxxx/xxxx.github.io</code>。其它选项按注释设置或保留原样即可。</p>
 <p>重新生成博客，在每篇文章的最下方即会出现utterances评论。登录github账号，任何人可以新建评论，初始化工作将由utterances机器人完成，非常方便。</p>
-<p>缺点也有一些，首先，目前界面都是英文的。虽然无伤大雅，但还是希望能够保持界面语言的一致性。</p>
+<p>缺点也有一些，首先，目前界面都是英文的。虽然无伤大雅，但笔者还是希望能够保持界面语言的一致性，目前的样式实在有些别扭。</p>
 <p>第二，目前issue的名称似乎只支持pathname，当路径为中文时，此种方式会产生乱码。笔者没有进行尝试，不知道按照GITALK的方式进行配置是否有效，希望能够在后续的文档中有说明吧。</p>
 <p>如果出现跳转错误的问题（如登录后跳转到<code>https://yoursite.com/</code>），请在博客的配置文件中搜索<code># URL</code>，将<code>url:</code>配置为<code>/</code>或你的站点的URL地址。</p>
 <h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a><strong>字数统计</strong></h3><p>首先在根目录运行Git Bash，执行</p>
@@ -587,7 +588,7 @@
 
 <p>即可使用。</p>
 <p>此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。此外，在低分辨率的屏幕上，增加日历会使侧边栏出现一个滚动条，可能会影响美观。</p>
-<p>这种安装方式的缺点是无法进行自定义的配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用<a href="https://github.com/icecory/theme-next-calendar" target="_blank" rel="noopener">这种方法</a>安装，就可以自行修改文件。</p>
+<p>使用CDN的缺点是无法进行细节上的自定义配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用<a href="https://github.com/icecory/theme-next-calendar" target="_blank" rel="noopener">这种方法</a>安装，就可以自行修改文件。</p>
 
     </div>
 
@@ -883,14 +884,14 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">25k</span>
+    <span title="站点总字数">26k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">42 分钟</span>
+    <span title="站点阅读时长">43 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
