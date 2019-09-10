@@ -34,6 +34,8 @@ Design patterns implemented in Java (英文)： https://github.com/iluwatar/java
 
 系统设计入门： https://github.com/donnemartin/system-design-primer
 
+Java 程序员眼中的 Linux： https://github.com/judasn/Linux-Tutorial
+
 ## 框架使用篇
 Spring Boot 系列实战合集:  https://github.com/hansonwang99/Spring-Boot-In-Action
 
@@ -49,6 +51,8 @@ spring boot demo： https://github.com/xkcoding/spring-boot-demo
 电商系统： https://github.com/macrozheng/mall
 
 秒杀系统设计与实现： https://github.com/qiurunze123/miaosha
+
+后台管理系统： https://github.com/elunez/eladmin
 
 ## 面试指南篇
 2019年最新总结，阿里，腾讯，百度，美团，头条等技术面试题目，以及答案，专家出题人分析汇总: https://github.com/0voice/interview_internal_reference
