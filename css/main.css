@@ -1744,7 +1744,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #95672d;
+  background: #b92f5d;
 }
 .feed-link,
 .chat {
@@ -3041,9 +3041,6 @@ ul.breadcrumb li+li:last-child {
     margin: 8px 0 0;
   }
 }
-.utterances {
-  max-width: unset;
-}
 #CloudCalendar {
 /*全句背景色*/
   background-color: #eee;
@@ -3167,4 +3164,7 @@ ul.breadcrumb li+li:last-child {
   background-color: #68dc6e;
   color: #fff;
   cursor: pointer;
+}
+.utterances {
+  max-width: unset;
 }
