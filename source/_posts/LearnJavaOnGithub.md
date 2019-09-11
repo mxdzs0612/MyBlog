@@ -23,7 +23,11 @@ Java工程师成神之路： https://github.com/hollischuang/toBeTopJavaer
 
 互联网 Java 工程师进阶知识完全扫盲： https://github.com/doocs/advanced-java
 
-面试总结： https://github.com/gzc426/Java-Interview https://github.com/xbox1994/Java-Interview 
+处于萌芽阶段的 Java 核心知识库： https://github.com/crossoverJie/JCSprout
+
+汇总java生态圈技术心得： https://github.com/aalansehaiyang/technology-talk
+
+面试总结×2： https://github.com/gzc426/Java-Interview && https://github.com/xbox1994/Java-Interview 
 
 ## 知识体系篇
 All Algorithms implemented in Java (英文)： https://github.com/TheAlgorithms/Java
@@ -70,14 +74,18 @@ On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 
 effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
 
-## 实用工具篇
-WxJava （微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
+## 实用轮子篇
+WxJava（微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
 
 史上最全的整合第三方登录的开源库： https://github.com/justauth/JustAuth
 
 hope-boot脚手架： https://github.com/hope-for/hope-boot
 
 JHipster： https://github.com/jhipster/generator-jhipster
+
+## 开发工具篇
+
+（待补完）
 
 ## 其它类型篇
 互联网公司技术架构： https://github.com/davideuler/architecture.of.internet-product
