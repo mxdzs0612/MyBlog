@@ -49,6 +49,13 @@ Spring Boot 教程、技术栈示例代码，快速简单上手教程： https:/
 
 spring boot demo： https://github.com/xkcoding/spring-boot-demo
 
+## 框架增强篇
+hope-boot脚手架： https://github.com/hope-for/hope-boot
+
+JHipster： https://github.com/jhipster/generator-jhipster
+
+Spring-Boot-Plus： https://github.com/geekidea/spring-boot-plus
+
 ## 开源项目篇
 微人事： https://github.com/lenve/vhr
 
@@ -74,18 +81,14 @@ On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 
 effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
 
-## 实用轮子篇
+## 开发工具篇
 WxJava（微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
 
 史上最全的整合第三方登录的开源库： https://github.com/justauth/JustAuth
 
-hope-boot脚手架： https://github.com/hope-for/hope-boot
+Hutool： https://github.com/looly/hutool
 
-JHipster： https://github.com/jhipster/generator-jhipster
-
-## 开发工具篇
-
-（待补完）
+Swagger： https://github.com/swagger-api/swagger-ui
 
 ## 其它类型篇
 互联网公司技术架构： https://github.com/davideuler/architecture.of.internet-product
