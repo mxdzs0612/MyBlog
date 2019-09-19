@@ -82,6 +82,8 @@ On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
 
 ## 开发工具篇
+lombok： https://github.com/rzwitserloot/lombok
+
 WxJava（微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
 
 史上最全的整合第三方登录的开源库： https://github.com/justauth/JustAuth
