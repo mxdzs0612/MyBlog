@@ -59,11 +59,15 @@ Spring-Boot-Plus： https://github.com/geekidea/spring-boot-plus
 ## 开源项目篇
 微人事： https://github.com/lenve/vhr
 
+V部落博客管理平台： https://github.com/lenve/VBlog
+
 电商系统： https://github.com/macrozheng/mall
 
 秒杀系统设计与实现： https://github.com/qiurunze123/miaosha
 
 后台管理系统： https://github.com/elunez/eladmin
+
+Spring Cloud电商平台： https://github.com/paascloud/paascloud-master
 
 ## 面试指南篇
 2019年最新总结，阿里，腾讯，百度，美团，头条等技术面试题目，以及答案，专家出题人分析汇总: https://github.com/0voice/interview_internal_reference
