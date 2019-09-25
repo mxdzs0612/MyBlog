@@ -57,13 +57,13 @@ JHipster： https://github.com/jhipster/generator-jhipster
 Spring-Boot-Plus： https://github.com/geekidea/spring-boot-plus
 
 ## 开源项目篇
+电商系统： https://github.com/macrozheng/mall
+
+秒杀系统： https://github.com/qiurunze123/miaosha
+
 微人事： https://github.com/lenve/vhr
 
 V部落博客管理平台： https://github.com/lenve/VBlog
-
-电商系统： https://github.com/macrozheng/mall
-
-秒杀系统设计与实现： https://github.com/qiurunze123/miaosha
 
 后台管理系统： https://github.com/elunez/eladmin
 
@@ -95,6 +95,8 @@ WxJava（微信开发 Java SDK）: https://github.com/Wechat-Group/WxJava
 Hutool： https://github.com/looly/hutool
 
 Swagger： https://github.com/swagger-api/swagger-ui
+
+JWT登录支持： https://github.com/jwtk/jjwt
 
 ## 其它类型篇
 互联网公司技术架构： https://github.com/davideuler/architecture.of.internet-product
