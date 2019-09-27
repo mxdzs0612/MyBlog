@@ -6,7 +6,7 @@ tags: [总结, Java, Web]
 ---
 这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。
 
-这份资料主要是方便自己看的。不过，如果真的有读者读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。
+这份资料主要是方便自己看的。不过，如果有读者不小心读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。
 
 <!-- more -->
 
@@ -36,6 +36,8 @@ Design patterns implemented in Java (英文)： https://github.com/iluwatar/java
 
 用动画的形式呈现解LeetCode题目的思路： https://github.com/MisterBooo/LeetCodeAnimation
 
+Java LeetCode题解： https://github.com/wind-liang/leetcode
+
 系统设计入门： https://github.com/donnemartin/system-design-primer
 
 Java 程序员眼中的 Linux： https://github.com/judasn/Linux-Tutorial
@@ -64,6 +66,8 @@ Spring-Boot-Plus： https://github.com/geekidea/spring-boot-plus
 微人事： https://github.com/lenve/vhr
 
 V部落博客管理平台： https://github.com/lenve/VBlog
+
+halo 一款现代化的个人独立博客系统： https://github.com/halo-dev/halo
 
 后台管理系统： https://github.com/elunez/eladmin
 
