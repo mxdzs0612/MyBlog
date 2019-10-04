@@ -80,6 +80,8 @@ Coding Interview University (英文)： https://github.com/jwasham/coding-interv
 
 Everything you need to know to get the job： https://github.com/kdn251/interviews
 
+Materials to help you rock your next coding interview（英文）： https://github.com/yangshun/tech-interview-handbook
+
 ## 读书充电篇
 Java开发者技术书籍大全： https://github.com/sorenduan/awesome-java-books
 
@@ -88,6 +90,8 @@ Java开发者技术书籍大全： https://github.com/sorenduan/awesome-java-boo
 On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 
 effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
+
+ Freely available programming books（各种语言，含中文）： https://github.com/EbookFoundation/free-programming-books
 
 ## 开发工具篇
 lombok： https://github.com/rzwitserloot/lombok
