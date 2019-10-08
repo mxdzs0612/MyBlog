@@ -196,8 +196,9 @@ codeblock:
 可以在博客上添加一个live2d看板娘。
 
 首先执行
->npm install --save hexo-helper-live2d
-
+```bash
+npm install --save hexo-helper-live2d
+```
 然后在[这里](https://github.com/summerscar/live2dDemo)挑选你喜欢的模型，甚至可以在[这里](http://summerscar.me/live2dDemo/)预览。挑选好后克隆仓库到博客主目录下，嫌大的话可以单独克隆你想要的文件，放在名称为`live2d_models`的文件夹下。当然也可以通过npm安装，但个人不是很推荐。
 
 在`assets`文件夹中找到你选好的模型，记住文件夹名称。此文件夹里必须要有`xxxx.model.json`文件。
