@@ -69,7 +69,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同。主要参考资料为官方网站的文档。当然，很多东西都已经写在配置文件的注释里了，也可以自行探索。 NexT的页面是通过.swig格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。当然很多功能都在主题的配置文件里面集成好了，并不需要我们手动修改源码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-11T02:13:13.370Z">
+<meta property="og:updated_time" content="2019-10-08T01:50:35.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo在github上搭建博客：个性化篇">
 <meta name="twitter:description" content="本文介绍了NexT主题的一些个性化配置方法，可以使你的博客变得与众不同。主要参考资料为官方网站的文档。当然，很多东西都已经写在配置文件的注释里了，也可以自行探索。 NexT的页面是通过.swig格式的文件渲染的，其语法和前端静态页面几乎一致，做过WEB开发的读者应该都可以看懂。当然很多功能都在主题的配置文件里面集成好了，并不需要我们手动修改源码。">
@@ -311,7 +311,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-11 10:13:13" itemprop="dateModified" datetime="2019-09-11T10:13:13+08:00">2019-09-11</time>
+                <time title="修改时间：2019-10-08 09:50:35" itemprop="dateModified" datetime="2019-10-08T09:50:35+08:00">2019-10-08</time>
               </span>
             
           
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>7.4k</span>
+              <span>7.6k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -356,7 +356,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>12 分钟</span>
+              <span>13 分钟</span>
             </span>
           
 
@@ -394,11 +394,12 @@
 <p>最后在主题的配置文件中的任意位置添加</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文章末尾添加“本文结束”标记</span></span><br><span class="line"><span class="attr">passage_end_tag:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<p>这样，每篇文章的末尾处，都会自动打印所添加的内容。</p>
+<p><del>这样，每篇文章的末尾处，都会自动打印所添加的内容。</del> 疑似失效，可能需要额外的配置了。</p>
 <h2 id="公众号与打赏"><a href="#公众号与打赏" class="headerlink" title="公众号与打赏"></a>公众号与打赏</h2><p>NexT支持在页面上显示你的公众号的二维码。当然也可以展示你的zfb、wx收钱码，赚一点点打赏。</p>
 <p>在主题的配置文件中搜索<code>wechat_subscriber</code>与<code>reward_settings</code>，根据注释设置即可。注意，你的二维码的位置应放在主题目录的<code>source</code>文件夹下，填写相对路径。关于添加图片的示例，请参考下一篇博文。</p>
 <p>传好图片、设置好路径后，将对应位置的配置项前的井号取消，使其生效。</p>
 <p>由于笔者没有公众号，因此没有尝试配置公众号订阅，不知道配置好了以后是什么样子的。打赏的效果是在文章底部出现一个按钮，二维码平时是隐藏的，点击按钮后才显示。</p>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><p>在主题配置信息中搜索<code>creative_commons:</code>，将<code>post:</code>改成true即可。<br>这样在每篇文章末尾都会出现本文作者、本文链接已经版权声明。<br>注：NexT 7.4.0之前，此项配置似乎不是这样的。还在用旧版的同学请自行查找合适的方法。</p>
 <h2 id="网页底部内容"><a href="#网页底部内容" class="headerlink" title="网页底部内容"></a>网页底部内容</h2><p>在主题配置文件中搜索<code>footer:</code>属性，按个人喜好进行配置即可。</p>
 <p>可进行控制的项目有：</p>
 <ul>
@@ -480,6 +481,22 @@
       </div>
 
   </div>
+</div>
+
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>mxdzs0612</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://mxdzs0612.github.io/其它技术/2019-07-31-HexoBlog3.html" title="使用hexo在github上搭建博客：个性化篇">https://mxdzs0612.github.io/其它技术/2019-07-31-HexoBlog3.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
 </div>
 
       
@@ -573,7 +590,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#永久链接"><span class="nav-number">1.</span> <span class="nav-text">永久链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏设置"><span class="nav-number">2.</span> <span class="nav-text">侧边栏设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回到顶部"><span class="nav-number">3.</span> <span class="nav-text">回到顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文末提示"><span class="nav-number">4.</span> <span class="nav-text">文末提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公众号与打赏"><span class="nav-number">5.</span> <span class="nav-text">公众号与打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页底部内容"><span class="nav-number">6.</span> <span class="nav-text">网页底部内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签样式"><span class="nav-number">7.</span> <span class="nav-text">标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码风格"><span class="nav-number">8.</span> <span class="nav-text">代码风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github横幅"><span class="nav-number">9.</span> <span class="nav-text">Github横幅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript动画"><span class="nav-number">10.</span> <span class="nav-text">JavaScript动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态标题栏"><span class="nav-number">11.</span> <span class="nav-text">动态标题栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现心形效果"><span class="nav-number">12.</span> <span class="nav-text">点击出现心形效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章不显示全文"><span class="nav-number">13.</span> <span class="nav-text">首页文章不显示全文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#live2d模型"><span class="nav-number">14.</span> <span class="nav-text">live2d模型</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#永久链接"><span class="nav-number">1.</span> <span class="nav-text">永久链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏设置"><span class="nav-number">2.</span> <span class="nav-text">侧边栏设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回到顶部"><span class="nav-number">3.</span> <span class="nav-text">回到顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文末提示"><span class="nav-number">4.</span> <span class="nav-text">文末提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公众号与打赏"><span class="nav-number">5.</span> <span class="nav-text">公众号与打赏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版权声明"><span class="nav-number">6.</span> <span class="nav-text">版权声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页底部内容"><span class="nav-number">7.</span> <span class="nav-text">网页底部内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签样式"><span class="nav-number">8.</span> <span class="nav-text">标签样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码风格"><span class="nav-number">9.</span> <span class="nav-text">代码风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github横幅"><span class="nav-number">10.</span> <span class="nav-text">Github横幅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript动画"><span class="nav-number">11.</span> <span class="nav-text">JavaScript动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态标题栏"><span class="nav-number">12.</span> <span class="nav-text">动态标题栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击出现心形效果"><span class="nav-number">13.</span> <span class="nav-text">点击出现心形效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首页文章不显示全文"><span class="nav-number">14.</span> <span class="nav-text">首页文章不显示全文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#live2d模型"><span class="nav-number">15.</span> <span class="nav-text">live2d模型</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -713,7 +730,7 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">27k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -811,21 +828,6 @@
 
   
 <!-- calendar widget -->
-
-    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        $('#CloudCalendar').aCalendar('zh-CN',
-            $.extend(
-                '', {
-                    single:true,
-                    root:'/calendar/'
-                }
-            )
-        );
-    });
-    </script>
 
 
   <!-- 页面点击小红心 -->
