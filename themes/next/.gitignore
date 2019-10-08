@@ -1,4 +1,21 @@
 .DS_Store
-node_modules
+.idea/
+*.log
+*.iml
+yarn.lock
+package-lock.json
+node_modules/
 tmp
 git备份
+
+# Ignore optional external libraries
+source/lib/*
+
+# Track internal libraries & Ignore unused verdors files
+source/lib/font-awesome/less/
+source/lib/font-awesome/scss/
+!source/lib/font-awesome/
+
+!source/lib/anime.min.js
+
+!source/lib/velocity/

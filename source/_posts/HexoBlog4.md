@@ -13,8 +13,9 @@ tags: [github, hexo]
 有时候我们想把自己设备上的图片传到博客上。这项工作需要借助第三方工具。
 
 在根路径下打开Git Bash，执行
->npm install hexo-asset-image --save
-
+```bash
+npm install hexo-asset-image --save
+```
 修改博客的配置文件，将`post_asset_folder:`设为true。
 
 此后，每次新建博客的时候，都会在相同目录下新建一个同名文件夹。将图片放入此文件夹中，然后按照markdown语法引入图片即可。文件夹当然也可以手动创建。
@@ -80,8 +81,9 @@ tags: [github, hexo]
 感觉站点地图还是有必要加的，不然搜索引擎无法索引到你的网站的具体文章。添加的步骤如下：
 
 首先在根目录下执行
->npm install hexo-generator-sitemap --save
-
+```bash
+npm install hexo-generator-sitemap --save
+```
 然后重新编译。部署，自动生成的站点地图就会出现。
 
 在对应搜索引擎的网站提交你的网站的站点地图地址即可，默认为`https://xxxx.github.io/sitemap.xml`。你也可以在浏览器输入此url查看效果。

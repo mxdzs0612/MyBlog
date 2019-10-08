@@ -5,11 +5,12 @@
       alt="{{ author }}">
   {%- endif %}
   <p class="site-author-name" itemprop="name">{{ author }}</p>
-  <div class="site-description motion-element" itemprop="description">{{ description }}</div>
+  <div class="site-description" itemprop="description">{{ description }}</div>
 </div>
 
 {%- if theme.site_state %}
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
     {%- if config.archive_dir != '/' and site.posts.length > 0 %}
       <div class="site-state-item site-state-posts">
         {%- if theme.menu.archives %}
@@ -34,11 +35,7 @@
             <a href="{{ url_for(config.category_dir) + '/' }}">
           {%- endif %}
         {%- endif %}
-        {%- set visibleCategories = 0 %}
-        {%- for cat in site.categories %}
-          {%- if cat.length %}{%- set visibleCategories += 1 %}{%- endif %}
-        {%- endfor %}
-        <span class="site-state-item-count">{{ visibleCategories }}</span>
+        <span class="site-state-item-count">{{ site.categories.length }}</span>
         <span class="site-state-item-name">{{ __('state.categories') }}</span>
         {%- if hasCategoriesPage %}</a>{%- endif %}
       </div>
@@ -55,16 +52,13 @@
             <a href="{{ url_for(config.tag_dir) + '/' }}">
           {%- endif %}
         {%- endif %}
-        {%- set visibleTags = 0 %}
-        {%- for tag in site.tags %}
-          {%- if tag.length %}{%- set visibleTags += 1 %}{%- endif %}
-        {%- endfor %}
-        <span class="site-state-item-count">{{ visibleTags }}</span>
+        <span class="site-state-item-count">{{ site.tags.length }}</span>
         <span class="site-state-item-name">{{ __('state.tags') }}</span>
         {%- if hasTagsPage %}</a>{%- endif %}
       </div>
     {%- endif %}
   </nav>
+</div>
 {%- endif %}
 
 {%- if theme.rss %}
@@ -122,10 +116,10 @@
 
 {# Blogroll #}
 {%- if theme.links %}
-  <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
+  <div class="links-of-blogroll motion-element">
     <div class="links-of-blogroll-title">
-      <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
-      {{ theme.links_title }}
+      <i class="fa fa-fw fa-{{ theme.links_settings.icon | default('link') | lower }}"></i>
+      {{ theme.links_settings.title }}
     </div>
     <ul class="links-of-blogroll-list">
       {%- for blogrollText, blogrollURL in theme.links %}

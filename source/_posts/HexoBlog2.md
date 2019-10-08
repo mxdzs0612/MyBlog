@@ -19,8 +19,9 @@ tags: [github, hexo]
  hexo的默认主题为landscape，可以在[此页面](https://hexo.io/themes/)中选择喜欢的主题。但是不管选哪个，都需要自己下载。这里就以NexT为例了。
 
 我们当然可以选择去官方网站下载源码，但是更简单的方法是使用git。在博客的目录下打开控制台，输入
->git clone https://github.com/theme-next/hexo-theme-next themes/next
-
+```bash
+git clone https://github.com/theme-next/hexo-theme-next themes/next
+```
 即可将主题文件克隆到themes目录下的next文件夹中。
 
 如果需要备份主题文件，此时应直接删去next文件夹下的.git文件夹，以防出现各种奇怪的问题。理论上使用--recursive参数也可以，但是会非常麻烦。
@@ -62,7 +63,7 @@ NexT主题共提供了四种风格，可以点击[官方github中Live Preview标
 #scheme: Pisces
 scheme: Gemini
 ```
-~~不进行设置时，默认选择的是第一个（Muse）。~~ 现在默认主题已经变成了Gemini。不是很建议选择Mist主题，因为后续支持的内容可能比较少。
+~~不进行设置时，默认选择的是第一个（Muse）。现在默认主题已经变成了Gemini。不是很建议选择Mist主题，因为后续支持的内容可能比较少。~~ 现在默认主题又变回了第一个，反复横跳= =
 
 ### **菜单栏**
 在主题的配置文件中找到`Menu`关键字，进行设置。想要哪个就去掉哪个配置前面的“#”注释。
@@ -80,8 +81,9 @@ menu:
 例如：如果想给文章添加标签，应按如下步骤操作：
 
 首先在博客根目录下，执行
->hexo new page tags
-
+```bash
+hexo new page tags
+```
 此操作会在`\source\tags`路径下生成一个`index.md`文件，其内容为
 ```md
 ---
@@ -180,8 +182,9 @@ busuanzi_count:
 再来到`All API Keys`标签，点击Edit，在ACL选项中打开`search`、`addObject`、`deleteObject`、`listIndexes`、`deleteIndex`。
 
 然后安装插件。在主题根目录下执行
->	npm install hexo-algoliasearch --save
-
+```bash
+npm install hexo-algoliasearch --save
+```
 然后在根目录的站点配置文件中，增添
 ```yml
 algolia:
@@ -195,16 +198,19 @@ algolia:
 但还没结束。下一步需要让Algolia记录你的文章数据。
 
 在根目录下打开Git Bash，输入
->export HEXO_ALGOLIA_INDEXING_KEY=Search-Only API key
-
+```bash
+export HEXO_ALGOLIA_INDEXING_KEY=Search-Only API key
+```
 （注：若用cmd，要将export换成set，但此法可能会导致不可预知的错误，因此建议使用Git Bash）
->hexo algolia
-
+```bash
+hexo algolia
+```
 顺利的话，Algolia后台的`Indices`下应该就能看到我们的博客的信息了。
 
 最后添加页面上的入口及脚本。进入主题目录下，Git Bash输入
->git clone https://github.com/theme-next/theme-next-algolia-instant-search source/lib/algolia-instant-search
-
+```bash
+git clone https://github.com/theme-next/theme-next-algolia-instant-search source/lib/algolia-instant-search
+```
 在`source/lib/`目录下安装algolia-instant-search所需的文件。
 
 最后，把主题配置文件中的`algolia_search.enable`，属性设为true，即可开启搜索功能。
@@ -215,8 +221,9 @@ algolia:
 algolia免费用户策略改版后出现了一个缺点：不支持全文搜索。虽然在校学生可以申请到一年的免费使用权，但笔者还是觉得不解决根本问题。因此本站决定换用`Local Search`。个人也更推荐这种搜索方式。
 
 首先在根目录打开Git Bash，运行
->npm install hexo-generator-searchdb --save
-
+```bash
+npm install hexo-generator-searchdb --save
+```
 在博客配置文件增添下列语句：
 ```yml
 search:
@@ -286,8 +293,9 @@ NexT 7.3.0 + 版本集成了[utterances](https://utteranc.es/)评论。这一工
 首先来[这里](https://github.com/apps/utterances)为utterances在github上授权。只有这样，才能让utterances有资格访问你的issue。还可指定utterances能够访问的仓库，可见其权限控制做的非常好。
 
 授权完毕后，来到博客根目录，打开Git Bash，执行
->npm install --save github:theme-next/hexo-next-utteranc
-
+```bash
+npm install --save github:theme-next/hexo-next-utteranc
+```
 然后在任意配置文件中（建议在主题配置文件中）新建如下配置
 ```yml
 # Demo: https://utteranc.es/  http://trumandu.github.io/about/
@@ -309,10 +317,13 @@ utteranc:
 
 如果出现跳转错误的问题（如登录后跳转到`https://yoursite.com/`），请在博客的配置文件中搜索`# URL`，将`url: `配置为`/`或你的站点的URL地址。
 
+目前最新版NexT还支持多评论，详情请见[此issue](https://github.com/theme-next/hexo-theme-next/pull/1048)。
+
 ### **字数统计**
 首先在根目录运行Git Bash，执行
->npm install hexo-symbols-count-time --save
-
+```bash
+npm install hexo-symbols-count-time --save
+```
 然后在博客的配置文件中新增配置
 ```yml
 symbols_count_time:
@@ -342,8 +353,9 @@ symbols_count_time:
 ### **日历插件**
 NexT适配了一个云日历插件，可以在日历上显示提交标记。
 在根目录下打开Git Bash，执行
->npm install --save github:theme-next/theme-next-calendar
-
+```bash
+npm install --save github:theme-next/theme-next-calendar
+```
 安装插件。然后在NexT的主题配置文件中添加配置
 ```yml
 CloudCalendar:
@@ -360,3 +372,5 @@ CloudCalendar:
 此插件会在侧边栏的最下方添加一个日历。如果你的侧边栏比较窄，视觉效果可能会稍差。此外，在低分辨率的屏幕上，增加日历会使侧边栏出现一个滚动条，可能会影响美观。
 
 使用CDN的缺点是无法进行细节上的自定义配置，只能照着默认的来。如果想自己修改日历的颜色、位置等信息，请用[这种方法](https://github.com/icecory/theme-next-calendar)安装，就可以自行修改文件。
+
+~~不知为什么最近突然不好使了，容我调试一下……~~
