@@ -61,19 +61,19 @@
   };
 </script>
 
-  <meta name="description" content="这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。 这份资料主要是方便自己看的。不过，如果有读者不小心读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。">
-<meta name="keywords" content="总结,Java,Web">
+  <meta name="description" content="本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。">
+<meta name="keywords" content="Linux,WSL,Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github上的一些不错的Java学习资源">
-<meta property="og:url" content="https://mxdzs0612.github.io/后端开发/2019-08-11-LearnJavaOnGithub.html">
+<meta property="og:title" content="安装、配置WSL并在在其中安装Docker">
+<meta property="og:url" content="https://mxdzs0612.github.io/后端开发/2019-10-09-DockerOnWSL.html">
 <meta property="og:site_name" content="mxdzs0612的博客">
-<meta property="og:description" content="这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。 这份资料主要是方便自己看的。不过，如果有读者不小心读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。">
+<meta property="og:description" content="本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T00:40:52.168Z">
+<meta property="og:updated_time" content="2019-10-09T10:08:32.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github上的一些不错的Java学习资源">
-<meta name="twitter:description" content="这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。 这份资料主要是方便自己看的。不过，如果有读者不小心读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。">
-  <link rel="canonical" href="https://mxdzs0612.github.io/后端开发/2019-08-11-LearnJavaOnGithub">
+<meta name="twitter:title" content="安装、配置WSL并在在其中安装Docker">
+<meta name="twitter:description" content="本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。">
+  <link rel="canonical" href="https://mxdzs0612.github.io/后端开发/2019-10-09-DockerOnWSL">
 
 
 <script id="page-configurations">
@@ -87,7 +87,7 @@
   };
 </script>
 
-  <title>Github上的一些不错的Java学习资源 | mxdzs0612的博客</title>
+  <title>安装、配置WSL并在在其中安装Docker | mxdzs0612的博客</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mxdzs0612.github.io/后端开发/2019-08-11-LearnJavaOnGithub.html">
+    <link itemprop="mainEntityOfPage" href="https://mxdzs0612.github.io/后端开发/2019-10-09-DockerOnWSL.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mxdzs0612">
@@ -284,7 +284,7 @@
       <meta itemprop="name" content="mxdzs0612的博客">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Github上的一些不错的Java学习资源
+        <h1 class="post-title" itemprop="name headline">安装、配置WSL并在在其中安装Docker
 
           
         </h1>
@@ -300,7 +300,7 @@
                 
               
 
-              <time title="创建时间：2019-08-11 21:59:37" itemprop="dateCreated datePublished" datetime="2019-08-11T21:59:37+08:00">2019-08-11</time>
+              <time title="创建时间：2019-10-09 16:31:40" itemprop="dateCreated datePublished" datetime="2019-10-09T16:31:40+08:00">2019-10-09</time>
             </span>
           
             
@@ -311,7 +311,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-08 08:40:52" itemprop="dateModified" datetime="2019-10-08T08:40:52+08:00">2019-10-08</time>
+                <time title="修改时间：2019-10-09 18:08:32" itemprop="dateModified" datetime="2019-10-09T18:08:32+08:00">2019-10-09</time>
               </span>
             
           
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>3.1k</span>
+              <span>4.5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -356,7 +356,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>5 分钟</span>
+              <span>8 分钟</span>
             </span>
           
 
@@ -369,56 +369,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。</p>
-<p>这份资料主要是方便自己看的。不过，如果有读者不小心读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。</p>
+        <p>本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。</p>
 <a id="more"></a>
 
-<h2 id="完全总结篇"><a href="#完全总结篇" class="headerlink" title="完全总结篇"></a>完全总结篇</h2><p>Java学习+面试指南： <a href="https://github.com/Snailclimb/JavaGuide" target="_blank" rel="noopener">https://github.com/Snailclimb/JavaGuide</a></p>
-<p>Cyc Tech Interview Guide： <a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener">https://github.com/CyC2018/CS-Notes</a></p>
-<p>后端架构师技术图谱： <a href="https://github.com/xingshaocheng/architect-awesome" target="_blank" rel="noopener">https://github.com/xingshaocheng/architect-awesome</a></p>
-<p>3y： <a href="https://github.com/ZhongFuCheng3y/3y" target="_blank" rel="noopener">https://github.com/ZhongFuCheng3y/3y</a></p>
-<p>Java工程师成神之路： <a href="https://github.com/hollischuang/toBeTopJavaer" target="_blank" rel="noopener">https://github.com/hollischuang/toBeTopJavaer</a></p>
-<p>互联网 Java 工程师进阶知识完全扫盲： <a href="https://github.com/doocs/advanced-java" target="_blank" rel="noopener">https://github.com/doocs/advanced-java</a></p>
-<p>处于萌芽阶段的 Java 核心知识库： <a href="https://github.com/crossoverJie/JCSprout" target="_blank" rel="noopener">https://github.com/crossoverJie/JCSprout</a></p>
-<p>汇总java生态圈技术心得： <a href="https://github.com/aalansehaiyang/technology-talk" target="_blank" rel="noopener">https://github.com/aalansehaiyang/technology-talk</a></p>
-<p>面试总结×2： <a href="https://github.com/gzc426/Java-Interview" target="_blank" rel="noopener">https://github.com/gzc426/Java-Interview</a> &amp;&amp; <a href="https://github.com/xbox1994/Java-Interview" target="_blank" rel="noopener">https://github.com/xbox1994/Java-Interview</a> </p>
-<h2 id="知识体系篇"><a href="#知识体系篇" class="headerlink" title="知识体系篇"></a>知识体系篇</h2><p>All Algorithms implemented in Java (英文)： <a href="https://github.com/TheAlgorithms/Java" target="_blank" rel="noopener">https://github.com/TheAlgorithms/Java</a></p>
-<p>Design patterns implemented in Java (英文)： <a href="https://github.com/iluwatar/java-design-patterns" target="_blank" rel="noopener">https://github.com/iluwatar/java-design-patterns</a></p>
-<p>用动画的形式呈现解LeetCode题目的思路： <a href="https://github.com/MisterBooo/LeetCodeAnimation" target="_blank" rel="noopener">https://github.com/MisterBooo/LeetCodeAnimation</a></p>
-<p>Java LeetCode题解： <a href="https://github.com/wind-liang/leetcode" target="_blank" rel="noopener">https://github.com/wind-liang/leetcode</a></p>
-<p>系统设计入门： <a href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">https://github.com/donnemartin/system-design-primer</a></p>
-<p>Java 程序员眼中的 Linux： <a href="https://github.com/judasn/Linux-Tutorial" target="_blank" rel="noopener">https://github.com/judasn/Linux-Tutorial</a></p>
-<h2 id="框架使用篇"><a href="#框架使用篇" class="headerlink" title="框架使用篇"></a>框架使用篇</h2><p>Spring Boot 系列实战合集:  <a href="https://github.com/hansonwang99/Spring-Boot-In-Action" target="_blank" rel="noopener">https://github.com/hansonwang99/Spring-Boot-In-Action</a></p>
-<p>循序渐进，学习Spring Boot： <a href="https://github.com/wuyouzhuguli/SpringAll" target="_blank" rel="noopener">https://github.com/wuyouzhuguli/SpringAll</a></p>
-<p>Spring Boot 教程、技术栈示例代码，快速简单上手教程： <a href="https://github.com/ityouknow/spring-boot-examples" target="_blank" rel="noopener">https://github.com/ityouknow/spring-boot-examples</a></p>
-<p>spring boot demo： <a href="https://github.com/xkcoding/spring-boot-demo" target="_blank" rel="noopener">https://github.com/xkcoding/spring-boot-demo</a></p>
-<h2 id="框架增强篇"><a href="#框架增强篇" class="headerlink" title="框架增强篇"></a>框架增强篇</h2><p>hope-boot脚手架： <a href="https://github.com/hope-for/hope-boot" target="_blank" rel="noopener">https://github.com/hope-for/hope-boot</a></p>
-<p>JHipster： <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener">https://github.com/jhipster/generator-jhipster</a></p>
-<p>Spring-Boot-Plus： <a href="https://github.com/geekidea/spring-boot-plus" target="_blank" rel="noopener">https://github.com/geekidea/spring-boot-plus</a></p>
-<h2 id="开源项目篇"><a href="#开源项目篇" class="headerlink" title="开源项目篇"></a>开源项目篇</h2><p>电商系统： <a href="https://github.com/macrozheng/mall" target="_blank" rel="noopener">https://github.com/macrozheng/mall</a></p>
-<p>秒杀系统： <a href="https://github.com/qiurunze123/miaosha" target="_blank" rel="noopener">https://github.com/qiurunze123/miaosha</a></p>
-<p>微人事： <a href="https://github.com/lenve/vhr" target="_blank" rel="noopener">https://github.com/lenve/vhr</a></p>
-<p>V部落博客管理平台： <a href="https://github.com/lenve/VBlog" target="_blank" rel="noopener">https://github.com/lenve/VBlog</a></p>
-<p>halo 一款现代化的个人独立博客系统： <a href="https://github.com/halo-dev/halo" target="_blank" rel="noopener">https://github.com/halo-dev/halo</a></p>
-<p>后台管理系统： <a href="https://github.com/elunez/eladmin" target="_blank" rel="noopener">https://github.com/elunez/eladmin</a></p>
-<p>Spring Cloud电商平台： <a href="https://github.com/paascloud/paascloud-master" target="_blank" rel="noopener">https://github.com/paascloud/paascloud-master</a></p>
-<h2 id="面试指南篇"><a href="#面试指南篇" class="headerlink" title="面试指南篇"></a>面试指南篇</h2><p>2019年最新总结，阿里，腾讯，百度，美团，头条等技术面试题目，以及答案，专家出题人分析汇总: <a href="https://github.com/0voice/interview_internal_reference" target="_blank" rel="noopener">https://github.com/0voice/interview_internal_reference</a></p>
-<p>Coding Interview University (英文)： <a href="https://github.com/jwasham/coding-interview-university" target="_blank" rel="noopener">https://github.com/jwasham/coding-interview-university</a></p>
-<p>Everything you need to know to get the job： <a href="https://github.com/kdn251/interviews" target="_blank" rel="noopener">https://github.com/kdn251/interviews</a></p>
-<p>Materials to help you rock your next coding interview（英文）： <a href="https://github.com/yangshun/tech-interview-handbook" target="_blank" rel="noopener">https://github.com/yangshun/tech-interview-handbook</a></p>
-<h2 id="读书充电篇"><a href="#读书充电篇" class="headerlink" title="读书充电篇"></a>读书充电篇</h2><p>Java开发者技术书籍大全： <a href="https://github.com/sorenduan/awesome-java-books" target="_blank" rel="noopener">https://github.com/sorenduan/awesome-java-books</a></p>
-<p>编程之法（已停更）： <a href="https://github.com/julycoding/The-Art-Of-Programming-By-July" target="_blank" rel="noopener">https://github.com/julycoding/The-Art-Of-Programming-By-July</a></p>
-<p>On Java 8（翻译中）：<a href="https://github.com/LingCoder/OnJava8" target="_blank" rel="noopener">https://github.com/LingCoder/OnJava8</a></p>
-<p>effective-java-3rd-chinese： <a href="https://github.com/sjsdfg/effective-java-3rd-chinese" target="_blank" rel="noopener">https://github.com/sjsdfg/effective-java-3rd-chinese</a></p>
-<p> Freely available programming books（各种语言，含中文）： <a href="https://github.com/EbookFoundation/free-programming-books" target="_blank" rel="noopener">https://github.com/EbookFoundation/free-programming-books</a></p>
-<h2 id="开发工具篇"><a href="#开发工具篇" class="headerlink" title="开发工具篇"></a>开发工具篇</h2><p>lombok： <a href="https://github.com/rzwitserloot/lombok" target="_blank" rel="noopener">https://github.com/rzwitserloot/lombok</a></p>
-<p>WxJava（微信开发 Java SDK）: <a href="https://github.com/Wechat-Group/WxJava" target="_blank" rel="noopener">https://github.com/Wechat-Group/WxJava</a></p>
-<p>史上最全的整合第三方登录的开源库： <a href="https://github.com/justauth/JustAuth" target="_blank" rel="noopener">https://github.com/justauth/JustAuth</a></p>
-<p>Hutool： <a href="https://github.com/looly/hutool" target="_blank" rel="noopener">https://github.com/looly/hutool</a></p>
-<p>Swagger： <a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="noopener">https://github.com/swagger-api/swagger-ui</a></p>
-<p>JWT登录支持： <a href="https://github.com/jwtk/jjwt" target="_blank" rel="noopener">https://github.com/jwtk/jjwt</a></p>
-<h2 id="其它类型篇"><a href="#其它类型篇" class="headerlink" title="其它类型篇"></a>其它类型篇</h2><p>互联网公司技术架构： <a href="https://github.com/davideuler/architecture.of.internet-product" target="_blank" rel="noopener">https://github.com/davideuler/architecture.of.internet-product</a></p>
-<p>大牛企业内部pdf与PPT： <a href="https://github.com/0voice/from_coder_to_expert" target="_blank" rel="noopener">https://github.com/0voice/from_coder_to_expert</a></p>
+<p>读者最好要先熟悉Linux的基本操作，尤其是能够初步上手vim，至少要能够对着快捷键参照表使用vim编辑器进行基本的键入、复制、粘贴、撤销等操作。</p>
+<p>本文部分内容参考了<a href="https://zhuanlan.zhihu.com/p/61542198" target="_blank" rel="noopener">知乎</a>的文章，在此声明。</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作系统： Windows 10 1903 专业版 64位 版本18362</span><br></pre></td></tr></table></figure>
+
+<p>首先要开启window功能。</p>
+<blockquote>
+<p>设置&gt;应用&gt;程序和功能&gt;启用或关闭window功能</p>
+</blockquote>
+<p>勾选“适用于Linux的Windows子系统”前的方框。</p>
+<p>然后在“管理可选功能”中添加“OpenSSH客户端”。</p>
+<h2 id="安装WSL系统"><a href="#安装WSL系统" class="headerlink" title="安装WSL系统"></a>安装WSL系统</h2><p>打开<code>Microsoft Store</code>，在搜索框输入<code>WSL</code>，挑选你喜欢的Linux子系统。这里以Ubuntu 18.04 LTS为例。点击获取，等待下载完毕。</p>
+<p>之后可能会要求重启电脑。</p>
+<p>装好的系统会像应用一样出现在开始菜单中。点击打开系统，等待一段时间，系统会自动进行初始化。初始化过程中会要求设置用户名和密码，个人电脑建议不要设置得太过复杂，以免在之后频繁输入的过程中造成不必要的麻烦。</p>
+<p>可输入以下指令查看基本信息，检查安装的效果。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查看linux内核版本</span><br><span class="line">uname -r</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看系统版本</span><br><span class="line">cat /etc/lsb-release</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看本地磁盘内存情况（可见C盘、D盘）</span><br><span class="line">df -h</span><br></pre></td></tr></table></figure>
+
+<p>默认的安装位置为：<code>C:\Users\{你的用户名}\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_xxxxxxxxxxxxx\</code>。此目录中，<code>LocalState\rootfs\</code>文件夹下即为Ubuntu的根目录。熟悉Ubuntu的同学应该很容易通过其中的文件结构辨认出来。</p>
+<h2 id="配置WSL系统"><a href="#配置WSL系统" class="headerlink" title="配置WSL系统"></a>配置WSL系统</h2><p>强烈建议将软件源更换为国内源，因为在国内使用官方源下载的速度实在过于感人。推荐阿里源和中科大源，具体内容可以很容易搜索到。这里以阿里源为例。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>使用root权限登录，然后输入密码</span><br><span class="line">sudo -i</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>接下来备份当前源，输入以下命令</span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.old </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>这个sources.list文件就是源文件，删除该文件，重新写一个</span><br><span class="line">rm /etc/apt/sources.list</span><br><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>此时会进入vim编辑器。将下面的内容复制进文件中即可。<br>输入i进入编辑模式，按右键粘贴或不进入编辑模式，输入p进行粘贴。然后按ESC退出编辑模式，输入:wq回车，保存并退出。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties</span><br><span class="line">deb http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb-src http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe</span><br><span class="line">deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable</span><br><span class="line"># deb-src [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse</span><br></pre></td></tr></table></figure>
+
+<p>下面更新镜像源和软件包。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update      #更新软件源</span><br><span class="line">sudo apt upgrade     #更新软件包</span><br></pre></td></tr></table></figure>
+
+<h2 id="美化vim"><a href="#美化vim" class="headerlink" title="美化vim"></a>美化vim</h2><p>vim的默认情况下完全没法看，字体和背景都是深色，极容易让人眼瞎。建议更换主题。这里采用molokai配色。参考<a href="https://blog.csdn.net/zycdsg/article/details/79057698" target="_blank" rel="noopener">此文</a>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir .vim</span><br><span class="line">cd .vim</span><br><span class="line">git clone https://github.com/tomasr/molokai.git</span><br><span class="line">cp -rf molokai/colors/ ./colors</span><br><span class="line">vim vimrc</span><br><span class="line">colorscheme molokai</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用终端登录WSL"><a href="#使用终端登录WSL" class="headerlink" title="使用终端登录WSL"></a>使用终端登录WSL</h2><p>可以通过SSH方法，使用终端登录WSL。这里使用的是<code>Windows Terminal</code>，可以在<code>Microsoft Store</code>中获取。其实用自带的PowerShell也可以。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>设置root用户的口令（密码），用作后续登陆使用</span><br><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>安装openssh-server（Ubuntu自带，可省）</span><br><span class="line">sudo apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>备份很重要</span><br><span class="line">sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>使用vim进行编辑，按i进入insert模式</span><br><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>在vim中分别找到并对应修改四处，修改后ESC，输入wq保存退出，具体如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Port = 8022</span><br><span class="line">ListenAddress 0.0.0.0        # 如果需要指定监听的IP则去除最左侧的井号，并配置对应IP，默认即监听PC所有IP。故可不修改。</span><br><span class="line">PermitRootLogin yes           # 如果你需要用root直接登录系统则此处改为yes，在WSL中可能会不太好使，后文有解决办法。</span><br><span class="line">PasswordAuthentication yes    # 将no改为yes表示使用帐号密码方式登录</span><br></pre></td></tr></table></figure>
+
+<p>之后启动SSH并检查状态，输出running即正确。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service ssh start             #启动SSH服务</span><br><span class="line">sudo service ssh status            #检查状态</span><br><span class="line">sudo systemctl enable ssh          #开机自动启动ssh命令</span><br></pre></td></tr></table></figure>
+
+<p>下一步需要配置ssh密钥。执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key</span><br><span class="line">sudo ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key</span><br><span class="line">sudo ssh-keygen -t dsa -f /etc/ssh/ssh_host_ed25519_key</span><br></pre></td></tr></table></figure>
+
+<p>然后可尝试使用SSH登录。在终端输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh  root@127.0.0.1 -p 8022</span><br></pre></td></tr></table></figure>
+
+<p>键入密码，即可登录。</p>
+<p>如果遇到密码明明正确，却不断提示重试，建议通过这种方式登录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh  你的用户名@127.0.0.1 -p 8022</span><br></pre></td></tr></table></figure>
+
+<p>输入密码后，执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+
+<p>再次输入密码，也可达到同样的登录root用户的效果。</p>
+<h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><p>按照<a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/" target="_blank" rel="noopener">如下指令</a>安装即可。执行第一行时如果报警，可不必理会。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Install packages to allow apt to use a repository over HTTPS</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install apt-transport-https ca-certificates curl software-properties-common</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Add Docker<span class="string">'s official GPG key</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Set up the repository</span></span><br><span class="line">sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"</span><br><span class="line"><span class="meta">#</span><span class="bash"> Update <span class="built_in">source</span> lists</span></span><br><span class="line">sudo apt-get update</span><br><span class="line"><span class="meta">#</span><span class="bash"> Install Docker</span></span><br><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+
+<p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+
+<p>能正确显示版本号就是安装成功了.</p>
 
     </div>
 
@@ -458,7 +470,7 @@
     <strong>本文作者： </strong>mxdzs0612</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://mxdzs0612.github.io/后端开发/2019-08-11-LearnJavaOnGithub.html" title="Github上的一些不错的Java学习资源">https://mxdzs0612.github.io/后端开发/2019-08-11-LearnJavaOnGithub.html</a>
+    <a href="https://mxdzs0612.github.io/后端开发/2019-10-09-DockerOnWSL.html" title="安装、配置WSL并在在其中安装Docker">https://mxdzs0612.github.io/后端开发/2019-10-09-DockerOnWSL.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -473,11 +485,11 @@
           
           <div class="post-tags">
             
-              <a href="/tags/总结/" rel="tag"><i class="fa fa-tag"></i> 总结</a>
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
             
-              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/WSL/" rel="tag"><i class="fa fa-tag"></i> WSL</a>
             
-              <a href="/tags/Web/" rel="tag"><i class="fa fa-tag"></i> Web</a>
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
             
           </div>
         
@@ -487,8 +499,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/其它技术/2019-08-01-HexoBlog4.html" rel="next" title="使用hexo在github上搭建博客：多媒体与杂项篇">
-                  <i class="fa fa-chevron-left"></i> 使用hexo在github上搭建博客：多媒体与杂项篇
+                <a href="/其它技术/2019-10-08-HexoBlog5.html" rel="next" title="使用hexo在github上搭建博客：更新篇">
+                  <i class="fa fa-chevron-left"></i> 使用hexo在github上搭建博客：更新篇
                 </a>
               
             </div>
@@ -496,10 +508,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/其它技术/2019-10-08-HexoBlog5.html" rel="prev" title="使用hexo在github上搭建博客：更新篇">
-                  使用hexo在github上搭建博客：更新篇 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -558,7 +566,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#完全总结篇"><span class="nav-number">1.</span> <span class="nav-text">完全总结篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识体系篇"><span class="nav-number">2.</span> <span class="nav-text">知识体系篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架使用篇"><span class="nav-number">3.</span> <span class="nav-text">框架使用篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#框架增强篇"><span class="nav-number">4.</span> <span class="nav-text">框架增强篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开源项目篇"><span class="nav-number">5.</span> <span class="nav-text">开源项目篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试指南篇"><span class="nav-number">6.</span> <span class="nav-text">面试指南篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读书充电篇"><span class="nav-number">7.</span> <span class="nav-text">读书充电篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发工具篇"><span class="nav-number">8.</span> <span class="nav-text">开发工具篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它类型篇"><span class="nav-number">9.</span> <span class="nav-text">其它类型篇</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装WSL系统"><span class="nav-number">2.</span> <span class="nav-text">安装WSL系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置WSL系统"><span class="nav-number">3.</span> <span class="nav-text">配置WSL系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美化vim"><span class="nav-number">4.</span> <span class="nav-text">美化vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用终端登录WSL"><span class="nav-number">5.</span> <span class="nav-text">使用终端登录WSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Docker"><span class="nav-number">6.</span> <span class="nav-text">安装Docker</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
