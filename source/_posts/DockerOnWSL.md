@@ -1,8 +1,8 @@
 ---
-title: 安装、配置WSL并在在其中安装Docker
+title: 安装、配置WSL并在其中安装Docker
 date: 2019-10-09 16:31:40
 category: 后端开发
-tags: [Linux, WSL, Docker]
+tags: [Linux, WSL, Docker
 ---
 本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。
 
@@ -41,7 +41,7 @@ cat /etc/lsb-release
 #查看本地磁盘内存情况（可见C盘、D盘）
 df -h
 ```
-默认的安装位置为：`C:\Users\{你的用户名}\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_xxxxxxxxxxxxx\`。此目录中，`LocalState\rootfs\`文件夹下即为Ubuntu的根目录。熟悉Ubuntu的同学应该很容易通过其中的文件结构辨认出来。
+默认的安装位置为：C:\Users\{你的用户名}\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_xxxxxxxxxxxxx\。此目录中，`LocalState\rootfs\`文件夹下即为Ubuntu的根目录。熟悉Ubuntu的同学应该很容易通过其中的文件结构辨认出来。
 
 ## 配置WSL系统
 强烈建议将软件源更换为国内源，因为在国内使用官方源下载的速度实在过于感人。推荐阿里源和中科大源，具体内容可以很容易搜索到。这里以阿里源为例。
