@@ -8,7 +8,7 @@ tags: [Linux, WSL, Docker]
 
 <!-- more -->
 
-安装WSL的优点是无需双系统，启动快，切换方便，十分易用，适合入门。缺点是Linux只有终端，没有桌面环境。且可能会出现一些奇奇怪怪的问题。
+使用WSL的优点是无需双系统，启动快，更加流畅，切换方便，剪贴板和文件均可共享，十分易用，适合入门。缺点是Linux只有终端，没有桌面环境，资源利用率低，且可能会出现一些奇奇怪怪的问题。
 
 读者最好要先熟悉Linux的基本操作，尤其是能够初步上手vim，至少要能够对着快捷键参照表使用vim编辑器进行基本的键入、复制、粘贴、撤销等操作。
 
@@ -20,7 +20,7 @@ tags: [Linux, WSL, Docker]
 ```
 操作系统： Windows 10 1903 专业版 64位 版本18362
 ```
-注意家庭版是不行的。一些学校会提供正版的专业版Windows 10。
+注意家庭版是不行的。一些学校会提供正版的专业版Windows 10，没有的话还请自寻办法。
 
 首先要开启window功能。
 > 设置>应用>程序和功能>启用或关闭window功能
@@ -63,7 +63,7 @@ rm /etc/apt/sources.list
 vim /etc/apt/sources.list
 ```
 此时会进入vim编辑器。将下面的内容复制进文件中即可。
-输入i进入编辑模式，按右键粘贴或不进入编辑模式，输入p进行粘贴。然后按ESC退出编辑模式，输入:wq回车，保存并退出。
+输入`i`进入编辑模式，按右键粘贴或不进入编辑模式，输入`p`进行粘贴。然后按`ESC`退出编辑模式，输入`:wq`回车，保存并退出。
 ```
 deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
@@ -92,7 +92,7 @@ sudo apt upgrade     #更新软件包
 ```
 
 ## 美化vim
-vim的默认情况下完全没法看，字体和背景都是深色，极容易让人眼瞎。建议更换主题。这里采用molokai配色。参考[此文](https://blog.csdn.net/zycdsg/article/details/79057698)。
+vim的默认情况下完全没法看，字体和背景都是深色，屏幕亮度不高时什么都看不清。建议更换主题。这里采用molokai配色。参考[此文](https://blog.csdn.net/zycdsg/article/details/79057698)。
 ```shell
 mkdir .vim
 cd .vim
@@ -102,7 +102,7 @@ vim vimrc
 colorscheme molokai
 ```
 
-## 使用终端登录WSL
+## 使用Windows控制台登录WSL
 可以通过SSH方法，使用终端登录WSL。这里使用的是`Windows Terminal`，1903版系统可以在`Microsoft Store`中获取。其实用自带的PowerShell也行，右击左下角开始菜单打开即可。
 ```shell
 #设置root用户的口令（密码），用作后续登陆使用
@@ -120,15 +120,15 @@ sudo vim /etc/ssh/sshd_config
 在vim中分别找到并对应修改四处，修改后ESC，输入wq保存退出，具体如下：
 ```
 Port = 8022
-#ListenAddress 0.0.0.0        # 如果需要指定监听的IP则去除最左侧的井号，并配置对应IP，默认即监听PC所有IP。故可不修改。
+#ListenAddress 0.0.0.0        # 如果需要指定监听的IP则去除最左侧的井号，并配置对应IP，默认即监听PC所有IP。可不修改，保留井号。
 PermitRootLogin yes           # 如果你需要用root直接登录系统则此处改为yes，在WSL中可能会不太好使，后文有解决办法。
 PasswordAuthentication yes    # 将no改为yes表示使用帐号密码方式登录
 ```
-之后启动SSH并检查状态，输出带有running的信息即说明配置正确。
+之后启动SSH并检查状态，输出`sshd is running`的信息即说明配置正确。
 ```shell
 sudo service ssh start             #启动SSH服务
 sudo service ssh status            #检查状态
-sudo systemctl enable ssh          #开机自动启动ssh命令
+sudo systemctl enable ssh          #开机自动启动ssh命令，有时可能不好使
 ```
 下一步需要配置ssh密钥。执行如下命令：
 ```shell
@@ -143,7 +143,6 @@ ssh  root@127.0.0.1 -p 8022
 键入密码，即可登录。
 
 如果遇到root用户的密码明明正确，却不断提示重试，且`PermitRootLogin`已开启，就只能通过下面这种方式登录：
-
 ```bash
 ssh  你的用户名@127.0.0.1 -p 8022
 ```
@@ -157,11 +156,13 @@ sudo -i
 ```shell
 su -
 ```
-
-这样，只要ssh服务是开启的，就可以通过这种方式在Windows系统的控制台控制WSL。如果没开启，使用以下指令即可。如果你的电脑不经常关机，这一操作并不频繁，因此较为方便。
+这样，只要ssh服务是开启的，就可以通过这种方式在Windows系统的控制台控制WSL。如果没开启，使用以下指令即可。
 ```shell
 sudo service ssh restart
 ```
+如果你的电脑不经常关机，重启的频率不算高，用支持多标签等功能的Windows Terminal来操作会很方便。
+
+理论上在控制台使用bash命令直接切换到WSL环境应该也是可以的，但此时终端显示的是`/$`而非`~$`，且所在目录并非根目录。笔者才疏学浅，不太确定二者是否有差别，因此未采用此办法。
 
 ## 安装Docker
 按照[如下指令](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)安装即可。执行第一行时如果报警，可不必理会。
