@@ -174,9 +174,9 @@ avatar:
   # You can also use other linking images.
   url: https://avatars2.githubusercontent.com/u/35512473
   # If true, the avatar would be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar would be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -1129,23 +1129,9 @@ vendors:
   # Internal version: 1.0.0
   # Example:
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-  canvas_ribbon:
+  canvas_ribbon: 
 
 # Assets
 css: css
 js: js
 images: images
-
-# 文章末尾添加“本文结束”标记
-passage_end_tag:
-  enabled: false
-
-# 日历插件
-CloudCalendar:
-  enable: false
-  language: zh-CN
-  single: true
-  root: /calendar/
-  calendarCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/calendar.min.js
-  langCdn: //cdn.jsdelivr.net/gh/theme-next/theme-next-calendar/languages.min.js
-  #disableSidebar: false
