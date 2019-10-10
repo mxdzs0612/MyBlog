@@ -69,7 +69,7 @@
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-10T01:47:16.017Z">
+<meta property="og:updated_time" content="2019-10-10T05:56:56.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装、配置WSL并在其中安装Docker">
 <meta name="twitter:description" content="本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。">
@@ -311,7 +311,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-10 09:47:16" itemprop="dateModified" datetime="2019-10-10T09:47:16+08:00">2019-10-10</time>
+                <time title="修改时间：2019-10-10 13:56:56" itemprop="dateModified" datetime="2019-10-10T13:56:56+08:00">2019-10-10</time>
               </span>
             
           
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>4.7k</span>
+              <span>5k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -372,26 +372,28 @@
         <p>本文总结了使用WSL（Windows Subsystem for Linux，即Windows系统自带的Linux子系统）安装Docker的方法。</p>
 <a id="more"></a>
 
+<p>安装WSL的优点是无需双系统，启动快，切换方便，十分易用，适合入门。缺点是Linux只有终端，没有桌面环境。且可能会出现一些奇奇怪怪的问题。</p>
 <p>读者最好要先熟悉Linux的基本操作，尤其是能够初步上手vim，至少要能够对着快捷键参照表使用vim编辑器进行基本的键入、复制、粘贴、撤销等操作。</p>
 <p>本文部分内容参考了<a href="https://zhuanlan.zhihu.com/p/61542198" target="_blank" rel="noopener">知乎</a>的文章，在此声明。</p>
-<p>本文另有部分内容是笔者踩完坑后凭印象写的，可能会有疏漏，如果读者发现哪里不对，还望发评论提醒一下。</p>
+<p>本文有部分内容是笔者踩完坑后凭印象写的，可能会有疏漏、前后颠倒、逻辑顺序错误等情况，如果读者发现哪里不对，还望发评论提醒一下，笔者会立即修改。</p>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作系统： Windows 10 1903 专业版 64位 版本18362</span><br></pre></td></tr></table></figure>
 
+<p>注意家庭版是不行的。一些学校会提供正版的专业版Windows 10。</p>
 <p>首先要开启window功能。</p>
 <blockquote>
 <p>设置&gt;应用&gt;程序和功能&gt;启用或关闭window功能</p>
 </blockquote>
 <p>勾选“适用于Linux的Windows子系统”前的方框。</p>
-<p>然后在“管理可选功能”中添加“OpenSSH客户端”。</p>
-<h2 id="安装WSL系统"><a href="#安装WSL系统" class="headerlink" title="安装WSL系统"></a>安装WSL系统</h2><p>打开<code>Microsoft Store</code>，在搜索框输入<code>WSL</code>，挑选你喜欢的Linux子系统。这里以Ubuntu 18.04 LTS为例。点击获取，等待下载完毕。</p>
+<p>然后在“管理可选功能”中添加“OpenSSH客户端”。如果不想在Windows终端中操作WSL，这一步可以省略不做。</p>
+<h2 id="安装WSL系统"><a href="#安装WSL系统" class="headerlink" title="安装WSL系统"></a>安装WSL系统</h2><p>打开<code>Microsoft Store</code>，在搜索框输入<code>WSL</code>，挑选你喜欢的Linux子系统。目前并没有几种可用的选择，这里就以Ubuntu 18.04 LTS为例。点击获取，等待下载完毕。</p>
 <p>之后可能会要求重启电脑。</p>
 <p>装好的系统会像应用一样出现在开始菜单中。点击打开系统，等待一段时间，系统会自动进行初始化。初始化过程中会要求设置用户名和密码，个人电脑建议不要设置得太过复杂，以免在之后频繁输入的过程中造成不必要的麻烦。</p>
 <p>可输入以下指令查看基本信息，检查安装的效果。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查看linux内核版本</span><br><span class="line">uname -r</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看系统版本</span><br><span class="line">cat /etc/lsb-release</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看本地磁盘内存情况（可见C盘、D盘）</span><br><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看linux内核版本</span></span><br><span class="line">uname -r</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看系统版本</span></span><br><span class="line">cat /etc/lsb-release</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看本地磁盘内存情况（可见C盘、D盘）</span></span><br><span class="line">df -h</span><br></pre></td></tr></table></figure>
 
 <p>默认的安装位置为：<code>C:\Users\你的用户名 \AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_xxxxxxxxxxxxx\</code>。此目录中，<code>LocalState\rootfs\</code>文件夹下即为Ubuntu的根目录。熟悉Ubuntu的同学应该很容易通过其中的文件结构辨认出来。</p>
 <h2 id="配置WSL系统"><a href="#配置WSL系统" class="headerlink" title="配置WSL系统"></a>配置WSL系统</h2><p>强烈建议将软件源更换为国内源，因为在国内使用官方源下载的速度实在过于感人。推荐阿里源和中科大源，具体内容可以很容易搜索到。这里以阿里源为例。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>使用root权限登录，然后输入密码</span><br><span class="line">sudo -i</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>接下来备份当前源，输入以下命令</span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.old </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>这个sources.list文件就是源文件，删除该文件，重新写一个</span><br><span class="line">rm /etc/apt/sources.list</span><br><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用root权限登录，然后输入密码</span></span><br><span class="line">sudo -i</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">接下来备份当前源，输入以下命令</span></span><br><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.old </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">这个sources.list文件就是源文件，删除该文件，重新写一个</span></span><br><span class="line">rm /etc/apt/sources.list</span><br><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 
 <p>此时会进入vim编辑器。将下面的内容复制进文件中即可。<br>输入i进入编辑模式，按右键粘贴或不进入编辑模式，输入p进行粘贴。然后按ESC退出编辑模式，输入:wq回车，保存并退出。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties</span><br><span class="line">deb http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb-src http://archive.canonical.com/ubuntu xenial partner</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe</span><br><span class="line">deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable</span><br><span class="line"># deb-src [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse</span><br></pre></td></tr></table></figure>
@@ -403,12 +405,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir .vim</span><br><span class="line">cd .vim</span><br><span class="line">git clone https://github.com/tomasr/molokai.git</span><br><span class="line">cp -rf molokai/colors/ ./colors</span><br><span class="line">vim vimrc</span><br><span class="line">colorscheme molokai</span><br></pre></td></tr></table></figure>
 
 <h2 id="使用终端登录WSL"><a href="#使用终端登录WSL" class="headerlink" title="使用终端登录WSL"></a>使用终端登录WSL</h2><p>可以通过SSH方法，使用终端登录WSL。这里使用的是<code>Windows Terminal</code>，1903版系统可以在<code>Microsoft Store</code>中获取。其实用自带的PowerShell也行，右击左下角开始菜单打开即可。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>设置root用户的口令（密码），用作后续登陆使用</span><br><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>安装openssh-server（Ubuntu自带，可省）</span><br><span class="line">sudo apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>备份很重要</span><br><span class="line">sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>使用vim进行编辑，按i进入insert模式</span><br><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">设置root用户的口令（密码），用作后续登陆使用</span></span><br><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">安装openssh-server（Ubuntu自带，可省）</span></span><br><span class="line">sudo apt install openssh-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">备份很重要</span></span><br><span class="line">sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">使用vim进行编辑，按i进入insert模式</span></span><br><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
 
 <p>在vim中分别找到并对应修改四处，修改后ESC，输入wq保存退出，具体如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Port = 8022</span><br><span class="line">ListenAddress 0.0.0.0        # 如果需要指定监听的IP则去除最左侧的井号，并配置对应IP，默认即监听PC所有IP。故可不修改。</span><br><span class="line">PermitRootLogin yes           # 如果你需要用root直接登录系统则此处改为yes，在WSL中可能会不太好使，后文有解决办法。</span><br><span class="line">PasswordAuthentication yes    # 将no改为yes表示使用帐号密码方式登录</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Port = 8022</span><br><span class="line">#ListenAddress 0.0.0.0        # 如果需要指定监听的IP则去除最左侧的井号，并配置对应IP，默认即监听PC所有IP。故可不修改。</span><br><span class="line">PermitRootLogin yes           # 如果你需要用root直接登录系统则此处改为yes，在WSL中可能会不太好使，后文有解决办法。</span><br><span class="line">PasswordAuthentication yes    # 将no改为yes表示使用帐号密码方式登录</span><br></pre></td></tr></table></figure>
 
-<p>之后启动SSH并检查状态，输出running即正确。</p>
+<p>之后启动SSH并检查状态，输出带有running的信息即说明配置正确。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service ssh start             #启动SSH服务</span><br><span class="line">sudo service ssh status            #检查状态</span><br><span class="line">sudo systemctl enable ssh          #开机自动启动ssh命令</span><br></pre></td></tr></table></figure>
 
 <p>下一步需要配置ssh密钥。执行如下命令：</p>
@@ -418,14 +420,17 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh  root@127.0.0.1 -p 8022</span><br></pre></td></tr></table></figure>
 
 <p>键入密码，即可登录。</p>
-<p>如果遇到密码明明正确，却不断提示重试，建议通过这种方式登录：</p>
+<p>如果遇到root用户的密码明明正确，却不断提示重试，且<code>PermitRootLogin</code>已开启，就只能通过下面这种方式登录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh  你的用户名@127.0.0.1 -p 8022</span><br></pre></td></tr></table></figure>
 
 <p>输入密码后，执行</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
 
 <p>再次输入密码，也可达到同样的登录root用户的效果。</p>
-<p>这样，只要ssh服务是开启的，就可以通过这种方式在Windows系统的终端控制WSL。如果没开启，使用以下指令即可。</p>
+<p>或者用这条语句，输入root用户的密码也可以。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su -</span><br></pre></td></tr></table></figure>
+
+<p>这样，只要ssh服务是开启的，就可以通过这种方式在Windows系统的控制台控制WSL。如果没开启，使用以下指令即可。如果你的电脑不经常关机，这一操作并不频繁，因此较为方便。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service ssh restart</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><p>按照<a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/" target="_blank" rel="noopener">如下指令</a>安装即可。执行第一行时如果报警，可不必理会。</p>
@@ -434,7 +439,7 @@
 <p>执行</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
 
-<p>能正确显示版本号就是安装成功了。</p>
+<p>能正确显示版本号就是安装成功了。我们就可以在WSL中愉快地使用Docker了。</p>
 
     </div>
 
@@ -710,7 +715,7 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
