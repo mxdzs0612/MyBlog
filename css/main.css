@@ -390,27 +390,13 @@ td {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  color: #fff;
-  font-size: 14px;
-  right: 0;
-  top: 2px;
-}
-.highlight-wrap {
-  background: #21252b;
-  border-radius: 5px;
-  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
-  padding-top: 30px;
-}
-.highlight-wrap::before {
-  background: #fc625d;
-  border-radius: 50%;
-  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-  content: ' ';
-  height: 12px;
-  left: 12px;
-  margin-top: -20px;
-  position: absolute;
-  width: 12px;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  font-size: 0.8125em;
+  right: 4px;
+  top: 8px;
 }
 pre,
 .highlight {
@@ -1272,7 +1258,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b646ff;
+  background: #b1fffe;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
