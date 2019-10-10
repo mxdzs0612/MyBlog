@@ -12,6 +12,8 @@ tags: [Linux, WSL, Docker]
 
 本文部分内容参考了[知乎](https://zhuanlan.zhihu.com/p/61542198)的文章，在此声明。
 
+本文另有部分内容是笔者踩完坑后凭印象写的，可能会有疏漏，如果读者发现哪里不对，还望发评论提醒一下。
+
 ## 环境配置
 ```
 操作系统： Windows 10 1903 专业版 64位 版本18362
@@ -97,7 +99,7 @@ colorscheme molokai
 ```
 
 ## 使用终端登录WSL
-可以通过SSH方法，使用终端登录WSL。这里使用的是`Windows Terminal`，可以在`Microsoft Store`中获取。其实用自带的PowerShell也可以。
+可以通过SSH方法，使用终端登录WSL。这里使用的是`Windows Terminal`，1903版系统可以在`Microsoft Store`中获取。其实用自带的PowerShell也行，右击左下角开始菜单打开即可。
 ```shell
 #设置root用户的口令（密码），用作后续登陆使用
 sudo passwd root
@@ -147,6 +149,11 @@ sudo -i
 ```
 再次输入密码，也可达到同样的登录root用户的效果。
 
+这样，只要ssh服务是开启的，就可以通过这种方式在Windows系统的终端控制WSL。如果没开启，使用以下指令即可。
+```shell
+sudo service ssh restart
+```
+
 ## 安装Docker
 按照[如下指令](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)安装即可。执行第一行时如果报警，可不必理会。
 ```shell
@@ -165,4 +172,4 @@ sudo apt-get install docker-ce
 ```shell
 docker --version
 ```
-能正确显示版本号就是安装成功了.
+能正确显示版本号就是安装成功了。

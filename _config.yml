@@ -101,7 +101,6 @@ symbols_count_time:
 ## https://github.com/EYHN/hexo-helper-live2d
 live2d:
     enable: true
-  # enable: false
     scriptFrom: local # 默认
     pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
     pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
@@ -117,7 +116,7 @@ live2d:
     # use: ./wives/wanko # 相对于博客根目录的路径
     # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
     display: # 模型位置，根据不同的模型自行调整
-      position: left
+      position: right
       width: 225
       height: 300
     mobile: # 是否适用于移动端
