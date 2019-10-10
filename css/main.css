@@ -390,18 +390,32 @@ td {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  background-color: #eee;
-  background-image: linear-gradient(#fcfcfc, #eee);
-  border: 1px solid #d5d5d5;
-  border-radius: 3px;
-  font-size: 0.8125em;
-  right: 4px;
-  top: 8px;
+  color: #fff;
+  font-size: 14px;
+  right: 0;
+  top: 2px;
+}
+.highlight-wrap {
+  background: #21252b;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+.highlight-wrap::before {
+  background: #fc625d;
+  border-radius: 50%;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
+  height: 12px;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  width: 12px;
 }
 pre,
 .highlight {
-  background: #002b36;
-  color: #93a1a1;
+  background: #262626;
+  color: #9e9e9e;
   line-height: 1.6;
   margin: 0 auto 20px;
 }
@@ -423,13 +437,13 @@ pre {
 }
 pre code {
   background: none;
-  color: #93a1a1;
+  color: #9e9e9e;
   font-size: 0.875em;
   padding: 0;
   text-shadow: none;
 }
 .highlight *::selection {
-  background: #073642;
+  background: #303030;
 }
 .highlight pre {
   border: 0;
@@ -448,7 +462,7 @@ pre code {
 .highlight figcaption {
   background: #eee;
   border-bottom: 1px solid #e9e9e9;
-  color: #93a1a1;
+  color: #9e9e9e;
   line-height: 1em;
   margin: 0;
   padding: 0.5em;
@@ -462,21 +476,21 @@ pre code {
   clear: both;
 }
 .highlight figcaption a {
-  color: #93a1a1;
+  color: #9e9e9e;
   float: right;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #93a1a1;
+  border-bottom-color: #9e9e9e;
 }
 .highlight .gutter pre {
-  background-color: #002b36;
-  color: #586e75;
+  background-color: #262626;
+  color: #6a6a6a;
   padding-left: 10px;
   padding-right: 10px;
   text-align: right;
 }
 .highlight .code pre {
-  background-color: #002b36;
+  background-color: #262626;
   padding-left: 10px;
   width: 100%;
 }
@@ -499,14 +513,14 @@ pre .addition {
   background: #008000;
 }
 pre .meta {
-  color: #b58900;
+  color: #a68f01;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 pre .comment {
-  color: #586e75;
+  color: #6a6a6a;
 }
 pre .variable,
 pre .attribute,
@@ -521,7 +535,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #dc322f;
+  color: #ff511a;
 }
 pre .number,
 pre .preprocessor,
@@ -531,7 +545,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #cb4b16;
+  color: #dd7202;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -544,11 +558,11 @@ pre .ruby .symbol,
 pre .xml .cdata,
 pre .special,
 pre .formula {
-  color: #859900;
+  color: #4ca340;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #2aa198;
+  color: #07a38f;
 }
 pre .function,
 pre .python .decorator,
@@ -558,11 +572,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #268bd2;
+  color: #3294ff;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #6c71c4;
+  color: #cc62fe;
 }
 .blockquote-center {
   border-left: none;
@@ -1258,7 +1272,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff50c4;
+  background: #b646ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
