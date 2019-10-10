@@ -58,9 +58,22 @@ npm install hexo-asset-image --save
 这种插件通常可以从资源所在的网站获取。如网易云音乐网页版播放器的专辑封面下方，就有“生成外链播放器”的选项。
 
 ## README文件
-在主题的`source`根目录下添加一个`README.md`文件，正常填写内容。
+在博客的`source`根目录下添加一个`README.md`文件，正常填写内容。
 
 然后打开博客的配置文件，搜索`skip_render`参数，设为`README.md`。这样，部署博客时就会自动跳过README.md文件，内容可以正常显示在github仓库的首页。
+
+## 个性化404页面
+在博客的`source`根目录下添加一个`404.md`文件，然后填入你想要的内容。如腾讯寻找走失儿童的404公益界面：
+```html
+---
+title: 404
+date: 1970-01-01 00:00:00
+---
+<script src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"
+        charset="utf-8" homePageUrl="/" homePageName="Back to home">
+</script>
+```
+这样，当访客访问到你博客中不存在的页面时，会自动跳转到个性化的404页面。
 
 ## 搜索引擎收录
 默认情况下，博客的内容是不会出现在搜索引擎中的。如果希望你的博客能够被搜索引擎搜索到，需要一点额外的操作。
