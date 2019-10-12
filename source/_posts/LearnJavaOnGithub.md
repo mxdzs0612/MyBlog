@@ -1,10 +1,10 @@
 ---
-title: Github上的一些不错的Java学习资源
+title: GitHub上的一些不错的Java学习资源
 date: 2019-08-11 21:59:37
 category: 后端开发
 tags: [总结, Java, Web]
 ---
-这里总结一下在Github上看到的比较好的Java学习资料，其中大部分都是中文的。
+这里总结一下在GitHub上看到的比较好的Java学习资料，其中大部分都是中文的。
 
 这份资料主要是方便自己看的。不过，如果有读者不小心读到本文并且感觉对自己有帮助的话，还望去右上角给我点个star鼓励我。
 
@@ -21,7 +21,7 @@ Java工程师成神之路： https://github.com/hollischuang/toBeTopJavaer
 
 后端架构师技术图谱： https://github.com/xingshaocheng/architect-awesome
 
-互联网 Java 工程师进阶知识完全扫盲： https://github.com/doocs/advanced-java
+互联网Java工程师进阶知识完全扫盲： https://github.com/doocs/advanced-java
 
 处于萌芽阶段的 Java 核心知识库： https://github.com/crossoverJie/JCSprout
 
@@ -40,14 +40,14 @@ Java LeetCode题解： https://github.com/wind-liang/leetcode
 
 系统设计入门： https://github.com/donnemartin/system-design-primer
 
-Java 程序员眼中的 Linux： https://github.com/judasn/Linux-Tutorial
+Java程序员眼中的Linux： https://github.com/judasn/Linux-Tutorial
 
 ## 框架使用篇
-Spring Boot 系列实战合集:  https://github.com/hansonwang99/Spring-Boot-In-Action
+Spring Boot系列实战合集:  https://github.com/hansonwang99/Spring-Boot-In-Action
 
 循序渐进，学习Spring Boot： https://github.com/wuyouzhuguli/SpringAll
 
-Spring Boot 教程、技术栈示例代码，快速简单上手教程： https://github.com/ityouknow/spring-boot-examples
+Spring Boot教程、技术栈示例代码，快速简单上手教程： https://github.com/ityouknow/spring-boot-examples
 
 spring boot demo： https://github.com/xkcoding/spring-boot-demo
 
@@ -91,7 +91,7 @@ On Java 8（翻译中）：https://github.com/LingCoder/OnJava8
 
 effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chinese
 
- Freely available programming books（各种语言，含中文）： https://github.com/EbookFoundation/free-programming-books
+Freely available programming books（各种语言，含中文）： https://github.com/EbookFoundation/free-programming-books
 
 ## 开发工具篇
 lombok： https://github.com/rzwitserloot/lombok
