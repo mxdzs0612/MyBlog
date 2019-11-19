@@ -93,6 +93,8 @@ effective-java-3rd-chinese： https://github.com/sjsdfg/effective-java-3rd-chine
 
 Freely available programming books（各种语言，含中文）： https://github.com/EbookFoundation/free-programming-books
 
+Documentations, books, courses, git repositories and so on（书单，不含资源）： https://github.com/tagnja/resources-of-learning
+
 ## 开发工具篇
 lombok： https://github.com/rzwitserloot/lombok
 
