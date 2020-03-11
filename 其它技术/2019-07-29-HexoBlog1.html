@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 4.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
@@ -62,18 +62,19 @@
 </script>
 
   <meta name="description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。">
-<meta name="keywords" content="github,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo在github上搭建博客：基础篇">
-<meta property="og:url" content="https://mxdzs0612.github.io/其它技术/2019-07-29-HexoBlog1.html">
+<meta property="og:url" content="https://mxdzs0612.github.io/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/2019-07-29-HexoBlog1.html">
 <meta property="og:site_name" content="mxdzs0612的博客">
 <meta property="og:description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T00:35:05.101Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-29T02:58:21.000Z">
+<meta property="article:modified_time" content="2019-08-14T00:35:06.000Z">
+<meta property="article:author" content="mxdzs0612">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hexo在github上搭建博客：基础篇">
-<meta name="twitter:description" content="本文记录在github上搭建hexo博客的过程，其中包含了一些实用的小技巧，能够让新手少踩一些坑。 关于hexo的简介，可以参考官方文档。">
-  <link rel="canonical" href="https://mxdzs0612.github.io/其它技术/2019-07-29-HexoBlog1">
+  <link rel="canonical" href="https://mxdzs0612.github.io/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/2019-07-29-HexoBlog1">
 
 
 <script id="page-configurations">
@@ -261,7 +262,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mxdzs0612.github.io/其它技术/2019-07-29-HexoBlog1.html">
+    <link itemprop="mainEntityOfPage" href="https://mxdzs0612.github.io/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/2019-07-29-HexoBlog1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mxdzs0612">
@@ -300,7 +301,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-14 08:35:05" itemprop="dateModified" datetime="2019-08-14T08:35:05+08:00">2019-08-14</time>
+                <time title="修改时间：2019-08-14 08:35:06" itemprop="dateModified" datetime="2019-08-14T08:35:06+08:00">2019-08-14</time>
               </span>
             
           
@@ -310,7 +311,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/其它技术/" itemprop="url" rel="index"><span itemprop="name">其它技术</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">其它技术</span></a></span>
 
                 
                 
@@ -335,7 +336,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>4.2k</span>
+              <span>4k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -364,7 +365,6 @@
 
 <p>依照本文以及接下来的若干篇文章的步骤进行操作，读者即可自行搭建出和本博客类似的博客。本博客的每一个组件的增加和配置都会在接下来的文章中进行讲解。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">操作系统： Windows 10 1903专业版</span><br><span class="line">编辑器： VS Code &amp; Notepad++</span><br><span class="line">浏览器： Chrome</span><br></pre></td></tr></table></figure>
-
 <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>首先注册<a href="https://github.com/" target="_blank" rel="noopener">github</a>账号。</p>
 <p>然后需要安装、配置好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>。git的配置中，用户名和邮箱应与github相同。</p>
 <p>安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">node.js</a>。</p>
@@ -384,7 +384,7 @@
 <p>后续过程中，master分支用于存放博客的静态页面，而hexo分支用于存放源文件。</p>
 <p>在本地某个文件夹下打开Git Bash，用SSH方式克隆仓库。指令为</p>
 <blockquote>
-<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
+<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
 <p>这一步的目的是获取远程仓库自动生成的.git文件夹及其中的配置内容。</p>
 <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>进入刚克隆的<code>xxxx.github.io</code>文件夹，在空白处点击右键打开Git Bash，依次执行以下指令：</p>
@@ -406,10 +406,8 @@
 <h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开目录下的<code>_config.yml</code>文件，继续修改其中的内容。请注意，<strong>yaml语法中，冒号后面需要空一格</strong>，再键入内容。</p>
 <p>基本的配置在<code># Site</code>下，即</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">这是一个博客</span> <span class="comment"># 网站标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">这是一个副标题</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">试着搭个博客</span> <span class="comment"># 网页描述，类似座右铭，一般会显示在author附近</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">mxdzs0612</span> <span class="comment"># 站长信息</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 网站语言，部分主题的默认语言是英文，建议修改</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span> <span class="comment"># 网站时区，默认使用电脑的时区</span></span><br></pre></td></tr></table></figure>
-
 <p>然后比较重要的是<code># Deployment</code>下的部署信息，即</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span> </span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/xxxx/xxxx.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
 <p>请务必将_config.yml中的deploy下branch参数的值修改为master，这样编译好的静态文件才会被上传到master分支。</p>
 <h2 id="完成部署"><a href="#完成部署" class="headerlink" title="完成部署"></a>完成部署</h2><h3 id="博客的部署"><a href="#博客的部署" class="headerlink" title="博客的部署"></a><strong>博客的部署</strong></h3><p>先来部署网站。Shift+右键点击文件夹的空白位置，打开控制台，依次执行</p>
 <blockquote>
@@ -459,18 +457,17 @@
 <h3 id="已有博客的备份"><a href="#已有博客的备份" class="headerlink" title="已有博客的备份"></a><strong>已有博客的备份</strong></h3><p>如果之前已经创建并上传好了博客，没有备份源码，但又突然想备份了，还是有救的。备份的操作与之前几乎相同，依然要创建分支。区别在于建立的分支中已经有内容了，此时的内容是部署的文件的一份拷贝，而非源码。</p>
 <p>因此，clone之后，要将clone下来的文件中除.git文件夹以外的文件全部删掉，我们只需要.git中的信息。将原来写的博客的源文件整体复制到.git文件夹所在的目录，就算是改好了。</p>
 <p>注意，复制过来的源文件中应该包含一个<code>.gitignore</code>文件，如果没有则需要手动创建，内容为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules&#x2F;</span><br><span class="line">public&#x2F;</span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure>
 <p>如果之前安装过主题，也应该将themes文件夹中对应主题目录下的.git文件夹删掉，防止主题文件上传不上去。这会导致主题的配置在其它设备上无法使用。</p>
 <p>之后再按照上文中的步骤将源文件push到github上。这样，源文件就会覆盖掉分支中的文件，从而实现备份。</p>
 <h3 id="新设备上的操作"><a href="#新设备上的操作" class="headerlink" title="新设备上的操作"></a><strong>新设备上的操作</strong></h3><p>安装过程与之前一样，只需省略初始化（init）的步骤即可。</p>
 <p>配置好环境后，首先克隆仓库。在任意文件夹下打开Git Bash，输入</p>
 <blockquote>
-<p>git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
+<p>git clone <a href="mailto:git@github.com">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
 <p>注意，默认分支仍应为hexo。如已修改，需使用下列语句克隆对应分支：</p>
 <blockquote>
-<p>git clone -b hexo <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:xxxx/xxxx.github.io.git</p>
+<p>git clone -b hexo <a href="mailto:git@github.com">git@github.com</a>:xxxx/xxxx.github.io.git</p>
 </blockquote>
 <p>进入刚拷贝的<code>xxxx.github.io</code>文件夹，通过Git Bash依次执行</p>
 <blockquote>
@@ -515,7 +512,6 @@
 <p>笔者为懒人提供了两个批处理脚本，这样就不必手打命令了。</p>
 <p>“同步源文件到github.bat”：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> /p commit_log=请输入 commit 日志信息:</span><br><span class="line">git status</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"%commit_log%"</span></span><br><span class="line">git push</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
 <p>“发布文章到github.bat”：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
     </div>
@@ -556,7 +552,7 @@
     <strong>本文作者： </strong>mxdzs0612</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://mxdzs0612.github.io/其它技术/2019-07-29-HexoBlog1.html" title="使用hexo在github上搭建博客：基础篇">https://mxdzs0612.github.io/其它技术/2019-07-29-HexoBlog1.html</a>
+    <a href="https://mxdzs0612.github.io/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/2019-07-29-HexoBlog1.html" title="使用hexo在github上搭建博客：基础篇">https://mxdzs0612.github.io/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/2019-07-29-HexoBlog1.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -589,7 +585,7 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/其它技术/2019-07-29-HexoBlog2.html" rel="prev" title="使用hexo在github上搭建博客：主题篇">
+                <a href="/%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF/2019-07-29-HexoBlog2.html" rel="prev" title="使用hexo在github上搭建博客：主题篇">
                   使用hexo在github上搭建博客：主题篇 <i class="fa fa-chevron-right"></i>
                 </a>
               
@@ -667,7 +663,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         
-          <a href="/archives/">
+          <a href="/archives/%20%7C%7C%20archive">
         
           <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
@@ -679,7 +675,7 @@
       <div class="site-state-item site-state-categories">
         
           
-            <a href="/categories/">
+            <a href="/categories/%20%7C%7C%20th">
           
         
         <span class="site-state-item-count">2</span>
@@ -692,7 +688,7 @@
       <div class="site-state-item site-state-tags">
         
           
-            <a href="/tags/">
+            <a href="/tags/%20%7C%7C%20tags">
           
         
         <span class="site-state-item-count">8</span>
@@ -776,7 +772,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-fire"></i>
   </span>
@@ -787,16 +783,16 @@
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">32k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">55 分钟</span>
+    <span title="站点阅读时长">53 分钟</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0</div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1</div>
 
@@ -848,10 +844,18 @@
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
-<script src="/js/schemes/pisces.js?v=7.4.1"></script>
 
-<script src="/js/next-boot.js?v=7.4.1"></script>
+<script src="/js/utils.js?v=7.4.1.js"></script>
+
+<script src="/js/motion.js?v=7.4.1.js"></script>
+
+
+<script src="/js/schemes/pisces.js?v=7.4.1.js"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.4.1.js"></script>
+
 
 
 
@@ -864,7 +868,9 @@
 
 
 
-  <script src="/js/local-search.js?v=7.4.1"></script>
+  
+<script src="/js/local-search.js?v=7.4.1.js"></script>
+
 
 
 
