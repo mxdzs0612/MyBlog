@@ -38,7 +38,7 @@ Design patterns implemented in Java (英文)： https://github.com/iluwatar/java
 
 Java LeetCode题解： https://github.com/wind-liang/leetcode
 
-手把手撕LeetCode题目： https://github.com/labuladong/fucking-algorithm
+手把手撕LeetCode题目（Python）： https://github.com/labuladong/fucking-algorithm
 
 系统设计入门： https://github.com/donnemartin/system-design-primer
 

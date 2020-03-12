@@ -81,7 +81,7 @@ plugins: hexo-generator-sitemap
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repo: https://github.com/mxdzs0612/mxdzs0612.github.io.git
+  repo: git@github.com:mxdzs0612/mxdzs0612.github.io.git
   branch: master
 
 search:
