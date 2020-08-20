@@ -162,7 +162,7 @@ sudo service ssh restart
 ```
 如果你的电脑不经常关机，重启的频率不算高，用支持多标签等功能的Windows Terminal来操作会很方便。
 
-理论上在控制台使用bash命令直接切换到WSL环境应该也是可以的，但此时终端显示的是`/$`而非`~$`，且所在目录并非根目录。笔者才疏学浅，不太确定二者是否有差别，因此未采用此办法。
+理论上在控制台使用`bash`命令直接切换到WSL环境应该也是可以的，然后输入`cd`，此时WSL会跳转到`/home/用户名`目录下，其实也等同于通过SSH的方法连接WSL，很方便。
 
 ## 安装Docker
 按照[如下指令](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)安装即可。执行第一行时如果报警，可不必理会。
@@ -182,4 +182,4 @@ sudo apt-get install docker-ce
 ```shell
 docker --version
 ```
-能正确显示版本号就是安装成功了。我们就可以在WSL中愉快地使用Docker了。
+能正确显示版本号就是安装成功了。理论上我们就可以在WSL中愉快地使用Docker了。但实际操作过程中笔者发现通过这种方法安装的docker是使用不了的，因此还是建议安装Windows Desktop客户端，然后修改WSL中`.docker`路径下的配置信息来使用。
